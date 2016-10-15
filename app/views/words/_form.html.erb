@@ -11,35 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="col m4 s12">
+      <div class="input-field">
+        <%= f.text_field :name, label: false, placeholder: "Nom" %>
+      </div>
+    </div>
+
+    <div class="col m4 s12">
+      <div class="input-field"> 
+        <%= f.text_field :prononciation, label: false, placeholder: "Prononciation" %>
+      </div>
+    </div>
+
+    <div class="col m2 s6">
+      <div class="input-field">
+        <%= f.check_box :is_fr %>
+        <%= f.label :is_fr, "français" %>
+      </div>
+    </div>
+
+    <div class="col m2 s6">
+      <div class="input-field">
+        <%= f.check_box :is_li %>
+        <%= f.label :is_li, "lingala" %>
+      </div>
+    </div>
+
+    <div class="col m12 s12">
+      <div class="input-field"> 
+        <%= f.text_field :source, label: false, placeholder: "Source" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :is_fr %><br>
-    <%= f.text_field :is_fr %>
+  
+  <div class="row">
+    
+<!--
+    <div class="col m2 s4">
+      <div class="input-field">
+        <%= f.check_box :is_validated %>
+        <%= f.label :is_validated, "validé" %>
+      </div>
+    </div>
+  -->
+
+    <%= f.hidden_field :contributor_id, value: current_user.id %>
+    <div class="center-align">
+        <%= f.submit "Ajouter ce mot au dictionnaire", class: "waves-effect waves-light btn-large" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :is_li %><br>
-    <%= f.text_field :is_li %>
-  </div>
-  <div class="field">
-    <%= f.label :prononciation %><br>
-    <%= f.text_field :prononciation %>
-  </div>
-  <div class="field">
-    <%= f.label :contributor_id %><br>
-    <%= f.text_field :contributor_id %>
-  </div>
-  <div class="field">
-    <%= f.label :source %><br>
-    <%= f.text_field :source %>
-  </div>
-  <div class="field">
-    <%= f.label :is_validated %><br>
-    <%= f.check_box :is_validated %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+ 
+
+
 <% end %>
