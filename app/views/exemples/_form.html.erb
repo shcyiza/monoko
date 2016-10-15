@@ -1,0 +1,45 @@
+<%= form_for(@exemple) do |f| %>
+  <% if @exemple.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exemple.errors.count, "error") %> prohibited this exemple from being saved:</h2>
+
+      <ul>
+      <% @exemple.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fr %><br>
+    <%= f.check_box :is_fr %>
+  </div>
+  <div class="field">
+    <%= f.label :is_li %><br>
+    <%= f.check_box :is_li %>
+  </div>
+  <div class="field">
+    <%= f.label :definition_id %><br>
+    <%= f.number_field :definition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :contributor_id %><br>
+    <%= f.number_field :contributor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :is_validated %><br>
+    <%= f.check_box :is_validated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

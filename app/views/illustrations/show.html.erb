@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @illustration.description %>
+</p>
+
+<p>
+  <strong>Is fr:</strong>
+  <%= @illustration.is_fr %>
+</p>
+
+<p>
+  <strong>Is li:</strong>
+  <%= @illustration.is_li %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @illustration.video %>
+</p>
+
+<p>
+  <strong>Contributor:</strong>
+  <%= @illustration.contributor_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @illustration.source %>
+</p>
+
+<p>
+  <strong>Is validated:</strong>
+  <%= @illustration.is_validated %>
+</p>
+
+<%= link_to 'Edit', edit_illustration_path(@illustration) %> |
+<%= link_to 'Back', illustrations_path %>

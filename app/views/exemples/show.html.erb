@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @exemple.content %>
+</p>
+
+<p>
+  <strong>Is fr:</strong>
+  <%= @exemple.is_fr %>
+</p>
+
+<p>
+  <strong>Is li:</strong>
+  <%= @exemple.is_li %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @exemple.definition_id %>
+</p>
+
+<p>
+  <strong>Contributor:</strong>
+  <%= @exemple.contributor_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @exemple.source %>
+</p>
+
+<p>
+  <strong>Is validated:</strong>
+  <%= @exemple.is_validated %>
+</p>
+
+<%= link_to 'Edit', edit_exemple_path(@exemple) %> |
+<%= link_to 'Back', exemples_path %>

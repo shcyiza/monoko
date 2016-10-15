@@ -1,0 +1,41 @@
+<%= form_for(@theme) do |f| %>
+  <% if @theme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@theme.errors.count, "error") %> prohibited this theme from being saved:</h2>
+
+      <ul>
+      <% @theme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fr %><br>
+    <%= f.check_box :is_fr %>
+  </div>
+  <div class="field">
+    <%= f.label :is_li %><br>
+    <%= f.check_box :is_li %>
+  </div>
+  <div class="field">
+    <%= f.label :contributor_id %><br>
+    <%= f.number_field :contributor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :is_validated %><br>
+    <%= f.check_box :is_validated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

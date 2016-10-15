@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Illustrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Is fr</th>
+      <th>Is li</th>
+      <th>Video</th>
+      <th>Contributor</th>
+      <th>Source</th>
+      <th>Is validated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @illustrations.each do |illustration| %>
+      <tr>
+        <td><%= illustration.description %></td>
+        <td><%= illustration.is_fr %></td>
+        <td><%= illustration.is_li %></td>
+        <td><%= illustration.video %></td>
+        <td><%= illustration.contributor_id %></td>
+        <td><%= illustration.source %></td>
+        <td><%= illustration.is_validated %></td>
+        <td><%= link_to 'Show', illustration %></td>
+        <td><%= link_to 'Edit', edit_illustration_path(illustration) %></td>
+        <td><%= link_to 'Destroy', illustration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Illustration', new_illustration_path %>

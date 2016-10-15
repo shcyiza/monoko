@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @theme.name %>
+</p>
+
+<p>
+  <strong>Is fr:</strong>
+  <%= @theme.is_fr %>
+</p>
+
+<p>
+  <strong>Is li:</strong>
+  <%= @theme.is_li %>
+</p>
+
+<p>
+  <strong>Contributor:</strong>
+  <%= @theme.contributor_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @theme.source %>
+</p>
+
+<p>
+  <strong>Is validated:</strong>
+  <%= @theme.is_validated %>
+</p>
+
+<%= link_to 'Edit', edit_theme_path(@theme) %> |
+<%= link_to 'Back', themes_path %>

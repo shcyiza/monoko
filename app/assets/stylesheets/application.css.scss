@@ -1,0 +1,16 @@
+@import "materialize/components/color";
+$primary-color: color("teal", "lighten-2") !default;
+$secondary-color: color("pink", "accent-1") !default;
+@import 'materialize';
+@import "materialize/extras/nouislider";
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }

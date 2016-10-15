@@ -1,0 +1,77 @@
+
+  <h3><%= @word.name.titleize %></h3>
+
+  <div class="divider"></div>
+
+  <div class="row">
+
+    <div class="col m8 s12">
+      <ul class="collection">
+        <% @word.definitions.each do |definition| %>
+          <% if definition.content %>
+          <li class="collection-item">
+            <%= definition.content %>
+            <span class="new badge teal" data-badge-caption="">theme</span>
+          </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col m4 s12">
+     
+          <div class="card">
+            <div class="card-image">
+              <img src="http://lorempixel.com/100/90/nature/6">
+              <span class="card-title">Illustration</span>
+            </div>
+            <div class="card-content">
+              <p>Illustration description</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        
+    </div>
+
+</div>
+  
+
+
+<%= render "definitions/form" %>
+
+<p>
+  <strong>Is fr:</strong>
+  <%= @word.is_fr %>
+</p>
+
+<p>
+  <strong>Is li:</strong>
+  <%= @word.is_li %>
+</p>
+
+<p>
+  <strong>Prononciation:</strong>
+  <%= @word.prononciation %>
+</p>
+
+<p>
+  <strong>Contributor:</strong>
+  <%= @word.contributor_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @word.source %>
+</p>
+
+<p>
+  <strong>Is validated:</strong>
+  <%= @word.is_validated %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
+
+

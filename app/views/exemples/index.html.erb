@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exemples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Is fr</th>
+      <th>Is li</th>
+      <th>Definition</th>
+      <th>Contributor</th>
+      <th>Source</th>
+      <th>Is validated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exemples.each do |exemple| %>
+      <tr>
+        <td><%= exemple.content %></td>
+        <td><%= exemple.is_fr %></td>
+        <td><%= exemple.is_li %></td>
+        <td><%= exemple.definition_id %></td>
+        <td><%= exemple.contributor_id %></td>
+        <td><%= exemple.source %></td>
+        <td><%= exemple.is_validated %></td>
+        <td><%= link_to 'Show', exemple %></td>
+        <td><%= link_to 'Edit', edit_exemple_path(exemple) %></td>
+        <td><%= link_to 'Destroy', exemple, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exemple', new_exemple_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@illustration) do |f| %>
+  <% if @illustration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@illustration.errors.count, "error") %> prohibited this illustration from being saved:</h2>
+
+      <ul>
+      <% @illustration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fr %><br>
+    <%= f.check_box :is_fr %>
+  </div>
+  <div class="field">
+    <%= f.label :is_li %><br>
+    <%= f.check_box :is_li %>
+  </div>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.text_field :video %>
+  </div>
+  <div class="field">
+    <%= f.label :contributor_id %><br>
+    <%= f.number_field :contributor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :is_validated %><br>
+    <%= f.check_box :is_validated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

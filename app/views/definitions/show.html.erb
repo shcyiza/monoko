@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @definition.content %>
+</p>
+
+<p>
+  <strong>Is fr:</strong>
+  <%= @definition.is_fr %>
+</p>
+
+<p>
+  <strong>Is li:</strong>
+  <%= @definition.is_li %>
+</p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @definition.word_id %>
+</p>
+
+<p>
+  <strong>Contributor:</strong>
+  <%= @definition.contributor_id %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @definition.source %>
+</p>
+
+<p>
+  <strong>Is validated:</strong>
+  <%= @definition.is_validated %>
+</p>
+
+<%= link_to 'Edit', edit_definition_path(@definition) %> |
+<%= link_to 'Back', definitions_path %>

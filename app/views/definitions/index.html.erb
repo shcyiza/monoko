@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Definitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Is fr</th>
+      <th>Is li</th>
+      <th>Word</th>
+      <th>Contributor</th>
+      <th>Source</th>
+      <th>Is validated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @definitions.each do |definition| %>
+      <tr>
+        <td><%= definition.content %></td>
+        <td><%= definition.is_fr %></td>
+        <td><%= definition.is_li %></td>
+        <td><%= definition.word_id %></td>
+        <td><%= definition.contributor_id %></td>
+        <td><%= definition.source %></td>
+        <td><%= definition.is_validated %></td>
+        <td><%= link_to 'Show', definition %></td>
+        <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
+        <td><%= link_to 'Destroy', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Definition', new_definition_path %>
