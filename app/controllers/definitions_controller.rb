@@ -1,5 +1,6 @@
 class DefinitionsController < ApplicationController
   before_action :set_definition, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
   # GET /definitions
   # GET /definitions.json
@@ -19,6 +20,7 @@ class DefinitionsController < ApplicationController
 
   # GET /definitions/1/edit
   def edit
+    @word = @definition.word
   end
 
   # POST /definitions

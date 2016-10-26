@@ -9,9 +9,9 @@
           <% if word.is_fr %>français<% end %>
           <% if word.is_li %>lingala<% end %>
         </span>
-        <span class="new badge teal" data-badge-caption="définitions"><%= word.definitions.count %></span>
+        <span class="new badge purple" data-badge-caption="définitions"><%= word.definitions.count %></span>
       </h5>
-      <p><%= word.definitions.last.content %></p>
+      <p><%= word.definitions.last.content if word.definitions.any? %></p>
 
        
         <!--<td><%= word.contributor_id %></td>
@@ -27,4 +27,6 @@
 
 <br>
 
-<%= link_to 'New Word', new_word_path %>
+<!--<%= link_to 'New Word', new_word_path %> -->
+
+<a class="btn-floating btn-large waves-effect waves-light right" href="/words/new"><i class="material-icons">edit</i></a>

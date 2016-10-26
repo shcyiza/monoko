@@ -1,5 +1,11 @@
 
-  <h3><%= @word.name.titleize %></h3>
+  <h3>
+    <%= @word.name.titleize %>
+    <small>
+      <button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button>
+    </small>
+  </h3>
+
 
   <div class="divider"></div>
 
@@ -9,13 +15,22 @@
       <ul class="collection">
         <% @word.definitions.each do |definition| %>
           <% if definition.content %>
+          
           <li class="collection-item">
             <%= definition.content %>
             <span class="new badge teal" data-badge-caption="">theme</span>
           </li>
+
+      
+
+
+
+
           <% end %>
         <% end %>
       </ul>
+
+
     </div>
 
     <div class="col m4 s12">
@@ -37,41 +52,31 @@
 
 </div>
   
+               <!-- Modal Trigger -->
+  <!--<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>-->
+  <!-- Modal Trigger -->
+  
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <!--<h6>Ajoutez une définition à <%= @word.name %></h6>-->
+      <%= render "definitions/form" %>
+    </div>
+    <!--<div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>-->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>
 
 
-<%= render "definitions/form" %>
 
-<p>
-  <strong>Is fr:</strong>
-  <%= @word.is_fr %>
-</p>
 
-<p>
-  <strong>Is li:</strong>
-  <%= @word.is_li %>
-</p>
 
-<p>
-  <strong>Prononciation:</strong>
-  <%= @word.prononciation %>
-</p>
-
-<p>
-  <strong>Contributor:</strong>
-  <%= @word.contributor_id %>
-</p>
-
-<p>
-  <strong>Source:</strong>
-  <%= @word.source %>
-</p>
-
-<p>
-  <strong>Is validated:</strong>
-  <%= @word.is_validated %>
-</p>
-
-<%= link_to 'Edit', edit_word_path(@word) %> |
-<%= link_to 'Back', words_path %>
 
 

@@ -1,6 +1,6 @@
 @import "materialize/components/color";
-$primary-color: color("teal", "lighten-2") !default;
-$secondary-color: color("pink", "accent-1") !default;
+$primary-color: color("teal", "lighten-1") !default;
+$secondary-color: color("purple", "lighten-2") !default;
 @import 'materialize';
 @import "materialize/extras/nouislider";
 
