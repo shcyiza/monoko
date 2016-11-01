@@ -5,7 +5,7 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words = Word.all
+    @words = Word.in_lingala.order('name ASC')
   end
 
   # GET /words/1
@@ -78,6 +78,8 @@ class WordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def word_params
-      params.require(:word).permit(:name, :is_fr, :is_li, :prononciation, :contributor_id, :source, :is_validated)
+      params.require(:word).permit(:name, :is_fr, :is_li,
+                                  :prononciation, :root, :structure, :role,
+                                  :contributor_id, :source, :is_validated)
     end
 end

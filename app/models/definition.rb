@@ -5,6 +5,8 @@ class Definition < ActiveRecord::Base
 	has_many :exemples
 	has_many :definition_groups
 	has_many :groups, through: :definition_groups
+	has_many :definition_translations
+
 
 	def name
 		word.name
@@ -17,4 +19,8 @@ class Definition < ActiveRecord::Base
 			end
 		end
 	end
+
+	def translations
+    	self.definition_translations
+    end
 end

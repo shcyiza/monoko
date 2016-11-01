@@ -1,0 +1,39 @@
+<ul class="collection">
+<% @word.translations.each do |translation| %>
+<li class="collection-item">
+	<h5>
+		<%= link_to translation.name, word_path(translation.definition.word) %>
+		<small><% if translation.definition.themes.any? %>
+              <span class="new badge teal" data-badge-caption="">
+                <%= translation.definition.definition_themes.last.name %>
+              </span>
+              <br>
+            <% end %></small>
+	</h5>
+	
+	<p><%= translation.definition.content %></p>
+
+	<p>
+              <small><strong>Exemples : </strong></small>
+              <br>
+              <% translation.definition.exemples.each do |exemple| %>
+                - <%= exemple.content %>
+                <br>
+              <% end %>
+            
+            </p>
+    <p>
+              <small><strong>Voir aussi : </strong></small>
+              <br>
+              <% translation.definition.groups.each do |group| %>
+                <% group.definitions.each do |terme_associe| %>
+                  <% unless terme_associe == translation.definition %>
+                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </p>
+
+	</li>
+<% end %>
+</ul>

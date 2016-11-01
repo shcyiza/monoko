@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101134849) do
+ActiveRecord::Schema.define(version: 20161101161046) do
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
@@ -125,6 +125,9 @@ ActiveRecord::Schema.define(version: 20161101134849) do
     t.boolean  "is_validated"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "root"
+    t.string   "structure"
+    t.string   "role"
   end
 
 end

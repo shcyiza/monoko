@@ -37,15 +37,38 @@
         <%= f.label :is_li, "lingala" %>
       </div>
     </div>
+    </div>
 
-    <div class="col m12 s12">
+    <div class="row">
+
+      <div class="col m4 s12">
+        <div class="input-field"> 
+          <%= f.text_field :root, label: false, placeholder: "Racine" %>
+        </div>
+      </div>
+
+      <div class="col m4 s12">
+        <div class="input-field"> 
+          <%= f.text_field :structure, label: false, placeholder: "Structure" %>
+        </div>
+      </div>
+
+      <div class="col m4 s12">
+        <div class="input-field"> 
+          <%= f.text_field :role, label: false, placeholder: "Partie du discours" %>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="col m12 s12">
       <div class="input-field"> 
         <%= f.text_field :source, label: false, placeholder: "Source" %>
       </div>
     </div>
-  </div>
+  </div>-->
   
   <div class="row">
+
     
 <!--
     <div class="col m2 s4">

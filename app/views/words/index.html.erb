@@ -1,10 +1,10 @@
  
-<h3 class="center-align">Dictionnaire alphabétique</h3>
+<h3 class="center-align">Dictionnaire lingala</h3>
 
  <div class="collection">
     <% @words.each do |word| %>
       <div class="collection-item">
-      <h5><%= link_to word.name, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
+      <h5><%= link_to word.name.titleize, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
         <span class="badge">
           <% if word.is_fr %>français<% end %>
           <% if word.is_li %>lingala<% end %>

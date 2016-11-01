@@ -1,0 +1,139 @@
+<ul class="collection">
+        <% @word.definitions.each do |definition| %>
+          <% if definition.content %>
+          
+          <li class="collection-item">
+            
+            <% if definition.themes.any? %>
+              <span class="new badge teal" data-badge-caption="">
+                <%= definition.definition_themes.last.name %>
+              </span>
+              <br>
+            <% end %>
+
+            <%= definition.content %>
+            
+            <p>
+              <small><strong>Exemples : </strong></small>
+              <br>
+              <% definition.exemples.each do |exemple| %>
+                - <%= exemple.content %>
+                <br>
+              <% end %>
+            
+            </p>
+
+            <!-- Modal Structure Exemple -->
+            <div id="modal3_<%= definition.id %>" class="modal bottom-sheet">
+              <div class="modal-content">   
+                <%= render partial: "exemples/form", locals: {definition: definition} %>
+              </div>
+            </div>
+            
+            <p>
+              <small><strong>Voir aussi : </strong></small>
+              <br>
+              <% definition.groups.each do |group| %>
+                <% group.definitions.each do |terme_associe| %>
+                  <% unless terme_associe == definition %>
+                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </p>
+
+            <!-- Modal Structure Groupe -->
+              <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
+                <div class="modal-content">
+                  <h6>Associez cette définition à d'autres termes</h6>
+                  
+                  <ul class="collection">
+                    <% @groups.each do |group| %>
+                      <li class="collection-item">
+                        <div class="row">
+                          <div class="col m9">
+                            <% group.definitions.each do |definition| %>
+                              <i><%= definition.name %>,</i>
+                            <% end %>
+                          </div>
+                          <div class="col m3">
+                          <%= render partial: "definition_groups/form", locals: {definition: definition, group: group} %>
+                          </div>
+                        </div>
+                       </li>
+                    <% end %>
+                  </ul>
+
+
+                </div> 
+              </div>
+                  <br>
+          <div class="right-align">
+            <div class="fixed-action-btn horizontal click-to-toggle" style="position: relative;">
+              
+              <a class="btn-floating btn-large waves-effect waves-light red">
+              <i class="material-icons">edit</i>
+              </a>
+
+              <ul>
+                <li>
+                <button data-target="modal5_<%= definition.id %>" class="btn-floating red modal-trigger"><i class="material-icons">language</i></button></li>
+                
+                <li><a data-target="modal3_<%= definition.id %>" class="btn-floating yellow darken-1 modal-trigger"><i class="material-icons">info_outline</i></a></li>
+                
+                <li><button data-target="modal2_<%= definition.id %>" class="btn-floating green modal-trigger"><i class="material-icons">label</i></button></li>
+                
+                <li><a data-target="modal4_<%= definition.id %>" class="btn-floating blue modal-trigger"><i class="material-icons">group_work</i></a></li>
+              </ul>
+
+            </div>
+
+
+          </div>
+
+
+
+
+          </li>
+
+      <!-- Modal Structure Theme -->
+        <div id="modal2_<%= definition.id %>" class="modal bottom-sheet">
+          <div class="modal-content">
+            <!--<h6>Ajoutez une définition à <%= @word.name %></h6>-->
+            <div class="row">
+              <% @themes.each do |theme| %>
+                <div class="col m3 s6">
+                  <%= render partial: "definition_themes/form", locals: {definition: definition, theme: theme} %>
+                  <br>
+                </div>
+              <% end %>
+            </div> 
+          </div>
+            <!--<div class="modal-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>-->
+        </div>
+
+        <!-- Modal Structure Translate -->
+        <div id="modal5_<%= definition.id %>" class="modal bottom-sheet">
+          <div class="modal-content">
+            <!--<h6>Ajoutez une Traduction à cette définition de <%= @word.name %></h6>-->
+            <div class="row">
+              <% @words.in_french.each do |word| %>
+              <div class="col m3 s6">
+              <%= render partial: "definition_translations/form", locals: {definition: definition, word: word} %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+            <!--<div class="modal-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>-->
+        </div>
+
+
+
+
+          <% end %>
+        <% end %>
+      </ul>
