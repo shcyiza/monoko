@@ -3,9 +3,13 @@
 <li class="collection-item">
 	<h5>
 		<%= link_to translation.name, word_path(translation.definition.word) %>
-		<small><% if translation.definition.themes.any? %>
+		<small>
+
+      (<i><%= translation.definition.word.prononciation if translation.definition.word.prononciation %></i>)
+    
+    <% if translation.definition.themes.any? %>
               <span class="new badge teal" data-badge-caption="">
-                <%= translation.definition.definition_themes.last.name %>
+                <%= link_to translation.definition.definition_themes.last.name, theme_path(translation.definition.definition_themes.last.theme) %>
               </span>
               <br>
             <% end %></small>
