@@ -8,6 +8,14 @@ class WordsController < ApplicationController
     @words = Word.in_lingala.order('name ASC')
   end
 
+  def dico_fr
+    @words = Word.in_french.order('name ASC')
+  end
+
+  def dico_li
+    @words = Word.in_lingala.order('name ASC')
+  end
+
   # GET /words/1
   # GET /words/1.json
   def show

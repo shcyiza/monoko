@@ -1,37 +1,24 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Themes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Is fr</th>
-      <th>Is li</th>
-      <th>Contributor</th>
-      <th>Source</th>
-      <th>Is validated</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h3>Champs lexicaux
+<small><button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button></small>
+</h3>
+<div class="divider"></div>
 
-  <tbody>
-    <% @themes.each do |theme| %>
-      <tr>
-        <td><%= theme.name %></td>
-        <td><%= theme.is_fr %></td>
-        <td><%= theme.is_li %></td>
-        <td><%= theme.contributor_id %></td>
-        <td><%= theme.source %></td>
-        <td><%= theme.is_validated %></td>
-        <td><%= link_to 'Show', theme %></td>
-        <td><%= link_to 'Edit', edit_theme_path(theme) %></td>
-        <td><%= link_to 'Destroy', theme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<ul class="collection">
+<% @themes.each do |theme| %>
+  <li class="collection-item">
+    <%= link_to theme.name, theme_path(theme) %>
+
+    <% if theme.definitions.any? %>
+        <span class="new badge teal" data-badge-caption="">
+          <%= theme.definitions.count %> termes
+        </span>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  </li>
+<% end %>
+</ul>
+
 
 <%= link_to 'New Theme', new_theme_path %>

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :themes
   resources :definitions
   resources :words
+
+  get "dico_fr" => "words#dico_fr"
+  get "dico_li" => "words#index"
+
   get 'pages/home'
 
   get 'pages/about'
@@ -18,6 +22,10 @@ Rails.application.routes.draw do
   get 'pages/team'
 
   get 'pages/terms'
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,34 +1,14 @@
-<p id="notice"><%= notice %></p>
+<h3><%= @theme.name %>
+<small>
+<button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button>
+</small>
+</h3>
+<div class="divider"></div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @theme.name %>
-</p>
-
-<p>
-  <strong>Is fr:</strong>
-  <%= @theme.is_fr %>
-</p>
-
-<p>
-  <strong>Is li:</strong>
-  <%= @theme.is_li %>
-</p>
-
-<p>
-  <strong>Contributor:</strong>
-  <%= @theme.contributor_id %>
-</p>
-
-<p>
-  <strong>Source:</strong>
-  <%= @theme.source %>
-</p>
-
-<p>
-  <strong>Is validated:</strong>
-  <%= @theme.is_validated %>
-</p>
-
-<%= link_to 'Edit', edit_theme_path(@theme) %> |
-<%= link_to 'Back', themes_path %>
+<ul class="collection">
+<% @theme.definitions.joins(:word).order('name').each do |definition| %>
+  <li class="collection-item">
+    <%= link_to definition.name.titleize, word_path(definition.word) %>
+  </li>
+<% end %>
+</ul>
