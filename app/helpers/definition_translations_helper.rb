@@ -1,0 +1,2 @@
+module DefinitionTranslationsHelper
+end

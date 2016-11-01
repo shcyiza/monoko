@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Definition Themes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Definition</th>
+      <th>Theme</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @definition_themes.each do |definition_theme| %>
+      <tr>
+        <td><%= definition_theme.definition_id %></td>
+        <td><%= definition_theme.theme_id %></td>
+        <td><%= link_to 'Show', definition_theme %></td>
+        <td><%= link_to 'Edit', edit_definition_theme_path(definition_theme) %></td>
+        <td><%= link_to 'Destroy', definition_theme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Definition theme', new_definition_theme_path %>

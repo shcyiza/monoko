@@ -1,0 +1,24 @@
+<%= form_for(@definition_group) do |f| %>
+  <% if @definition_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@definition_group.errors.count, "error") %> prohibited this definition_group from being saved:</h2>
+
+      <ul>
+      <% @definition_group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :definition_id, value: definition.id %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :group_id, value: group.id %>
+  </div>
+  <div class="actions">
+
+    <small><%= f.submit "Associer", class: "btn right" %></small>
+  </div>
+<% end %>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :definition_translations
+  resources :definition_groups
+  resources :groups
+  resources :definition_themes
   devise_for :users
   resources :exemples
   resources :illustrations

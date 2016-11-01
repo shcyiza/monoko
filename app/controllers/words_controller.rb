@@ -12,6 +12,13 @@ class WordsController < ApplicationController
   # GET /words/1.json
   def show
     @definition = @word.definitions.new
+    @definition_theme = DefinitionTheme.new
+    @themes = Theme.all
+    @exemple = Exemple.new
+    @groups = Group.all
+    @definition_group = DefinitionGroup.new
+    @words = Word.all
+    @definition_translation = DefinitionTranslation.new
   end
 
   # GET /words/new

@@ -1,0 +1,27 @@
+<%= form_for(@definition_translation) do |f| %>
+  <% if @definition_translation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@definition_translation.errors.count, "error") %> prohibited this definition_translation from being saved:</h2>
+
+      <ul>
+      <% @definition_translation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    
+    <%= f.hidden_field :definition_id, value: definition.id %>
+  </div>
+  <div class="field">
+    <%= f.label :word_id %><br>
+    <%= f.number_field :word_id %>
+  </div>
+  <div class="actions">
+  <% @words.in_french.each do |word| %>
+    <%= f.submit word.name, class: "btn" %>
+  <% end %>
+  </div>
+<% end %>

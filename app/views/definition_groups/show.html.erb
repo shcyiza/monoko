@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @definition_group.definition_id %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @definition_group.group_id %>
+</p>
+
+<%= link_to 'Edit', edit_definition_group_path(@definition_group) %> |
+<%= link_to 'Back', definition_groups_path %>

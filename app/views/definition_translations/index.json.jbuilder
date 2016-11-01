@@ -1,0 +1,1 @@
+json.array! @definition_translations, partial: 'definition_translations/definition_translation', as: :definition_translation

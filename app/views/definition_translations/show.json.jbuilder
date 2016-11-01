@@ -1,0 +1,1 @@
+json.partial! "definition_translations/definition_translation", definition_translation: @definition_translation

@@ -1,0 +1,1 @@
+json.partial! "definition_groups/definition_group", definition_group: @definition_group

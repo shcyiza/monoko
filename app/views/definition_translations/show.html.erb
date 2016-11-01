@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @definition_translation.definition_id %>
+</p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @definition_translation.word_id %>
+</p>
+
+<%= link_to 'Edit', edit_definition_translation_path(@definition_translation) %> |
+<%= link_to 'Back', definition_translations_path %>

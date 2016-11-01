@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @definition_theme.definition_id %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @definition_theme.theme_id %>
+</p>
+
+<%= link_to 'Edit', edit_definition_theme_path(@definition_theme) %> |
+<%= link_to 'Back', definition_themes_path %>

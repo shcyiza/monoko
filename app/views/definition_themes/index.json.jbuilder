@@ -1,0 +1,1 @@
+json.array! @definition_themes, partial: 'definition_themes/definition_theme', as: :definition_theme

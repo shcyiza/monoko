@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Definition Groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Definition</th>
+      <th>Group</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @definition_groups.each do |definition_group| %>
+      <tr>
+        <td><%= definition_group.definition_id %></td>
+        <td><%= definition_group.group_id %></td>
+        <td><%= link_to 'Show', definition_group %></td>
+        <td><%= link_to 'Edit', edit_definition_group_path(definition_group) %></td>
+        <td><%= link_to 'Destroy', definition_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Definition group', new_definition_group_path %>

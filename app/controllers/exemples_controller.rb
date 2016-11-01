@@ -28,7 +28,7 @@ class ExemplesController < ApplicationController
 
     respond_to do |format|
       if @exemple.save
-        format.html { redirect_to @exemple, notice: 'Exemple was successfully created.' }
+        format.html { redirect_to :back, notice: 'Exemple was successfully created.' }
         format.json { render :show, status: :created, location: @exemple }
       else
         format.html { render :new }
