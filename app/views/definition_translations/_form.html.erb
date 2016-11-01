@@ -16,12 +16,12 @@
     <%= f.hidden_field :definition_id, value: definition.id %>
   </div>
   <div class="field">
-    <%= f.label :word_id %><br>
-    <%= f.number_field :word_id %>
+   
+    <%= f.hidden_field :word_id, value: word.id %>
   </div>
   <div class="actions">
-  <% @words.in_french.each do |word| %>
+  
     <%= f.submit word.name, class: "btn" %>
-  <% end %>
+  
   </div>
 <% end %>

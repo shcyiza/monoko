@@ -144,7 +144,13 @@
         <div id="modal5_<%= definition.id %>" class="modal bottom-sheet">
           <div class="modal-content">
             <!--<h6>Ajoutez une Traduction à cette définition de <%= @word.name %></h6>-->
-            <%= render partial: "definition_translations/form", locals: {definition: definition} %>
+            <div class="row">
+              <% @words.in_french.each do |word| %>
+              <div class="col m3 s6">
+              <%= render partial: "definition_translations/form", locals: {definition: definition, word: word} %>
+              </div>
+              <% end %>
+            </div>
           </div>
             <!--<div class="modal-footer">
               <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
