@@ -8,13 +8,21 @@ Dictionnaire lingala - français
     <% @words.each do |word| %>
       <div class="collection-item">
       <h5><%= link_to word.name.titleize, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
-        <span class="badge">
+        <!--<span class="badge">
           <% if word.is_fr %>français<% end %>
           <% if word.is_li %>lingala<% end %>
-        </span>
-        <span class="new badge purple" data-badge-caption="définitions"><%= word.definitions.count %></span>
+        </span> -->
+        
       </h5>
-      <p><%= word.definitions.last.content if word.definitions.any? %></p>
+      <p>
+        
+        <% if word.definitions.any? && word.definitions.last.definition_translations %>
+          <% word.definitions.last.definition_translations.each do |translation| %>
+            <%= translation.word.name if translation %>, 
+          <% end %>
+        
+        <% end %>
+      </p>
       
 
        
