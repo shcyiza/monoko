@@ -10,8 +10,10 @@ Rails.application.routes.draw do
   resources :definition_groups
   resources :groups
   resources :definition_themes
-  resources :users
+  
   devise_for :users
+  resources :users
+  
   resources :exemples
   resources :illustrations
   resources :themes
