@@ -1,0 +1,33 @@
+
+
+
+	<h5 class="center-align">Résultats de votre recherche sur Monoko
+		<small><br><span class="whitey">Terme recherché : "<%= @search.keywords %>"</span></small>
+	</h5>
+<hr>
+	
+
+
+
+<div class="">
+<% if @search.search_words.empty? %>
+	<p class="center-align">Il n'y pas encore de terme qui correspond à votre recherche.
+		<br>Vous aurez peut-être plus de chance plus tard.
+	</p>
+<% else %>
+
+	<% @search.search_words.each do |word| %>
+		<div>
+			<%= link_to word.name, word_path(word) %>
+			
+			<hr>
+	<% end %>
+		
+<% end %>
+
+<div class="center-align">
+<%= link_to "Nouvelle recherche", root_path, class: "btn btn-primary btn-sm" %> 
+</div>
+</div>
+
+

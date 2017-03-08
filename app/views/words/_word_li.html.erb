@@ -17,7 +17,7 @@
               <small><strong>En français : </strong></small>
               <br>
               <% definition.definition_translations.each do |translation| %>
-                <%= translation.word.name %>
+                <%= translation.word.name if translation.word %>
                 <br>
               <% end %>
             
