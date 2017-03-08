@@ -99,7 +99,8 @@
       <!-- Modal Structure Theme -->
         <div id="modal2_<%= definition.id %>" class="modal bottom-sheet">
           <div class="modal-content">
-            <!--<h6>Ajoutez une définition à <%= @word.name %></h6>-->
+            <h6>Ajoutez un thème à cette définition de <%= @word.name %></h6>
+            <hr>
             <div class="row">
               <% @themes.each do |theme| %>
                 <div class="col m3 s6">
@@ -117,7 +118,7 @@
         <!-- Modal Structure Translate -->
         <div id="modal5_<%= definition.id %>" class="modal bottom-sheet">
           <div class="modal-content">
-            <!--<h6>Ajoutez une Traduction à cette définition de <%= @word.name %></h6>-->
+            <h6>Ajoutez une Traduction à cette définition de <%= @word.name %></h6>
             <div class="row">
               <% @words.in_french.each do |word| %>
               <div class="col m3 s6">

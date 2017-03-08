@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  resources :skills
+  get 'users/show'
+
+  get 'users/index'
+
+  get 'users/edit'
+
   resources :definition_translations
   resources :definition_groups
   resources :groups
   resources :definition_themes
+  resources :users
   devise_for :users
   resources :exemples
   resources :illustrations
@@ -11,7 +19,7 @@ Rails.application.routes.draw do
   resources :words
 
   get "dico_fr" => "words#dico_fr"
-  get "dico_li" => "words#index"
+  get "dico_li" => "words#dico_li"
 
   get 'pages/home'
 

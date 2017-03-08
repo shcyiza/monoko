@@ -1,0 +1,30 @@
+<h3>Modifiez votre profil</h3>
+<hr>
+
+<%= form_for(@user) do |f| %>
+	<% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+		<div class="row">
+			<div class="col m4 s12">
+
+				<%= f.text_field :first_name, :placeholder => "Prénom", class: "form-control" %>
+			</div>
+			<div class="col m4 s12">
+				<%= f.text_field :last_name, :placeholder => "Nom", class: "form-control" %>
+			</div>
+		</div>
+
+
+
+<%= f.submit "Mettre à jour le profil", class: 'btn btn-primary btn-block btn-lg' %>
+		<% end %>

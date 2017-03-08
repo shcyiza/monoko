@@ -28,7 +28,7 @@ class DefinitionTranslationsController < ApplicationController
 
     respond_to do |format|
       if @definition_translation.save
-        format.html { redirect_to @definition_translation, notice: 'Definition translation was successfully created.' }
+        format.html { redirect_to :back, notice: 'Definition translation was successfully created.' }
         format.json { render :show, status: :created, location: @definition_translation }
       else
         format.html { render :new }

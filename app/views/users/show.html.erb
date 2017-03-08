@@ -1,0 +1,13 @@
+<h3><%= @user.first_name %> <%= @user.last_name %></h3>
+<hr>
+
+<% @user.skills.each do |skill| %>
+	<%= skill.theme %>
+	<% if skill.certified %>
+	<small>par diplome (dernier diplôme : <%= skill.last_diploma %>)</small> 
+	<% end %>
+	<% if skill.practiced %>
+	<small>par la pratique (dernier projet : <%= skill.last_project %>)</small> 
+	<% end %>
+<% end %>
+<p>Find me in app/views/users/show.html.erb</p>

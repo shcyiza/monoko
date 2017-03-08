@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101161046) do
+ActiveRecord::Schema.define(version: 20170308145732) do
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
@@ -86,6 +86,17 @@ ActiveRecord::Schema.define(version: 20161101161046) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "theme_id"
+    t.boolean  "certified"
+    t.boolean  "practiced"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "last_diploma"
+    t.text     "last_project"
+  end
+
   create_table "themes", force: :cascade do |t|
     t.string   "name"
     t.boolean  "is_fr"
@@ -110,6 +121,10 @@ ActiveRecord::Schema.define(version: 20161101161046) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.boolean  "is_contributor"
+    t.boolean  "is_admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

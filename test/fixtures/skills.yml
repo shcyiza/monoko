@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  theme_id: 1
+  certified: false
+  practiced: false
+
+two:
+  user_id: 1
+  theme_id: 1
+  certified: false
+  practiced: false
