@@ -18,14 +18,15 @@
 
 	<% @search.search_words.each do |word| %>
 		<div>
-			<%= link_to word.name, word_path(word) %> :
+			<b><%= link_to word.name, word_path(word) %></b> :
 
 			<% if word.is_fr && word.translations.any? %>
-				<%= link_to word.translations.last.definition.word.name, word_path(word.translations.last.definition.word) %>
+				<i><%= link_to word.translations.last.definition.word.name, word_path(word.translations.last.definition.word) %></i> <small>(lingala)</small>
 			<% elsif word.is_li && word.definitions.any? %>
 				<% word.definitions.each do |definition| %>
 					<% definition.definition_translations.each do |translation| %>
-	                	<%= translation.word.name if translation.word %> (<%= definition.content %>)
+	                	<i><%= link_to translation.word.name, word_path(translation.word) if translation.word %></i> <small>(français)</small>
+	                	<br><%= definition.content %><br>
 	              	<% end %>
               	<% end %>
 			<% end %>
