@@ -4,13 +4,10 @@
     <% @words.each do |word| %>
       <div class="collection-item">
       <h5><%= link_to word.name.titleize, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
-        <span class="badge">
-          <% if word.is_fr %>français<% end %>
-          <% if word.is_li %>lingala<% end %>
-        </span>
+        
         <span class="new badge purple" data-badge-caption="définitions"><%= word.definitions.count %></span>
       </h5>
-      <p><%= word.definitions.last.content if word.definitions.any? %></p>
+      <p><%= word.translations.first.definition.word.name if word.translations.any? %></p>
       
     </div>
     <% end %>
