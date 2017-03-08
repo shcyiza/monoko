@@ -1,7 +1,9 @@
 
 
 <h3>Champs lexicaux
-<small><button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button></small>
+<small>
+<button data-target="modaltheme" class="btn modal-trigger right"><i class="material-icons">edit</i></button>
+</small>
 </h3>
 <div class="divider"></div>
 
@@ -21,4 +23,18 @@
 </ul>
 
 
-<%= link_to 'New Theme', new_theme_path %>
+
+<!-- Modal Structure -->
+  <div id="modaltheme" class="modal bottom-sheet">
+    <div class="modal-content">
+      
+      <%= render "themes/form" %>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>

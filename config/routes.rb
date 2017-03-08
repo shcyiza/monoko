@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :users
-  
+
   resources :exemples
   resources :illustrations
   resources :themes
@@ -24,13 +24,9 @@ Rails.application.routes.draw do
   get "dico_li" => "words#dico_li"
 
   get 'pages/home'
-
   get 'pages/about'
-
   get 'pages/contact'
-
   get 'pages/team'
-
   get 'pages/terms'
 
 

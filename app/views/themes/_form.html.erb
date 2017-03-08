@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+  <div class="col m8 s6">
+    <div class="input-field">
+      <%= f.text_field :name, label: false, placeholder: "Ajoutez un nouveau champ lexical" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :is_fr %><br>
-    <%= f.check_box :is_fr %>
-  </div>
-  <div class="field">
-    <%= f.label :is_li %><br>
-    <%= f.check_box :is_li %>
-  </div>
-  <div class="field">
-    <%= f.label :contributor_id %><br>
-    <%= f.number_field :contributor_id %>
-  </div>
+
+  <div class="col m2 s3">
+      <div class="input-field">
+        <%= f.check_box :is_fr %>
+        <%= f.label :is_fr, "français" %>
+      </div>
+    </div>
+
+    <div class="col m2 s3">
+      <div class="input-field">
+        <%= f.check_box :is_li %>
+        <%= f.label :is_li, "lingala" %>
+      </div>
+    </div>
+    </div>
+
+
+  <% if user_signed_in? %>
+    <%= f.hidden_field :contributor_id, value: current_user.id %>
+<% end %>
+
+
+<!--
   <div class="field">
     <%= f.label :source %><br>
     <%= f.text_field :source %>
@@ -35,7 +48,9 @@
     <%= f.label :is_validated %><br>
     <%= f.check_box :is_validated %>
   </div>
+  -->
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Ajouter", class: "btn right" %>
+    <br>
   </div>
 <% end %>

@@ -5,6 +5,7 @@ class ThemesController < ApplicationController
   # GET /themes.json
   def index
     @themes = Theme.all
+    @theme = Theme.new
   end
 
   # GET /themes/1

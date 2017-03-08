@@ -1,3 +1,10 @@
+<% if user_signed_in? and current_user.first_name.blank? %>
+<h3 class="center-align">
+<br><br>
+<%= link_to "Mettez à jour votre profil", edit_user_path(current_user) %></h3>
+
+<% else %>
+
 <h3><%= @user.first_name %> <%= @user.last_name %></h3>
 <hr>
 
@@ -10,4 +17,5 @@
 	<small>par la pratique (dernier projet : <%= skill.last_project %>)</small> 
 	<% end %>
 <% end %>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<% end %>
