@@ -5,8 +5,19 @@
 
 <% else %>
 
-<h3><%= @user.first_name %> <%= @user.last_name %></h3>
+<h3>
+	<%= @user.first_name %> <%= @user.last_name %>
+	
+	<small><small><small><small>
+		<%= link_to "Mettre à jour", edit_user_path(current_user), class: "waves-effect waves-light btn right" %>
+			
+	</small></small></small></small>
+
+</h3>
+
 <hr>
+
+<h5>Domaines d'expertise :</h5>
 
 <% @user.skills.each do |skill| %>
 	<%= skill.theme %>
@@ -19,3 +30,7 @@
 <% end %>
 
 <% end %>
+
+<hr>
+
+<h5>Contributions :</h5>
