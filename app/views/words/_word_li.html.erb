@@ -17,7 +17,7 @@
               <small><strong>En français : </strong></small>
               <br>
               <% definition.definition_translations.each do |translation| %>
-                <%= translation.word.name if translation.word %>
+                <%= link_to translation.word.name, word_path(translation.word) if translation.word %>
                 <br>
               <% end %>
             
@@ -78,6 +78,8 @@
                 </div> 
               </div>
                   <br>
+
+                  
           <div class="right-align">
             <div class="fixed-action-btn horizontal click-to-toggle" style="position: relative;">
               

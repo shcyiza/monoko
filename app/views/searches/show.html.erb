@@ -15,11 +15,11 @@
 		<br>Vous aurez peut-être plus de chance plus tard.
 	</p>
 <% else %>
-
+<ul class="collection">
 	<% @search.search_words.each do |word| %>
-		<div>
+		<li class="collection-item">
 			<b><%= link_to word.name, word_path(word) %></b> :
-
+			<br>
 			<% if word.is_fr && word.translations.any? %>
 				<i><%= link_to word.translations.last.definition.word.name, word_path(word.translations.last.definition.word) %></i> <small>(lingala)</small>
 			<% elsif word.is_li && word.definitions.any? %>
@@ -31,8 +31,9 @@
               	<% end %>
 			<% end %>
 			
-			<hr>
+			</li>
 	<% end %>
+</ul>
 		
 <% end %>
 

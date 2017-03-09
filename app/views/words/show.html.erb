@@ -1,15 +1,20 @@
 
   <h3>
     <%= @word.name.titleize %>
+    
+    <% if @word.is_li %>
     <small>
       (<i><%= @word.prononciation if @word.prononciation %></i>)
       <button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button>
     </small>
     <br>
+    <% end %>
 
   </h3>
-<strong>racine :</strong> -<i><%= @word.root %></i>- <strong>| structure :</strong> <i><%= @word.structure %></i> <strong>| partie du discours :</strong> <i><%= @word.role %></i>
 
+  <% if @word.is_li %>
+    <strong>racine :</strong> -<i><%= @word.root %></i>- <strong>| structure :</strong> <i><%= @word.structure %></i> <strong>| partie du discours :</strong> <i><%= @word.role %></i>
+<% end %>
 
   <div class="divider"></div>
 
