@@ -4,6 +4,8 @@ $secondary-color: color("purple", "lighten-2") !default;
 @import 'materialize';
 @import "materialize/extras/nouislider";
 
+@import url('https://fonts.googleapis.com/css?family=Courgette|Shadows+Into+Light');
+
 
 body {
     display: flex;
@@ -18,4 +20,13 @@ main {
 .home-page-search {
 	margin-top: 150px;
 	font-size: 2.4em;
+}
+
+.bigger {
+	font-size: 3.4em;
+}
+
+.monoko {
+	font-family: 'Shadows Into Light', cursive;
+	/* font-family: 'Courgette', cursive; */
 }
