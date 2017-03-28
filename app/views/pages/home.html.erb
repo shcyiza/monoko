@@ -1,22 +1,29 @@
 
 <div class="container">
 <h1 class="home-page-search center-align"><span class="bigger monoko">Monoko</span>
-<br><small><small><small><i>devise ou slogan de Monoko à insérer</i></small></small></small>
+<br><small><small><small><i>Sepela na boyebi, ebomaka te.</i></small></small></small>
 </h1>
 <div class="search-middle center-align">
 
       <div class="row">
         <div class="input-field col s12">
           <%= form_for @search do |s| %>
-  <div class="field">
-   
-    <%= s.text_field :keywords, label: false, placeholder: "Recherchez une définition ou une traduction" %>
-  </div>
+            <div class="field">
+              <i class="material-icons prefix">search</i>
+              <%= s.text_field :keywords, label: false, placeholder: "Luka ndimbola na Lingala to libongoli na Français / Rechercher une définition ou une traduction en Lingala" %>
+            </div>
+
+            <!--<div class="input-field col s6">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">First Name</label>
+            </div> -->
   
   
-  <div class="actions"><%= s.submit "Trouver", class: "btn" %></div>
+            <!--<div class="actions"><%= s.submit "Trouver", class: "btn" %></div>-->
+            <!--<small>Luka ndimbola na Lingala to libongoli na Français / Rechercher une définition ou une traduction en Lingala</small>-->
   
-<% end %>
+          <% end %>
 
 
 
