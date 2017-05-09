@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="row">
     
     <%= f.hidden_field :definition_id, value: definition.id %>
-  </div>
-  <div class="field">
+  
+  <div class="col m3 s6">
    
-    <%= f.hidden_field :word_id, value: word.id %>
+    
+    <%= f.collection_select :word_id, @words.in_french, :id, :name, {prompt: 'Choisissez parmi les mots existants'}, {class: "browser-default"} %>
   </div>
-  <div class="actions">
+  <div class="col m3 s6">
   
-    <%= f.submit word.name, class: "btn" %>
+    <%= f.submit "Confirmer", class: "btn" %>
   
+  </div>
   </div>
 <% end %>

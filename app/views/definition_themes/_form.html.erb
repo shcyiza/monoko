@@ -14,11 +14,15 @@
   <div class="field">
     
     <%= f.hidden_field :definition_id, value: definition.id %>
+    <div class="col m3 s6">
+   
+    
+    <%= f.collection_select :theme_id, @themes.all, :id, :name, {prompt: 'Choisissez parmi les thèmes existants'}, {class: "browser-default"} %>
   </div>
-  <div class="field">
-    <%= f.hidden_field :theme_id, value: theme.id %>
+  <div class="col m3 s6">
+  
+    <%= f.submit "Confirmer", class: "btn" %>
+  
   </div>
-  <div class="actions">
-    <%= f.submit theme.name, class: "btn" %>
   </div>
 <% end %>

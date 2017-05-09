@@ -55,7 +55,16 @@
             <!-- Modal Structure Groupe -->
               <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
                 <div class="modal-content">
-                  <h6>Associez cette définition à d'autres termes</h6>
+                  <h6>Associez cette définition à d'autres termes, 
+
+                  
+                  <%= link_to ou ajoutez une nouvelle association de mots, "" %>
+                  <!-- ajouter form for create group AND then create def group with this word definition -->
+                   
+
+                  </h6>
+
+                  
                   
                   <ul class="collection">
                     <% @groups.each do |group| %>
@@ -106,7 +115,7 @@
 
 
 
-          </li>
+      </li>
 
       <!-- Modal Structure Theme -->
         <div id="modal2_<%= definition.id %>" class="modal bottom-sheet">
@@ -114,12 +123,15 @@
             <h6>Ajoutez un thème à cette définition de <%= @word.name %></h6>
             <hr>
             <div class="row">
-              <% @themes.each do |theme| %>
-                <div class="col m3 s6">
-                  <%= render partial: "definition_themes/form", locals: {definition: definition, theme: theme} %>
-                  <br>
+              
+                <div class="col m9 s12">
+                  <%= render partial: "definition_themes/form", locals: {definition: definition} %>
+                  
                 </div>
-              <% end %>
+                <div class="col m3 s12">
+                  <%= link_to "ou ajoutez un nouveau thème au lexique", new_theme_path %>
+                </div>
+              
             </div> 
           </div>
             <!--<div class="modal-footer">
@@ -132,11 +144,15 @@
           <div class="modal-content">
             <h6>Ajoutez une Traduction à cette définition de <%= @word.name %></h6>
             <div class="row">
-              <% @words.in_french.each do |word| %>
-              <div class="col m3 s6">
-              <%= render partial: "definition_translations/form", locals: {definition: definition, word: word} %>
+              
+              <div class="col m9 s12">
+              <%= render partial: "definition_translations/form", locals: {definition: definition} %>
               </div>
-              <% end %>
+
+              <div class="col m3 s12">
+              <%= link_to "ou ajoutez un nouveau mot au dictionnaire", new_word_path %>
+              </div>
+              
             </div>
           </div>
             <!--<div class="modal-footer">
