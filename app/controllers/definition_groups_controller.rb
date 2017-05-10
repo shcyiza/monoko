@@ -69,6 +69,6 @@ class DefinitionGroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def definition_group_params
-      params.require(:definition_group).permit(:definition_id, :group_id)
+      params.require(:definition_group).permit(:definition_id, :group_id, :contributor_id)
     end
 end

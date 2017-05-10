@@ -69,6 +69,6 @@ class DefinitionThemesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def definition_theme_params
-      params.require(:definition_theme).permit(:definition_id, :theme_id)
+      params.require(:definition_theme).permit(:definition_id, :theme_id, :contributor_id)
     end
 end

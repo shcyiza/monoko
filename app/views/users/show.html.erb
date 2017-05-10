@@ -34,3 +34,104 @@
 <hr>
 
 <h5>Contributions :</h5>
+
+ <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">library_books</i>Mots ajoutés au dictionnaire
+      </div>
+      
+      <div class="collapsible-body">
+      	
+      		<% @user.words.each do |word| %>
+				<p><%= link_to word.name, word_path(word) %></p>
+			<% end %>
+      	
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">subject</i>Définitions ajoutées
+      </div>
+      <div class="collapsible-body">
+      	<span>
+      		<% @user.definitions.each do |definition| %>
+				<p><%= definition.content %></p>
+			<% end %>
+      	</span>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">language</i>Traductions ajoutées
+      </div>
+
+      <div class="collapsible-body">
+      	<span>
+      		<% @user.definition_translations.each do |translation| %>
+
+				<p><%= translation.definition.content %></p>
+			<% end %>
+      	</span>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">label</i>Thèmes ajoutés
+      </div>
+
+      <div class="collapsible-body">
+      	<% @user.definition_themes.each do |theme| %>
+			<p><%= theme.name %></p>
+		<% end %>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">info_outline</i>Exemples ajoutés
+      </div>
+
+      <div class="collapsible-body">
+      	<% @user.exemples.each do |exemple| %>
+			<p><%= exemple.content %></p>
+		<% end %>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">group_work</i>Associations
+      </div>
+
+      <div class="collapsible-body">
+      	<p>Associations de mot créées</p>
+
+		<% @user.groups.each do |association| %>
+
+			<p><%= association.name %></p>
+
+		<% end %>
+
+		
+
+		<p>Mots associés</p>
+
+		<% @user.definition_groups.each do |assiociated| %>
+
+			<p><%= assiociated.definition.content %></p>
+		<% end %>
+      </div>
+    </li>
+
+  </ul>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+</script>

@@ -29,10 +29,9 @@
     
     <%= f.hidden_field :definition_id, value: definition.id %>
   </div>
-  <!--<div class="field">
-    <%= f.label :contributor_id %><br>
-    <%= f.number_field :contributor_id %>
-  </div>
+  
+    <%= f.hidden_field :contributor_id, value: current_user.id %>
+  
   <div class="field">
     <%= f.label :source %><br>
     <%= f.text_field :source %>

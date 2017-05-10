@@ -29,7 +29,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        Definition_group.create(:definition_id => definition.id, :group_id => @group.id)
+        Definition_group.create(:definition_id => definition.id, :group_id => @group.id, :contributor_id => current_user.id)
 
         format.html { redirect_to :back, notice: 'Group was successfully created.' }
         format.json { render :show, status: :created, location: @group }
@@ -74,6 +74,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:name_li, :name_fr)
+      params.require(:group).permit(:name_li, :name_fr, :contributor_id)
     end
 end

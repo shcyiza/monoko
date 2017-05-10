@@ -90,6 +90,7 @@ class WordsController < ApplicationController
     def word_params
       params.require(:word).permit(:name, :is_fr, :is_li,
                                   :prononciation, :root, :structure, :role,
-                                  :contributor_id, :source, :is_validated)
+                                  :contributor_id, :source, :is_validated,
+                                  :user_id)
     end
 end

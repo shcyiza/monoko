@@ -13,6 +13,7 @@
 
   <div class="field">
     <%= f.hidden_field :definition_id, value: definition.id %>
+    <%= f.hidden_field :contributor_id, value: current_user.id %>
   </div>
   <div class="field">
     <%= f.hidden_field :group_id, value: group.id %>

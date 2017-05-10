@@ -69,6 +69,7 @@ class DefinitionTranslationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def definition_translation_params
-      params.require(:definition_translation).permit(:definition_id, :word_id)
+      params.require(:definition_translation).permit(:definition_id, :word_id,
+                                                      :contributor_id)
     end
 end

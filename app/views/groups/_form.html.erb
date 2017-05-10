@@ -19,6 +19,8 @@
     <%= f.label :name_fr %><br>
     <%= f.text_field :name_fr %>
   </div>
+
+  <%= f.hidden_field :contributor_id, value: current_user.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

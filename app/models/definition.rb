@@ -7,6 +7,8 @@ class Definition < ActiveRecord::Base
 	has_many :groups, through: :definition_groups
 	has_many :definition_translations
 
+	belongs_to :contributor, :class_name => "User"
+
 
 	def name
 		word.name

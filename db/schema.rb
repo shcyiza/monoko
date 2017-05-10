@@ -11,27 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308182435) do
+ActiveRecord::Schema.define(version: 20170510124911) do
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
     t.integer  "group_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "contributor_id"
   end
 
   create_table "definition_themes", force: :cascade do |t|
     t.integer  "definition_id"
     t.integer  "theme_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "contributor_id"
   end
 
   create_table "definition_translations", force: :cascade do |t|
     t.integer  "definition_id"
     t.integer  "word_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "contributor_id"
   end
 
   create_table "definitions", force: :cascade do |t|
@@ -61,8 +64,9 @@ ActiveRecord::Schema.define(version: 20170308182435) do
   create_table "groups", force: :cascade do |t|
     t.string   "name_li"
     t.string   "name_fr"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "contributor_id"
   end
 
   create_table "illustrations", force: :cascade do |t|
@@ -149,6 +153,7 @@ ActiveRecord::Schema.define(version: 20170308182435) do
     t.string   "root"
     t.string   "structure"
     t.string   "role"
+    t.integer  "user_id"
   end
 
 end
