@@ -4,16 +4,28 @@
 <div class="card">
 
 
-
+<%= link_to @word.image_url, target: "_blank" do %>
 	<div class="card-image">
         <!--<img src="http://lorempixel.com/100/90/nature/6"> -->
         <%= image_tag @word.image.url(:medium) %>
-        <span class="card-title"><%= @word.image_title %></span>
+        <span class="card-title">
+        	<%= @word.image_title %>
+
+        	
+        </span>
+        
     </div>
+<% end %>
             
     <div class="card-content">
         <p><%= @word.image_description %></p>
     </div>
+
+<div class="card-action">
+    <%= link_to edit_word_path(@word) do %>
+        		<i class="material-icons">edit</i> modifier l'illustration
+        	<% end %>
+</div>
             <!--<div class="card-action">
               <a href="#">This is a link</a>
             </div>-->
@@ -27,7 +39,8 @@
         <img src="http://lorempixel.com/100/90/nature/6"> 
         <!--<%= image_tag @word.image.url(:medium) %>-->
         <span class="card-title">
-        <button data-target="modal_image" class="btn modal-trigger right"><i class="material-icons">add</i> 
+        <button data-target="modal_image" class="btn modal-trigger right">
+        	<i class="material-icons">add</i> 
         </button>
         </span>
     </div>

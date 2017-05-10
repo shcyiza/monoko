@@ -91,6 +91,6 @@ class WordsController < ApplicationController
       params.require(:word).permit(:name, :is_fr, :is_li,
                                   :prononciation, :root, :structure, :role,
                                   :contributor_id, :source, :is_validated,
-                                  :image)
+                                  :image, :image_title, :image_description, :image_url)
     end
 end

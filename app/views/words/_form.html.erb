@@ -66,7 +66,16 @@
       </div>
     </div>
   </div>-->
-  
+
+<div class="card">
+<div class="card-content">
+<h5><small><u>Admin : modifier l'illustration</u></small></h5>
+  <%= f.file_field :image %>
+  <%= f.text_field :image_title, label: false, placeholder: "Titre de l'illustration" %>
+  <%= f.text_area :image_description, label: false, placeholder: "Description de l'illustration" %>
+  <%= f.text_field :image_url, label: false, placeholder: "Lien externe" %>
+  </div>
+  </div>
   <div class="row">
 
     
