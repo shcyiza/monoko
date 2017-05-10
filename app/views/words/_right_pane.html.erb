@@ -1,0 +1,42 @@
+<% if @word.image.present? %>
+
+
+<div class="card">
+
+
+
+	<div class="card-image">
+        <!--<img src="http://lorempixel.com/100/90/nature/6"> -->
+        <%= image_tag @word.image.url(:medium) %>
+        <span class="card-title"><%= @word.image_title %></span>
+    </div>
+            
+    <div class="card-content">
+        <p><%= @word.image_description %></p>
+    </div>
+            <!--<div class="card-action">
+              <a href="#">This is a link</a>
+            </div>-->
+</div>
+
+<% else %>
+
+	
+<div class="card">
+	<div class="card-image">
+        <img src="http://lorempixel.com/100/90/nature/6"> 
+        <!--<%= image_tag @word.image.url(:medium) %>-->
+        <span class="card-title">
+        <button data-target="modal_image" class="btn modal-trigger right"><i class="material-icons">add</i> 
+        </button>
+        </span>
+    </div>
+            
+    
+</div>
+		
+
+	
+
+<% end %>
+    

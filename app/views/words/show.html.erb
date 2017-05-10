@@ -32,18 +32,9 @@
 
     <div class="col m4 s12">
      
-          <div class="card">
-            <div class="card-image">
-              <img src="http://lorempixel.com/100/90/nature/6">
-              <span class="card-title">Illustration</span>
-            </div>
-            <div class="card-content">
-              <p>Illustration description</p>
-            </div>
-            <!--<div class="card-action">
-              <a href="#">This is a link</a>
-            </div>-->
-          </div>
+          <%= render "right_pane" %>
+
+          
         
     </div>
 
@@ -56,6 +47,14 @@
     <div class="modal-content">
       
       <%= render "definitions/form" %>
+    </div>
+</div>
+
+<!-- Modal Image -->
+  <div id="modal_image" class="modal bottom-sheet">
+    <div class="modal-content">
+      
+      <%= render "words/form_image" %>
     </div>
 </div>
 

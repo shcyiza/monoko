@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510124911) do
+ActiveRecord::Schema.define(version: 20170510144957) do
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
@@ -148,12 +148,19 @@ ActiveRecord::Schema.define(version: 20170510124911) do
     t.integer  "contributor_id"
     t.string   "source"
     t.boolean  "is_validated"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "root"
     t.string   "structure"
     t.string   "role"
     t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image_title"
+    t.text     "image_description"
+    t.string   "image_url"
   end
 
 end
