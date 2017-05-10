@@ -35,7 +35,7 @@
 
             <!-- Modal Structure Exemple -->
             <div id="modal3_<%= definition.id %>" class="modal bottom-sheet">
-              <div class="modal-content">   
+              <div class="modal-content container">   
                 <%= render partial: "exemples/form", locals: {definition: definition} %>
               </div>
             </div>
@@ -46,7 +46,7 @@
               <% definition.groups.each do |group| %>
                 <% group.definitions.each do |terme_associe| %>
                   <% unless terme_associe == definition %>
-                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>
+                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>, 
                   <% end %>
                 <% end %>
               <% end %>
@@ -54,7 +54,7 @@
 
             <!-- Modal Structure Groupe -->
               <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
-                <div class="modal-content">
+                <div class="modal-content container">
                   <h6>Associez cette définition à d'autres termes, 
 
                   
@@ -67,7 +67,7 @@
                   
                   
                   <ul class="collection">
-                    <% @groups.each do |group| %>
+                    <% @groups.order("created_at DESC").each do |group| %>
                       <li class="collection-item">
                         <div class="row">
                           <div class="col m9">
@@ -119,7 +119,7 @@
 
       <!-- Modal Structure Theme -->
         <div id="modal2_<%= definition.id %>" class="modal bottom-sheet">
-          <div class="modal-content">
+          <div class="modal-content container">
             <h6>Ajoutez un thème à cette définition de <%= @word.name %></h6>
             <hr>
             <div class="row">
@@ -141,7 +141,7 @@
 
         <!-- Modal Structure Translate -->
         <div id="modal5_<%= definition.id %>" class="modal bottom-sheet">
-          <div class="modal-content">
+          <div class="modal-content container">
             <h6>Ajoutez une Traduction à cette définition de <%= @word.name %></h6>
             <div class="row">
               
