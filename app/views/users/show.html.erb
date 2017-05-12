@@ -36,51 +36,27 @@
 <h5>Contributions :</h5>
 
  <ul class="collapsible" data-collapsible="accordion">
+    <%= render "words" %>
+
+    <%= render "definitions" %>
+
+    <%= render "traductions" %>
+
     <li>
       <div class="collapsible-header">
-      	<i class="material-icons">library_books</i>Mots ajoutés au dictionnaire
+        <i class="material-icons">label</i>Thèmes ajoutés au lexique
       </div>
-      
+
       <div class="collapsible-body">
-      	
-      		<% @user.words.each do |word| %>
-				<p><%= link_to word.name, word_path(word) %></p>
-			<% end %>
-      	
+        <% @user.themes.each do |theme| %>
+      <p><%= theme.name %></p>
+    <% end %>
       </div>
     </li>
 
     <li>
       <div class="collapsible-header">
-      	<i class="material-icons">subject</i>Définitions ajoutées
-      </div>
-      <div class="collapsible-body">
-      	<span>
-      		<% @user.definitions.each do |definition| %>
-				<p><%= definition.content %></p>
-			<% end %>
-      	</span>
-      </div>
-    </li>
-
-    <li>
-      <div class="collapsible-header">
-      	<i class="material-icons">language</i>Traductions ajoutées
-      </div>
-
-      <div class="collapsible-body">
-      	<span>
-      		<% @user.definition_translations.each do |translation| %>
-
-				<p><%= translation.definition.content %></p>
-			<% end %>
-      	</span>
-      </div>
-    </li>
-
-    <li>
-      <div class="collapsible-header">
-      	<i class="material-icons">label</i>Thèmes ajoutés
+      	<i class="material-icons">label</i>Thèmes ajoutés aux définitions
       </div>
 
       <div class="collapsible-body">

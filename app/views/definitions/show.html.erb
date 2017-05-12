@@ -1,39 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col m8 s12 offset-m2">
+    <div class="card">
+      <div class="card-content">
 
-<p>
-  <strong>Content:</strong>
-  <%= @definition.content %>
-</p>
+        <!--<span class="card-title">
 
-<p>
-  <strong>Is fr:</strong>
-  <%= @definition.is_fr %>
-</p>
+          <small><%= @definition.content %></small>
+          
+        </span>-->
+        <br>
+        <p><%= @definition.content %></p>
+        <br>
+        
+        <p class="right-align">
+         <small>
+            <strong>Mot défini</strong> : <%= link_to @definition.word.name, word_path(@definition.word) %>
+            <br><strong>Source</strong> : <%= @definition.source %>
+          </small>
+        </p>
+        
+      </div>
 
-<p>
-  <strong>Is li:</strong>
-  <%= @definition.is_li %>
-</p>
+      <div class="card-action right-align">
+        
+        <small><%= link_to "Modifier la définition", edit_definition_path(@definition) %></small>
+              
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Word:</strong>
-  <%= @definition.word_id %>
-</p>
 
-<p>
-  <strong>Contributor:</strong>
-  <%= @definition.contributor_id %>
-</p>
 
-<p>
-  <strong>Source:</strong>
-  <%= @definition.source %>
-</p>
-
+<!--
 <p>
   <strong>Is validated:</strong>
   <%= @definition.is_validated %>
-</p>
+</p>  -->
 
-<%= link_to 'Edit', edit_definition_path(@definition) %> |
-<%= link_to 'Back', definitions_path %>

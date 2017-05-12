@@ -1,0 +1,46 @@
+<li>
+      <div class="collapsible-header">
+      	<i class="material-icons">library_books</i>Mots ajoutés au dictionnaire
+      </div>
+      
+      <div class="collapsible-body">
+
+      	<div class="row">
+			<div class="col m6 s12">
+			
+
+			<ul class="collection">
+				<li class="collection-item">
+					En lingala
+				</li>
+			<% @user.words.in_lingala.order("name ASC").each do |word| %>
+				<li class="collection-item">
+				<%= link_to word.name, word_path(word) %> <small>(<%= link_to "modifier", edit_word_path(word) %>)</small>
+				</li>
+			<% end %>
+
+
+			
+			</ul>
+			</div>
+
+			<div class="col m6 s12">
+			
+			<ul class="collection">
+				<li class="collection-item">
+					En français
+				</li>
+			<% @user.words.in_french.order("name ASC").each do |word| %>
+				<li class="collection-item">
+				<%= link_to word.name, word_path(word) %>
+				</li>
+			<% end %>
+			</ul>
+			</div>
+		</div>
+
+      	
+      		
+      	
+      </div>
+    </li>
