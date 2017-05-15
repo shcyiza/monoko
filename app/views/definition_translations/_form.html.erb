@@ -19,7 +19,7 @@
   <div class="col m3 s6">
    
     
-    <%= f.collection_select :word_id, @words.in_french, :id, :name, {prompt: 'Choisissez parmi les mots existants'}, {class: "browser-default"} %>
+    <%= f.collection_select :word_id, @words.in_french.order("name ASC"), :id, :name, {prompt: 'Choisissez parmi les mots existants'}, {class: "browser-default"} %>
   </div>
 
 
