@@ -33,6 +33,7 @@
 			<% @user.words.in_french.order("name ASC").each do |word| %>
 				<li class="collection-item">
 				<%= link_to word.name, word_path(word) %>
+				<small>(<%= link_to "modifier", edit_word_path(word) %>)</small>
 				</li>
 			<% end %>
 			</ul>

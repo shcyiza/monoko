@@ -1,6 +1,31 @@
-<h1>Editing Definition Theme</h1>
+<h3>Modifier le thème auquel est attribué <small><i><%= @definition_theme.definition.content %></i></small></h3>
 
-<%= render 'form' %>
+<%= form_for(@definition_theme) do |f| %>
+  <% if @definition_theme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@definition_theme.errors.count, "error") %> prohibited this definition_theme from being saved:</h2>
 
-<%= link_to 'Show', @definition_theme %> |
-<%= link_to 'Back', definition_themes_path %>
+      <ul>
+      <% @definition_theme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    
+    <!--<%= f.hidden_field :definition_id %>
+    <%= f.hidden_field :contributor_id, value: current_user.id %> -->
+    <div class="col m3 s6">
+   
+    
+    <%= f.collection_select :theme_id, Theme.all, :id, :name, {prompt: 'Choisissez parmi les thèmes existants'}, {class: "browser-default"} %>
+  </div>
+  <div class="col m3 s6">
+  
+    <%= f.submit "Confirmer", class: "btn" %>
+  
+  </div>
+  </div>
+<% end %>

@@ -42,29 +42,9 @@
 
     <%= render "traductions" %>
 
-    <li>
-      <div class="collapsible-header">
-        <i class="material-icons">label</i>Thèmes ajoutés au lexique
-      </div>
+    <%= render "themes" %>
 
-      <div class="collapsible-body">
-        <% @user.themes.each do |theme| %>
-      <p><%= theme.name %></p>
-    <% end %>
-      </div>
-    </li>
-
-    <li>
-      <div class="collapsible-header">
-      	<i class="material-icons">label</i>Thèmes ajoutés aux définitions
-      </div>
-
-      <div class="collapsible-body">
-      	<% @user.definition_themes.each do |theme| %>
-			<p><%= theme.name %></p>
-		<% end %>
-      </div>
-    </li>
+    
 
     <li>
       <div class="collapsible-header">
