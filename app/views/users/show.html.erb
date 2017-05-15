@@ -44,19 +44,9 @@
 
     <%= render "themes" %>
 
-    
+    <%= render "exemples" %>
 
-    <li>
-      <div class="collapsible-header">
-      	<i class="material-icons">info_outline</i>Exemples ajoutés
-      </div>
 
-      <div class="collapsible-body">
-      	<% @user.exemples.each do |exemple| %>
-			<p><%= exemple.content %></p>
-		<% end %>
-      </div>
-    </li>
 
     <li>
       <div class="collapsible-header">

@@ -1,0 +1,24 @@
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons">info_outline</i>Exemples ajoutés
+      </div>
+
+      <div class="collapsible-body">
+      	<ul class="collection">
+
+      	<% @user.exemples.each do |exemple| %>
+			<li class="collection-item">
+				
+          		
+          		<%= exemple.content %>
+          		<small>(<%= link_to "modifier l'exemple", edit_exemple_path(exemple) %>)
+          		</small>
+          		<br>
+          		<small>Exemple attribué à la définition de <%= link_to exemple.definition.name, word_path(exemple.definition.word) %> suivante : "<i><%= exemple.definition.content %></i>"</small>
+			</li>
+		<% end %>
+		</ul>
+
+      	
+      </div>
+    </li>

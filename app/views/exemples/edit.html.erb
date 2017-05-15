@@ -1,6 +1,51 @@
-<h1>Editing Exemple</h1>
+<h3>Modifier l'exemple à la définition <small><i>"<%= @exemple.definition.content %>" du mot <%= link_to @exemple.definition.name, word_path(@exemple.definition.word) %></i></small></h3>
+<hr>
 
-<%= render 'form' %>
+<%= form_for(@exemple) do |f| %>
+  <% if @exemple.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exemple.errors.count, "error") %> prohibited this exemple from being saved:</h2>
 
-<%= link_to 'Show', @exemple %> |
-<%= link_to 'Back', exemples_path %>
+      <ul>
+      <% @exemple.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <div class="input-field">
+      <%= f.text_area :content, label: false, placeholder: "Modifiez l'exemple pour cette définition", class: "materialize-textarea" %>
+    </div>
+  </div>
+  <!--<div class="field">
+    <%= f.label :is_fr %><br>
+    <%= f.check_box :is_fr %>
+  </div>
+  <div class="field">
+    <%= f.label :is_li %><br>
+    <%= f.check_box :is_li %>
+  </div>-->
+  <div class="field">
+    
+    <%= f.hidden_field :definition_id %>
+  </div>
+  
+    <%= f.hidden_field :contributor_id %>
+  
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+ <!-- <div class="field">
+    <%= f.label :is_validated %><br>
+    <%= f.check_box :is_validated %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit "Ajouter" , class: "btn right" %>
+  </div>
+  <br>
+<% end %>
+
