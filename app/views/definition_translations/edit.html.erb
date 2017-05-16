@@ -22,7 +22,7 @@
   
    <div class="col m8 s12 offset-m2">
     <h6>Sélectionnez dans la liste un mot français qui correspond à <%= link_to @definition_translation.definition.name, word_path(@definition_translation.definition.word) %></h6>
-    <%= f.collection_select :word_id, Word.in_french, :id, :name, {prompt: 'Choisissez parmi les mots existants'}, {class: "browser-default"} %>
+    <%= f.collection_select :word_id, Word.in_french.order("name ASC"), :id, :name, {prompt: 'Choisissez parmi les mots existants'}, {class: "browser-default"} %>
 
     <br><%= f.submit "Confirmer la nouvelle traduction", class: "btn" %>
     <br><small>Le mot français n'est pas dans la liste ? <%= link_to "Ajoutez un nouveau mot français au dictionnaire", new_word_path %></small>

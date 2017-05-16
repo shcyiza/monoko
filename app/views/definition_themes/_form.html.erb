@@ -18,7 +18,7 @@
     <div class="col m3 s6">
    
     
-    <%= f.collection_select :theme_id, @themes.all, :id, :name, {prompt: 'Choisissez parmi les thèmes existants'}, {class: "browser-default"} %>
+    <%= f.collection_select :theme_id, @themes.all.order("name ASC"), :id, :name, {prompt: 'Choisissez parmi les thèmes existants'}, {class: "browser-default"} %>
   </div>
   <div class="col m3 s6">
   
