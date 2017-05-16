@@ -12,6 +12,9 @@
 					<br>
 					<small>
 						<b>Mots associés : </b>
+						<% association.definitions.each do |definition| %>
+        <i><%= link_to definition.name, word_path(definition.word) %>,</i>
+    <% end %>
 
 					</small>
 				</li>
@@ -33,8 +36,19 @@
 				<li class="collection-item">
 					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %>)</small>
 					<small>
-					<br><b>Nom de l'association de mots :</b>
+					<br>Mot ainsi défini : <%= link_to associated.definition.name, word_path(associated.definition.word) %>
+					<br>Nom de l'association de mots :
+						<b><%= associated.group.name %></b>
+
 					<br><b>Autres mots de la même association : </b>
+						
+			                <% associated.group.definitions.each do |terme_associe| %>
+			                  <% unless terme_associe == associated %>
+			                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>, 
+			                  <% end %>
+			                <% end %>
+			            
+
 					</small>
 				</li>
 			<% end %>
