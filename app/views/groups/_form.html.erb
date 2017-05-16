@@ -11,17 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name_li %><br>
-    <%= f.text_field :name_li %>
-  </div>
-  <div class="field">
-    <%= f.label :name_fr %><br>
-    <%= f.text_field :name_fr %>
-  </div>
 
-  <%= f.hidden_field :contributor_id, value: current_user.id %>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row">
+    <div class="col m8">
+      
+      <div class="">
+
+      <%= f.text_field :name_li, label: false, placeholder: "Désignez l'élément commun au groupe de mots" %>
+      </div>
+    </div>
+    <!--<div class="field">
+      <%= f.label :name_fr %><br>
+      <%= f.text_field :name_fr %>
+    </div>-->
+    <%= f.hidden_field :contributor_id, value: current_user.id %>
+    <%= f.hidden_field :first_definition_id, value: definition.id %>
+    <div class="col m4">
+      <small><%= f.submit "Associer", class: "btn right" %></small>
+    </div>
   </div>
 <% end %>

@@ -29,6 +29,7 @@ class WordsController < ApplicationController
     @definition_group = DefinitionGroup.new
     @words = Word.all
     @definition_translation = DefinitionTranslation.new
+    @group = Group.new
   end
 
   # GET /words/new

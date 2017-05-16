@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510144957) do
+ActiveRecord::Schema.define(version: 20170516101327) do
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
@@ -64,9 +64,10 @@ ActiveRecord::Schema.define(version: 20170510144957) do
   create_table "groups", force: :cascade do |t|
     t.string   "name_li"
     t.string   "name_fr"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "contributor_id"
+    t.integer  "first_definition_id"
   end
 
   create_table "illustrations", force: :cascade do |t|

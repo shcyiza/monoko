@@ -56,12 +56,7 @@
               <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
                 <div class="modal-content container">
                   <h6>Associez cette définition à d'autres termes, 
-
-                  
-                  <%= link_to "ou ajoutez une nouvelle association de mots", "" %>
-                  <!-- ajouter form for create group AND then create def group with this word definition -->
-                   
-
+                   ou rendez-vous en bas de la liste pour créer une nouvelle association
                   </h6>
 
                   
@@ -71,6 +66,7 @@
                       <li class="collection-item">
                         <div class="row">
                           <div class="col m9">
+                            <%= group.name_li %> : 
                             <% group.definitions.each do |definition| %>
                               <i><%= definition.name %>,</i>
                             <% end %>
@@ -80,7 +76,19 @@
                           </div>
                         </div>
                        </li>
+
+
                     <% end %>
+                    <li class="collection-item">
+                        <div class="row">
+                          <div class="col m4">
+                            Aucune association ne convient ? 
+                          </div>
+                          <div class="col m8">
+                          <%= render partial: "groups/form", locals: {definition: definition} %>
+                          </div>
+                        </div>
+                       </li>
                   </ul>
 
 
