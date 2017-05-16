@@ -1,6 +1,35 @@
-<h1>Editing Definition Group</h1>
+<h3>Modifier le groupe auquel est attribué <small><i><%= @definition_group.definition.content %></i></small></h3>
 
-<%= render 'form' %>
+<%= form_for(@definition_group) do |f| %>
+  <% if @definition_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@definition_group.errors.count, "error") %> prohibited this definition_group from being saved:</h2>
 
-<%= link_to 'Show', @definition_group %> |
-<%= link_to 'Back', definition_groups_path %>
+      <ul>
+      <% @definition_group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <%= f.collection_select :group_id, Group.all.order("name_li ASC"), :id, :name_li, {prompt: 'Choisissez parmi les groupes existants'}, {class: "browser-default"} %>
+  <div class="actions">
+
+    <small><%= f.submit "Associer", class: "btn right" %></small>
+  </div>
+<% end %>
+
+
+<% if @definition_group.group.definitions.count > 1 %>
+<small><b>Autres mots du même groupe (<%= @definition_group.group.name %>) :</b>
+<br>
+    <% @definition_group.group.definitions.each do |terme_associe| %>
+        <% unless terme_associe == @definition_group.definition %>
+            <%= link_to terme_associe.name, word_path(terme_associe.word) %>, 
+        <% end %>
+    <% end %>
+<% end %>
+            

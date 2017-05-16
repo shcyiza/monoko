@@ -1,0 +1,43 @@
+<li>
+      <div class="collapsible-header">
+      	<i class="material-icons">group_work</i>Associations de mots crées
+      </div>
+
+      <div class="collapsible-body">
+      	<ul class="collection">
+
+			<% @user.groups.order("created_at DESC").each do |association| %>
+				<li class="collection-item">
+					<%= association.name %> <small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %>)</small>
+					<br>
+					<small>
+						<b>Mots associés : </b>
+
+					</small>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+      	
+</li>
+
+<li>
+      <div class="collapsible-header">
+      	<i class="material-icons">group_work</i>Mots ajoutés à une association
+      </div>
+
+      <div class="collapsible-body">
+      	<ul class="collection">
+			
+			<% @user.definition_groups.order("created_at DESC").each do |associated| %>
+				<li class="collection-item">
+					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %>)</small>
+					<small>
+					<br><b>Nom de l'association de mots :</b>
+					<br><b>Autres mots de la même association : </b>
+					</small>
+				</li>
+			<% end %>
+		</ul>
+	</div>  	
+</li>

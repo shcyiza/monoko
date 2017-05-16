@@ -46,32 +46,7 @@
 
     <%= render "exemples" %>
 
-
-
-    <li>
-      <div class="collapsible-header">
-      	<i class="material-icons">group_work</i>Associations
-      </div>
-
-      <div class="collapsible-body">
-      	<p>Associations de mot créées</p>
-
-		<% @user.groups.each do |association| %>
-
-			<p><%= association.name %></p>
-
-		<% end %>
-
-		
-
-		<p>Mots associés</p>
-
-		<% @user.definition_groups.each do |assiociated| %>
-
-			<p><%= assiociated.definition.content %></p>
-		<% end %>
-      </div>
-    </li>
+    <%= render "associations" %>
 
   </ul>
 

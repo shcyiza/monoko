@@ -1,6 +1,47 @@
-<h1>Editing Group</h1>
+<h3>Modifiez le groupe de mot</h3>
 
-<%= render 'form' %>
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
 
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+      <ul>
+      <% @group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="row">
+    <div class="col m8">
+      
+      <div class="">
+
+      <%= f.text_field :name_li, label: false, placeholder: "Modifiez l'élément commun au groupe de mots" %>
+      </div>
+    </div>
+    <!--<div class="field">
+      <%= f.label :name_fr %><br>
+      <%= f.text_field :name_fr %>
+    </div>-->
+    <%= f.hidden_field :contributor_id, value: current_user.id %>
+    
+    <div class="col m4">
+      <small><%= f.submit "Associer", class: "btn right" %></small>
+    </div>
+  </div>
+<% end %>
+
+<% if @group.definitions.count > 1 %>
+
+<small><b>Pour rappel, ce groupe rassemble les mots suivants :</b>
+<br><% @group.definitions.each do |definition| %>
+        <i><%= link_to definition.name, word_path(definition.word) %>,</i>
+    <% end %>
+</small>
+
+<% end %>
+

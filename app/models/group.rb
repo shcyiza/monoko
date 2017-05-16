@@ -9,4 +9,10 @@ class Group < ActiveRecord::Base
 			"#{definitions.last.word.name}..."
 		end
 	end
+
+	def name
+		if name_li.present?
+			name_li
+		end
+	end
 end
