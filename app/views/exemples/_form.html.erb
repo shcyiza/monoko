@@ -30,8 +30,10 @@
     <%= f.hidden_field :definition_id, value: definition.id %>
   </div>
   
+  <% if user_signed_in? %>
     <%= f.hidden_field :contributor_id, value: current_user.id %>
-  
+  <% end %>
+
   <div class="field">
     <%= f.label :source %><br>
     <%= f.text_field :source %>
