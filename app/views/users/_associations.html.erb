@@ -6,13 +6,13 @@
       <div class="collapsible-body">
       	<ul class="collection">
 
-			<% @user.groups.order("created_at DESC").each do |association| %>
+			<% @user.groups.sort_by(&:name).each do |association| %>
 				<li class="collection-item">
-					<%= association.name %> <small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %>)</small>
+					<%= association.name %> <small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %> | <%= link_to "Supprimer ce groupe de mots", association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
 					<br>
 					<small>
 						<b>Mots associés : </b>
-						<% association.definitions.each do |definition| %>
+						<% association.definitions.sort_by(&:name).each do |definition| %>
         <i><%= link_to definition.name, word_path(definition.word) %>,</i>
     <% end %>
 
@@ -32,9 +32,9 @@
       <div class="collapsible-body">
       	<ul class="collection">
 			
-			<% @user.definition_groups.order("created_at DESC").each do |associated| %>
+			<% @user.definition_groups.sort_by(&:name).each do |associated| %>
 				<li class="collection-item">
-					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %>)</small>
+					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %> | <%= link_to "Supprimer l'association de ce mot au groupe '#{associated.group.name}'", associated, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
 					<small>
 					<br>Mot ainsi défini : <%= link_to associated.definition.name, word_path(associated.definition.word) %>
 					<br>Nom de l'association de mots :
@@ -42,7 +42,7 @@
 
 					<br><b>Autres mots de la même association : </b>
 						
-			                <% associated.group.definitions.each do |terme_associe| %>
+			                <% associated.group.definitions.sort_by(&:name).each do |terme_associe| %>
 			                  <% unless terme_associe == associated %>
 			                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>, 
 			                  <% end %>

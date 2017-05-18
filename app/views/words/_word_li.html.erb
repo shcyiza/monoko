@@ -48,11 +48,11 @@
               <small><strong>Voir aussi : </strong></small>
               <br>
               <% definition.groups.each do |group| %>
-                <% group.definitions.each do |terme_associe| %>
+                <small><b><%= group.name %> :</b></small> <% group.definitions.sort_by(&:name).each do |terme_associe| %>
                   <% unless terme_associe == definition %>
                     <%= link_to terme_associe.name, word_path(terme_associe.word) %>, 
                   <% end %>
-                <% end %>
+                <% end %><br>
               <% end %>
             </p>
 
@@ -75,7 +75,7 @@
                         <div class="row">
                           <div class="col m9">
                             <b><%= group.name_li %> :</b> 
-                            <% group.definitions.each do |definition| %>
+                            <% group.definitions.sort_by(&:name).each do |definition| %>
                               <i><%= definition.name %>,</i>
                             <% end %>
                           </div>

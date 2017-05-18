@@ -1,5 +1,5 @@
 class Group < ActiveRecord::Base
-	has_many :definition_groups
+	has_many :definition_groups, dependent: :destroy
 	has_many :definitions, through: :definition_groups
 
 	belongs_to :contributor, :class_name => "User"

@@ -56,7 +56,7 @@ class DefinitionGroupsController < ApplicationController
   def destroy
     @definition_group.destroy
     respond_to do |format|
-      format.html { redirect_to definition_groups_url, notice: 'Definition group was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Definition group was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
