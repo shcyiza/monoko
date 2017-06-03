@@ -56,7 +56,7 @@ class ExemplesController < ApplicationController
   def destroy
     @exemple.destroy
     respond_to do |format|
-      format.html { redirect_to exemples_url, notice: 'Exemple was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Exemple was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

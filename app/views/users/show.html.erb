@@ -15,23 +15,29 @@
 
 </h3>
 
+<% if @user.skills.any? %>
 <hr>
 
-<h5>Domaines d'expertise :</h5>
 
-<% @user.skills.each do |skill| %>
-	<%= skill.theme %>
-	<% if skill.certified %>
-	<small>par diplome (dernier diplôme : <%= skill.last_diploma %>)</small> 
-	<% end %>
-	<% if skill.practiced %>
-	<small>par la pratique (dernier projet : <%= skill.last_project %>)</small> 
+	<h5>Domaines d'expertise :</h5>
+
+	<% @user.skills.each do |skill| %>
+		<%= skill.theme %>
+		<% if skill.certified %>
+			<small>par diplome (dernier diplôme : <%= skill.last_diploma %>)</small> 
+		<% end %>
+
+		<% if skill.practiced %>
+		<small>par la pratique (dernier projet : <%= skill.last_project %>)</small> 
+		<% end %>
 	<% end %>
 <% end %>
 
+
 <% end %>
 
 <hr>
+
 
 <h5>Contributions :</h5>
 
