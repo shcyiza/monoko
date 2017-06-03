@@ -10,7 +10,7 @@
       	
       	<ul class="collection">
 				
-			<% @user.definitions.order("created_at DESC").each do |definition| %>
+			<% @user.definitions.sort_by(&:name).each do |definition| %>
 				<li class="collection-item">
 					<small>Définition de <%= link_to definition.word.name, word_path(definition.word) %></small>
           			<br><%= definition.content %> <small>(<%= link_to "voir", definition_path(definition)  %> | <%= link_to "modifier", edit_definition_path(definition) %>)</small>

@@ -42,7 +42,7 @@ class ExemplesController < ApplicationController
   def update
     respond_to do |format|
       if @exemple.update(exemple_params)
-        format.html { redirect_to @exemple, notice: 'Exemple was successfully updated.' }
+        format.html { redirect_to user_path(current_user), notice: 'Exemple was successfully updated.' }
         format.json { render :show, status: :ok, location: @exemple }
       else
         format.html { render :edit }
