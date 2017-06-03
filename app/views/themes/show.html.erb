@@ -1,39 +1,48 @@
 <h3 class="center-align"><%= @theme.name.titleize %>
-<!--<small>
+
+<% if user_signed_in? %>
+
+<small>
 <button data-target="modaltheme" class="btn modal-trigger right" href="/words/new"><i class="material-icons">edit</i></button>
-</small> -->
+</small>
+<% end %>
+
+
 </h3>
 <div class="divider"></div>
 
 
 <div class="row">
-<div class="col m6 s12">
-<h6 class="center-align">En lingala</h6>
 
-<ul class="collection">
-<% @theme.definitions.joins(:word).order('name').each do |definition| %>
-	<% if definition.word.is_li %>
-  <li class="collection-item">
-    <%= link_to definition.name.titleize, word_path(definition.word) %> : <%= definition.translations.last.word.name if definition.translations.any? %>
-  </li>
-  <% end %>
-<% end %>
-</ul>
-</div>
 
-<div class="col m6 s12">
-<h6 class="center-align">En français</h6>
+	<div class="col m6 s12">
+		<h6 class="center-align">En lingala</h6>
 
-<ul class="collection">
-<% @theme.definitions.joins(:word).order('name').each do |definition| %>
-<% if definition.word.is_fr %>
-  <li class="collection-item">
-    <%= link_to definition.name.titleize, word_path(definition.word) %> : <%= definition.word.translations.last.definition.word.name if definition.word.translations.any? %>
-  </li>
-  <% end %>
-<% end %>
-</ul>
-</div>
+		<ul class="collection">
+			<% @theme.definitions.joins(:word).order('name').each do |definition| %>
+
+				<% if definition && definition.word.is_li %>
+				  <li class="collection-item">
+				    <%= link_to definition.name.titleize, word_path(definition.word) %> : <%= definition.translations.last.word.name if definition.translations.any? && definition.translations.last.word %>
+				  </li>
+			  	<% end %>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class="col m6 s12">
+		<h6 class="center-align">En français</h6>
+
+		<ul class="collection">
+			<% @theme.definitions.joins(:word).order('name').each do |definition| %>
+				<% if definition && definition.word.is_fr %>
+				  <li class="collection-item">
+				    <%= link_to definition.name.titleize, word_path(definition.word) %> : <%= definition.word.translations.last.definition.word.name if definition.word.translations.any? && definition.word.translations.last.definition.word %>
+				  </li>
+			  	<% end %>
+			<% end %>
+		</ul>
+	</div>
 </div>
 
 
