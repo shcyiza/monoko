@@ -6,7 +6,7 @@
       <div class="collapsible-body">
       	<ul class="collection">
 				
-			<% @user.definition_translations.order("created_at DESC").each do |translation| %>
+			<% @user.definition_translations.sort_by(&:name).each do |translation| %>
 				
 				<li class="collection-item">
 					<small>Traduction de <%= link_to translation.word.name, word_path(translation.word) if translation.word %></small>
