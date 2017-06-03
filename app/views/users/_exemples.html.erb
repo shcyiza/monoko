@@ -6,7 +6,7 @@
       <div class="collapsible-body">
       	<ul class="collection">
 
-      	<% @user.exemples.each do |exemple| %>
+      	<% @user.exemples.sort_by(&:content).each do |exemple| %>
 			<li class="collection-item">
 				
           		
