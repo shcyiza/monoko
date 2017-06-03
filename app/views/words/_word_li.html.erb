@@ -117,23 +117,6 @@
                   <% unless terme_associe == definition %>
                     <%= link_to terme_associe.name, word_path(terme_associe.word) %>
 
-                    <!--
-
-                    TO FIX !!!!
-
-                    <% if current_user.id == terme_associe.contributor_id %>
-                      <%= link_to edit_definition_group_path(terme_associe.definition_groups.where(group_id: group.id; definition_id: terme_associe.id)) do %>
-                        <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
-                      <% end %>
-                    <% end %>
-
-                    <% if current_user.id == terme_associe.definition_group.contributor_id %>
-
-                      <%= link_to terme_associe.definition_group, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
-                        <%= content_tag(:i, "delete" ,:class=> 'tiny material-icons') -%>
-                      <% end %>
-
-                    <% end %>-->
 
                     , 
                   <% end %>
