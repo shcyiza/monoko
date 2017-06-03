@@ -34,24 +34,12 @@
       <%= link_to" Monoko", root_path, class: "brand-logo monoko" %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><%= link_to "Définitions", words_path %></li>
-        <li><%= link_to "Traductions", dico_fr_path %></li>
-        <li><%= link_to "Lexiques", themes_path %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "Mon profil", user_path(current_user) %></li>
-        <% end %>
-        <li><%= link_to "Contribuer", new_word_path, class: "waves-effect waves-light btn" %></li>
+        <%= render "layouts/nav_links" %>
         
       </ul>
       <ul class="side-nav" id="mobile-demo">
-      	<li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Définitions", words_path %></li>
-        <li><%= link_to "Traductions", dico_fr_path %></li>
-        <li><%= link_to "Lexiques", themes_path %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "Mon profil", user_path(current_user) %></li>
-        <% end %>
-        <li><%= link_to "Contribuer", new_word_path, class: "waves-effect waves-light btn" %></li>
+        <li><%= link_to "Home", root_path %></li>
+      	<%= render "layouts/nav_links" %>
       </ul>
     </div>
   </nav>

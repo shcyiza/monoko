@@ -5,7 +5,10 @@
     <% if @word.is_li %>
     <small>
       (<i><%= @word.prononciation if @word.prononciation %></i>)
+
+      <% if user_signed_in? %>
       <button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button>
+      <% end %>
     </small>
     <br>
     <% end %>

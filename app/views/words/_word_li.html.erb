@@ -1,29 +1,50 @@
 <ul class="collection">
-        <% @word.definitions.each do |definition| %>
-          <% if definition.content %>
-          
-          <li class="collection-item">
-            
-            <% if definition.themes.any? %>
-              <span class="new badge teal" data-badge-caption="">
-                <%= definition.definition_themes.last.name %>
-              </span>
-              <br>
-            <% end %>
+  
 
-            <%= definition.content %>
+<!-- definitions visible to all -->
+
+  <% @word.definitions.each do |definition| %>
+    
+
+
+    <!-- contenu de la définition -->
+          
+      <li class="collection-item">
             
-            <p>
-              <small><strong>En français : </strong></small>
-              <br>
-              <% definition.definition_translations.each do |translation| %>
+        <% if definition.themes.any? %>
+          
+                <span class="new badge teal" data-badge-caption="">
+                  <%= link_to definition.definition_themes.last.name, theme_path(definition.definition_themes.last.theme) %>
+                </span>
+                <br>
+
+        <% end %>
+
+        <%= definition.content if definition.content %>
+
+
+    <!-- traductions -->
+        
+        <% if definition.definition_translations.any? %>
+        <p>
+          <small><strong>En français : </strong></small>
+          <br>
+          
+          <% definition.definition_translations.each do |translation| %>
                 <%= link_to translation.word.name, word_path(translation.word) if translation.word %>
                 <br>
-              <% end %>
+          <% end %>
             
-            </p>
+        </p>
 
-            <p>
+        <% end %>
+
+    <!-- exemples -->
+
+        <% if definition.exemples.any? %>
+        
+
+        <p>
               <small><strong>Exemples : </strong></small>
               <br>
               <% definition.exemples.each do |exemple| %>
@@ -33,16 +54,23 @@
             
             </p>
 
+        <% end %>
 
 
+
+        <% if user_signed_in? %>
             <!-- Modal Structure Exemple -->
             <div id="modal3_<%= definition.id %>" class="modal bottom-sheet">
               <div class="modal-content container">   
                 <%= render partial: "exemples/form", locals: {definition: definition} %>
               </div>
             </div>
+        <% end %>
             
 
+      <!-- associations -->
+
+        <% if definition.groups.any? %>
 
             <p>
               <small><strong>Voir aussi : </strong></small>
@@ -56,10 +84,16 @@
               <% end %>
             </p>
 
+        <% end %>
+
+
+
+
+    <!-- visible only when signed in -->
 
 
             
-
+          <% if user_signed_in? %>
             <!-- Modal Structure Groupe -->
               <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
                 <div class="modal-content container">
@@ -103,6 +137,10 @@
                 </div> 
               </div>
                   <br>
+            <% end %>
+
+
+      <!-- bouton de modification ou ajout -->
 
            <% if user_signed_in? %>       
           <div class="right-align">
@@ -133,6 +171,11 @@
 
 
       </li>
+
+
+
+
+      <% if user_signed_in? %>
 
       <!-- Modal Structure Theme -->
         <div id="modal2_<%= definition.id %>" class="modal bottom-sheet">
@@ -177,9 +220,10 @@
             </div>-->
         </div>
 
-
-
-
           <% end %>
+
+
+
+
         <% end %>
       </ul>
