@@ -37,22 +37,31 @@
           <br>
           
           <% definition.definition_translations.each do |translation| %>
-
-                <%= link_to translation.word.name, word_path(translation.word) if translation.word %>
+              <% if translation.word %>
+                <%= link_to translation.word.name, word_path(translation.word) %>
 
                 
+                <% if user_signed_in? && current_user.id == translation.word.contributor_id or current_user.is_admin %>
+                   <!-- modifier le mot -->
+                  <%= link_to edit_word_path(translation.definition.word) do %>
+                    <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                  <% end %>
+                <% end %>
+
                 <% if user_signed_in? && current_user.id == translation.contributor_id %>
-                 
-                  <!-- traduire par un autre mot -->
+                  <!-- associer à un autre mot -->
                   <%= link_to edit_definition_translation_path(translation) do %>
                     <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
                   <% end %>
+                
                 <% end %>
+
+              <% end %>
                 <br>
+
           <% end %>
             
         </p>
-
         <% end %>
 
     <!-- exemples -->
