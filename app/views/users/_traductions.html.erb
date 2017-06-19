@@ -9,7 +9,7 @@
 			<% @user.definition_translations.sort_by(&:name).each do |translation| %>
 				
 				<li class="collection-item">
-					<small>Traduction de <%= link_to translation.word.name, word_path(translation.word) if translation.word %></small>
+					<small>Traduction de <%= link_to translation.word.name, word_path(translation.word) if translation && translation.word %></small>
           			<br><%= translation.definition.word.name %>
           			(<%= link_to "modifier l'expression", edit_word_path(translation.definition.word) %> | <%= link_to "modifier la traduction", edit_definition_translation_path(translation) %>)</small>
 				</li>
