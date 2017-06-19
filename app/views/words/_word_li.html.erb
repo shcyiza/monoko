@@ -48,7 +48,7 @@
                   <% end %>
                 <% end %>
 
-                <% if user_signed_in? && current_user.id == translation.contributor_id %>
+                <% if user_signed_in? && current_user.id == translation.contributor_id or current_user.is_admin %>
                   <!-- associer à un autre mot -->
                   <%= link_to edit_definition_translation_path(translation) do %>
                     <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
