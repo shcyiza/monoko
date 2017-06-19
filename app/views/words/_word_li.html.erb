@@ -22,7 +22,7 @@
 
         <%= definition.content if definition.content %>
 
-        <% if current_user.id == definition.contributor_id %>
+        <% if user_signed_in? && current_user.id == definition.contributor_id %>
           <%= link_to edit_definition_path(definition) do %>
             <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
           <% end %>
@@ -39,7 +39,7 @@
           <% definition.definition_translations.each do |translation| %>
                 <%= link_to translation.word.name, word_path(translation.word) if translation.word %>
 
-                <% if current_user.id == translation.contributor_id %>
+                <% if user_signed_in? && current_user.id == translation.contributor_id %>
                   <%= link_to edit_word_path(translation.definition.word) do %>
                     <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
                   <% end %>
@@ -66,7 +66,7 @@
               <% definition.exemples.each do |exemple| %>
                 - <%= exemple.content %>
 
-                <% if current_user.id == exemple.contributor_id %>
+                <% if user_signed_in? && current_user.id == exemple.contributor_id %>
                   <%= link_to edit_exemple_path(exemple) do %>
                     <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
                   <% end %>
@@ -99,10 +99,11 @@
             <p>
               <small><strong>Voir aussi : </strong></small>
               <br>
+
               <% definition.groups.each do |group| %>
                 <small><b><%= group.name %> 
 
-                <% if current_user.id == group.contributor_id %>
+                <% if user_signed_in? && current_user.id == group.contributor_id %>
                   <%= link_to edit_group_path(group) do %>
                     <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
                   <% end %>
@@ -113,14 +114,35 @@
 
                 <% end %>
 
-                :</b></small> <% group.definitions.sort_by(&:name).each do |terme_associe| %>
-                  <% unless terme_associe == definition %>
-                    <%= link_to terme_associe.name, word_path(terme_associe.word) %>
+                :</b></small> 
 
+                <% group.definitions.sort_by(&:name).each do |terme_associe| %>
+                  
+                  <% unless terme_associe == definition %>
+                    <%= link_to terme_associe.name, word_path(terme_associe.word) if terme_associe.word %>
+
+                    <% if user_signed_in? && current_user.id == terme_associe.contributor_id %>
+                      
+                      <%= link_to edit_definition_group_path(terme_associe.definition_groups.where(group_id: group.id, definition_id: terme_associe.id)) do %>
+                        <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                      <% end %>
+
+                    <% end %>
+
+                    <% if user_signed_in? && current_user.id == terme_associe.definition_group.contributor_id %>
+
+                      <%= link_to terme_associe.definition_group, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
+                        <%= content_tag(:i, "delete" ,:class=> 'tiny material-icons') -%>
+                      <% end %>
+
+                    <% end %>
 
                     , 
                   <% end %>
+
                 <% end %><br>
+
+
               <% end %>
             </p>
 

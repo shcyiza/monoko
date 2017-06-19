@@ -10,7 +10,7 @@
       </h5>
       <% if word.translations.any? %>
       <p><% word.translations.each do |translation| %>
-      <%= translation.definition.word.name if translation %>, 
+      <%= translation.definition.word.name if translation && translation.definition %>, 
       <% end %>
       </p>
       <% end %>
