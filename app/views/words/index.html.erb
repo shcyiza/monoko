@@ -1,10 +1,16 @@
- 
+
 <h3 class="center-align">
 Dictionnaire lingala
 
+
+
+
 </h3>
+
+<div class="center-align"><small><%= alphabetical_paginate @alphaParams %> </small></div>
 <div class="divider"></div>
 
+<div id="pagination_table">
  <div class="collection">
     <% @words.each do |word| %>
       <div class="collection-item">
@@ -27,6 +33,7 @@ Dictionnaire lingala
       
     </div>
     <% end %>
+</div>
 </div>
 
 <br>
