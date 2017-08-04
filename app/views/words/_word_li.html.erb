@@ -185,7 +185,7 @@
                   
                   
                   <ul class="collection">
-                    <% @groups.order("created_at DESC").each do |group| %>
+                    <% @groups.sort_by(&:name_li).each do |group| %>
                       <li class="collection-item">
                         <div class="row">
                           <div class="col m9">
