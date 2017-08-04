@@ -35,7 +35,7 @@
 			
 			<% @user.definition_groups.sort_by(&:name).each do |associated| %>
 				<li class="collection-item">
-					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %> | <%= link_to "Supprimer l'association de ce mot au groupe '#{associated.group.name}'", associated, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
+					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %> | <%= link_to "Supprimer l'association de ce mot au groupe '#{associated.group.name if associated.group.name}'", associated, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
 					<small>
 					<br>Mot ainsi défini : <%= link_to associated.definition.name, word_path(associated.definition.word) %>
 					<br>Nom de l'association de mots :
