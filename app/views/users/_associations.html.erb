@@ -8,7 +8,8 @@
 
 			<% @user.groups.sort_by(&:name).each do |association| %>
 				<li class="collection-item">
-					<%= association.name %> <small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %> | <%= link_to "Supprimer ce groupe de mots", association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
+
+					<%= association.name if association.name %> <small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %> | <%= link_to "Supprimer ce groupe de mots", association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
 					<br>
 					<small>
 						<b>Mots associés : </b>
