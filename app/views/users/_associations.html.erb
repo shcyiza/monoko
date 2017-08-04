@@ -6,14 +6,14 @@
       <div class="collapsible-body">
       	<ul class="collection">
 
-			<% @user.groups.sort_by(&:name).each do |association| %>
+			<% @user.groups.sort_by{ |a| a.name or 0 }.each do |association| %>
 				<li class="collection-item">
 
 					<%= association.name if association.name %> <small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %> | <%= link_to "Supprimer ce groupe de mots", association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
 					<br>
 					<small>
 						<b>Mots associés : </b>
-						<% association.definitions.sort_by(&:name).each do |definition| %>
+						<% association.definitions.sort_by{ |a| a.name or 0 }.each do |definition| %>
         <i><%= link_to definition.name, word_path(definition.word) %>,</i>
     <% end %>
 
@@ -33,7 +33,7 @@
       <div class="collapsible-body">
       	<ul class="collection">
 			
-			<% @user.definition_groups.sort_by(&:name).each do |associated| %>
+			<% @user.definition_groups.sort_by{ |a| a.name or 0 }.each do |associated| %> 
 				<li class="collection-item">
 					<%= associated.definition.content %> <small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %> | <%= link_to "Supprimer l'association de ce mot au groupe '#{associated.group.name if associated.group.name}'", associated, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
 					<small>
