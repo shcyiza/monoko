@@ -39,7 +39,11 @@
           		<small>(<%= link_to "attribuer à un autre thème", edit_definition_theme_path(theme) %>)
           		</small>
           		<br>
-          		<small>Thème attribué à la définition de <%= link_to theme.definition.name, word_path(theme.definition.word) %> suivante : "<i><%= theme.definition.content %></i>"</small>
+          		<small>
+                <% if theme.definition %>
+                Thème attribué à la définition de <%= link_to theme.definition.name, word_path(theme.definition.word) %> suivante : "<i><%= theme.definition.content %></i>"
+                <% end %>
+                </small>
 			</li>
 		<% end %>
 		</ul>
