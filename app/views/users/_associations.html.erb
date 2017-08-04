@@ -39,7 +39,7 @@
 					<small>
 					<br>Mot ainsi défini : <%= link_to associated.definition.name, word_path(associated.definition.word) %>
 					<br>Nom de l'association de mots :
-						<b><%= associated.group.name %></b>
+						<b><%= associated.group.name if associated.group.name %></b>
 
 					<br><b>Autres mots de la même association : </b>
 						
