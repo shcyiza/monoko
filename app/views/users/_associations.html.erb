@@ -33,13 +33,15 @@
       <div class="collapsible-body">
       	<ul class="collection">
 			
-			<% @user.definition_groups.each do |associated| %> 
-				
+			<% @user.definition_groups.sort_by{ |a| a.name or 0 }.each do |associated| %> 
+				<% if associated.definition %>
+
 				<li class="collection-item">
+
+					
 					
 					<%= associated.definition.content %> 
-					<small>
-					(<%= link_to "Changer d'association", edit_definition_group_path(associated) %> 
+					<small>(<%= link_to "Changer d'association", edit_definition_group_path(associated) %> 
 					| <%= link_to "Supprimer l'association de ce mot au groupe '#{associated.group.name if associated.group.name}'", associated, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)
 					</small>
 
@@ -58,7 +60,10 @@
 			            
 
 					</small>
+
+					
 				</li>
+				<% end %>
 			<% end %>
 		</ul>
 	</div>  	
