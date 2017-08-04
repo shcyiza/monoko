@@ -33,7 +33,13 @@
       <div class="collapsible-body">
       	<ul class="collection">
 			
-			test
+			<% @user.definition_groups.sort_by{ |a| a.name or 0 }.each do |associated| %>
+
+                <li class="collection-item">
+
+                    <%= associated.definition.content %>
+                </li>
+            <% end %>
 		</ul>
 	</div>  	
 </li>
