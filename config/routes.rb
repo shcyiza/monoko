@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/team'
   get 'pages/terms'
+  get 'admin' => "pages#admin"
 
   # You can have the root of your site routed with "root"
   root 'pages#home'

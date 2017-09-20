@@ -16,5 +16,19 @@ class User < ActiveRecord::Base
     has_many :definition_themes, :foreign_key => "contributor_id"
     has_many :definition_groups, :foreign_key => "contributor_id"
 
+    def full_name
+      "#{first_name} #{last_name}"
+    end
+
+    def translations
+      definition_translations
+    end
+
+   
+
+    def associations
+      definition_groups
+    end
+
 
 end

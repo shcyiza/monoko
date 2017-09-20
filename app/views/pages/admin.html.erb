@@ -1,0 +1,47 @@
+<% if user_signed_in? && current_user.is_admin %>
+
+<h3>
+Panneau d'administration
+</h3>
+
+<div class="row">
+	<div class="col m3 s12">
+		<div class="collection">
+        <a href="#!" class="collection-item active"><%= @users.count %> Contributeurs</a>
+
+        <a href="#!" class="collection-item "><%= Word.count %> Mots</a>
+        <a href="#!" class="collection-item"><%= Definition.count %> Définitions</a>
+        <a href="#!" class="collection-item"><%= DefinitionTranslation.count %> Traductions</a>
+        <a href="#!" class="collection-item"><%= Theme.count %> Thèmes</a>
+        <a href="#!" class="collection-item"><%= DefinitionTheme.count %> Labelisations</a>
+        <a href="#!" class="collection-item"><%= Group.count %> Groupes</a>
+        <a href="#!" class="collection-item"><%= DefinitionGroup.count %> Associations</a>
+        <a href="#!" class="collection-item "><%= Search.count %> Recherches</a>
+      </div>
+	</div>
+	<div class="col m9">
+		<div class="collection">
+			<% @users.each do |user| %>
+				<div class="collection-item">
+				<p><%= link_to user.full_name %>
+					<br><small><%= user.words.count %> mots | <%= user.definitions.count %> définitions | <%= user.translations.count %> traductions | <%= user.themes.count %> labelisations | <%= user.associations.count %> associations </small>
+				</p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% end %>

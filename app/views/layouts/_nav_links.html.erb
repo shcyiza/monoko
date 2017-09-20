@@ -3,6 +3,7 @@
         <% if user_signed_in? %>
 
                 <% if current_user.is_admin %>
+                        <li><%= link_to "Admin", admin_path %></li>
                         <li><%= link_to "Définitions", words_path %></li>
                         <li><%= link_to "Traductions", dico_fr_path %></li>
                         <li><%= link_to "Lexiques", themes_path %></li>
