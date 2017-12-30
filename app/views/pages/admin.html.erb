@@ -1,15 +1,17 @@
 <% if user_signed_in? && current_user.is_admin %>
 
 <h3>
-Panneau d'administration
+Panneau d'administration 
+<small><small>(<%= User.count + User.count + Definition.count + DefinitionTranslation.count + Theme.count + DefinitionTheme.count + Group.count + DefinitionGroup.count %> contributions)</small></small>
 </h3>
+<div class="divider"></div>
 
 <div class="row">
 	<div class="col m3 s12">
 		<div class="collection">
         
         <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item active" %>
-        <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
+        <%= link_to "#{User.count} Mots", admin_words_path, class: "collection-item" %>
         <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
         <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
         <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
