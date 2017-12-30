@@ -18,7 +18,7 @@
 <ul class="collection">
 
 	<% @search.search_words.each do |word| %>
-		!! identité
+		<!-- !! identité -->
 		<% if @search.search_words.include?(word.name) %>
 			<%= link_to word.name, word_path(word) %>
 		<% end %>
