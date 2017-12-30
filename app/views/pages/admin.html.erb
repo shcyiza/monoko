@@ -23,7 +23,7 @@ Panneau d'administration
 		<div class="collection">
 			<% @users.each do |user| %>
 				<div class="collection-item">
-					<p><%= link_to user.full_name, user_path(user) %>
+					<p><%= link_to user.name_or_placeholder, user_path(user) %>
 						<br><small><%= user.words.count %> mots | <%= user.definitions.count %> définitions | <%= user.translations.count %> traductions | <%= user.themes.count %> labelisations | <%= user.associations.count %> associations </small>
 					</p>
 				</div>
