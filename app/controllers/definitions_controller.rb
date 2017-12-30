@@ -6,6 +6,7 @@ class DefinitionsController < ApplicationController
   # GET /definitions.json
   def index
     @definitions = Definition.all
+    @words, @alphaParams = Word.in_lingala.order('name ASC').alpha_paginate(params[:letter]){|word| word.name}
   end
 
   # GET /definitions/1

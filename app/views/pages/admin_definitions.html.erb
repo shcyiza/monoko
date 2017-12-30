@@ -7,10 +7,9 @@ Panneau d'administration
 <div class="row">
 	<div class="col m3 s12">
 		<div class="collection">
-        
-        <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item active" %>
+        <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
         <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
-        <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
+        <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item active" %>
 
         <a href="#!" class="collection-item"><%= DefinitionTranslation.count %> Traductions</a>
         <a href="#!" class="collection-item"><%= Theme.count %> Thèmes</a>
@@ -22,10 +21,10 @@ Panneau d'administration
 	</div>
 	<div class="col m9">
 		<div class="collection">
-			<% @users.each do |user| %>
+			<% @definitions.each do |definition| %>
 				<div class="collection-item">
-					<p><%= link_to user.full_name, user_path(user) %>
-						<br><small><%= user.words.count %> mots | <%= user.definitions.count %> définitions | <%= user.translations.count %> traductions | <%= user.themes.count %> labelisations | <%= user.associations.count %> associations </small>
+					<p><%= definition.content %>
+						<br><small><%= link_to definition.word.name, word_path(definition.word) %></small>
 					</p>
 				</div>
 			<% end %>

@@ -31,6 +31,19 @@ Rails.application.routes.draw do
   get 'pages/terms'
   get 'admin' => "pages#admin"
 
+  
+  #admin page
+  
+  get 'admin_words' => 'pages#admin_words'
+  get 'admin_definitions' => 'pages#admin_definitions'
+  get 'admin_translations' => 'pages#admin_translations'
+  get 'admin_definitions_themes' => 'pages#admin_definitions_themes'
+  get 'admin_themes' => 'pages#admin_themes'
+  get 'admin_definitions_groups' => 'pages#admin_definitions_groups'
+  get 'admin_groups' => 'pages#admin_groups'
+  get 'admin_searches' => 'pages#admin_searches'
+
+
   # You can have the root of your site routed with "root"
   root 'pages#home'
 

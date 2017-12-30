@@ -12,11 +12,17 @@
 <div class="">
 <% if @search.search_words.empty? %>
 	<p class="center-align">Il n'y pas encore de terme qui correspond à votre recherche.
-		<br>Vous aurez peut-être plus de chance plus tard.
+		<br>Vérifiez l'orthographe, ou revenez plus tard, vous aurez peut-être plus de chance alors.
 	</p>
 <% else %>
 <ul class="collection">
+
 	<% @search.search_words.each do |word| %>
+		!! identité
+		<% if @search.search_words.include?(word.name) %>
+			<%= link_to word.name, word_path(word) %>
+		<% end %>
+
 		<li class="collection-item">
 			<b><%= link_to word.name, word_path(word) %></b> :
 			<br>
