@@ -32,7 +32,7 @@
 
       <div class="collapsible-body">
       	<ul class="collection">
-			<% if @user.definition_groups.any? %>
+			
 			<% @user.definition_groups.sort_by{ |a| a.name or 0 }.each do |associated| %> 
 				<% if associated.definition %>
 
@@ -64,7 +64,6 @@
 					
 				</li>
 				<% end %>
-			<% end %>
 			<% end %>
 		</ul>
 	</div>  	

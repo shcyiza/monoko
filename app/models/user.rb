@@ -24,7 +24,13 @@ class User < ActiveRecord::Base
       definition_translations
     end
 
-   
+    def name_or_placeholder
+      if full_name.present?
+        full_name
+      else
+        email.split("@")[0]
+      end
+    end
 
     def associations
       definition_groups
