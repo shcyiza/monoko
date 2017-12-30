@@ -10,13 +10,12 @@ Panneau d'administration
         <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
         <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item active" %>
         <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
-
-        <a href="#!" class="collection-item"><%= DefinitionTranslation.count %> Traductions</a>
-        <a href="#!" class="collection-item"><%= Theme.count %> Thèmes</a>
-        <a href="#!" class="collection-item"><%= DefinitionTheme.count %> Labelisations</a>
-        <a href="#!" class="collection-item"><%= Group.count %> Groupes</a>
-        <a href="#!" class="collection-item"><%= DefinitionGroup.count %> Associations</a>
-        <a href="#!" class="collection-item "><%= Search.count %> Recherches</a>
+        <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
+        <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
+        <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
+        <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
+        <%= link_to "#{DefinitionGroup.count} Associations", admin_definitions_groups_path, class: "collection-item" %>
+        <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item" %>
       </div>
 	</div>
 	<div class="col m9">

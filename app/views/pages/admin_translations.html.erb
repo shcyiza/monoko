@@ -1,0 +1,43 @@
+<% if user_signed_in? && current_user.is_admin %>
+
+<h3>
+Panneau d'administration
+</h3>
+
+<div class="row">
+	<div class="col m3 s12">
+		<div class="collection">
+        <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
+        <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
+        <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
+        <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item active" %>
+		<%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
+		<%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
+        <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
+        <%= link_to "#{DefinitionGroup.count} Associations", admin_definitions_groups_path, class: "collection-item" %>
+        <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item" %>
+        
+      </div>
+	</div>
+	<div class="col m9">
+		<div class="collection">
+		    <% @translations.where.not(definition_id: nil).sort_by(&:name).each do |translation| %>
+				
+				<div class="collection-item">
+					<p><%= translation.definition.word.name %>
+					<br><small>Traduction de <%= link_to translation.word.name, word_path(translation.word) if translation.definition && translation.word %></small></p>
+          			
+          			<!--(<%= link_to "modifier l'expression", edit_word_path(translation.definition.word) %> | <%= link_to "modifier la traduction", edit_definition_translation_path(translation) %>)</small>-->
+				</div>
+			<% end %>
+		</div>
+
+
+	</div>
+</div>
+
+<% end %>
+
+
+
+

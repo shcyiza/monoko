@@ -23,7 +23,6 @@ class PagesController < ApplicationController
   end
 
   def admin_definitions
-   
     @definitions = Definition.all
   end
 
@@ -33,20 +32,19 @@ class PagesController < ApplicationController
   end
 
   def admin_translations
-    @users = User.all
+    @translations = DefinitionTranslation.all
   end
 
 
-
-  def admin_definition_themes
-    @users = User.all
+  def admin_definitions_themes
+    @labelisations = DefinitionTheme.all
   end
 
   def admin_themes
-    @users = User.all
+    @themes = Theme.all
   end
 
-  def admin_definition_groups
+  def admin_definitions_groups
     @users = User.all
   end
 

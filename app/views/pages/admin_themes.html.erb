@@ -9,22 +9,27 @@ Panneau d'administration
 		<div class="collection">
         <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
         <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
-        <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item active" %>
- 		<%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
-        <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
+        <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
+        <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
+        <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item active" %>
         <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
         <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
         <%= link_to "#{DefinitionGroup.count} Associations", admin_definitions_groups_path, class: "collection-item" %>
         <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item" %>
+        
       </div>
 	</div>
 	<div class="col m9">
 		<div class="collection">
-			<% @definitions.each do |definition| %>
+		    <% @themes.order("name ASC").each do |theme|  %>
+				
 				<div class="collection-item">
-					<p><%= definition.content %>
-						<br><small><%= link_to definition.word.name, word_path(definition.word) %></small>
-					</p>
+					<p><%= theme.name %>
+					<br><small>
+						<%= link_to "voir", theme_path(theme)  %> | <%= link_to "modifier", edit_theme_path(theme) %>
+					</small></p>
+
+					
 				</div>
 			<% end %>
 		</div>
@@ -34,3 +39,7 @@ Panneau d'administration
 </div>
 
 <% end %>
+
+
+
+
