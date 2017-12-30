@@ -21,7 +21,7 @@ Panneau d'administration
 	</div>
 	<div class="col m9">
 		<div class="collection">
-			<% @users.order("sign_in_count DESC").each do |user| %>
+			<% @users.sort_by{ |a| a.contributions_count or 0 }.reverse.each do |user| %>
 				<div class="collection-item">
 					<p><%= link_to user.name_or_placeholder, user_path(user) %> (<%= user.contributions_count %> contributions)
 						<br><small><%= user.words.count %> mots | <%= user.definitions.count %> définitions | <%= user.translations.count %> traductions | <%= user.themes.count %> labelisations | <%= user.associations.count %> associations </small>
