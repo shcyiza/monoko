@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_word, only: [:show, :edit, :update, :destroy]
+  
 
 
   def home
@@ -27,7 +27,6 @@ class PagesController < ApplicationController
   end
 
   def admin_words
-   
     @words = Word.all
   end
 
@@ -44,23 +43,15 @@ class PagesController < ApplicationController
     @themes = Theme.all
   end
 
-  def admin_definitions_groups
-    @users = User.all
+  def admin_groups
+    @groups = Group.all
   end
 
-  def admin_groups
-    @users = User.all
+  def admin_definitions_groups
+    @associations = DefinitionGroup.all
   end
 
   def admin_searches
-    @users = User.all
+    @searches = Search.order('created_at DESC')
   end
-
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_word
-      @word = Word.find(params[:id])
-    end
-
 end

@@ -12,8 +12,8 @@ Panneau d'administration
         <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
         <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
         <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
-        <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item active" %>
-        <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
+        <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
+        <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item active" %>
         <%= link_to "#{DefinitionGroup.count} Associations", admin_definitions_groups_path, class: "collection-item" %>
         <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item" %>
         
@@ -21,20 +21,26 @@ Panneau d'administration
   </div>
   <div class="col m9">
     <div class="collection">
-        <% @labelisations.order("created_at DESC").each do |theme| %>
-      <div class="collection-item">
-    
-              <p><b><%= theme.name %></b>
+        
 
-                <br><% if theme.definition %>
-                attribué à la définition de <b><%= link_to theme.definition.name, word_path(theme.definition.word) %></b> suivante : "<i><b><%= theme.definition.content %></b></i>"
-                <% end %>
-                
-              <br><small>(<%= link_to "attribuer cette définition à un autre thème", edit_definition_theme_path(theme) %>)
-              </small>
-            </p>
-      </div>
-    <% end %>
+
+    <% @groups.each do |association| %>
+				<div class="collection-item">
+
+					<p><%= association.name if association.name %> 
+					<br>
+					<small>(<%= link_to "Modifier le nom de l'association", edit_group_path(association) %> | <%= link_to "Supprimer ce groupe de mots", association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %>)</small>
+					<br>
+					<small>
+						<b>Mots associés : </b>
+						<% association.definitions.sort_by{ |a| a.name or 0 }.each do |definition| %>
+        					<i><%= link_to definition.name, word_path(definition.word) %>,</i>
+    					<% end %>
+    				</small>
+				</div>
+			<% end %>
+
+
     </div>
 
 
@@ -42,8 +48,3 @@ Panneau d'administration
 </div>
 
 <% end %>
-
-
-
-
-		
