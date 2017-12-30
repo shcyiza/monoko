@@ -36,5 +36,9 @@ class User < ActiveRecord::Base
       definition_groups
     end
 
+    def contributions_count
+      words.count + definitions.count + translations.count + themes.count + associations.count 
+    end
+
 
 end
