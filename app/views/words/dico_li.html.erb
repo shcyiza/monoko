@@ -18,7 +18,7 @@ Dictionnaire lingala - français
         
         <% if word.definitions.any? && word.definitions.last.definition_translations %>
           <% word.definitions.last.definition_translations.each do |translation| %>
-            <%= translation.word.name if translation %>, 
+            <%= translation.word.name if translation && translation.word %>, 
           <% end %>
         
         <% end %>

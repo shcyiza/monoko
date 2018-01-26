@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   end
 
   def admin_words
-    @words = Word.all
+    @words = Word.all.where.not(name: [nil, '']).page(params[:page])
   end
 
   def admin_translations

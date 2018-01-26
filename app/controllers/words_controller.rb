@@ -8,11 +8,11 @@ class WordsController < ApplicationController
   # GET /words.json
   def index
     #@words, @alphaParams = Word.in_lingala.order('name ASC').alpha_paginate(params[:letter]){|word| word.name}
-    @words = Word.order('name ASC').where.not(name: [nil, '']).page(params[:page])
+    @words = Word.in_lingala.order('name ASC').where.not(name: [nil, '']).page(params[:page])
   end
 
   def dico_fr
-    @words = Word.in_french.order('name ASC')
+    @words = Word.in_french.order('name ASC').where.not(name: [nil, '']).page(params[:page])
   end
 
   def dico_li
