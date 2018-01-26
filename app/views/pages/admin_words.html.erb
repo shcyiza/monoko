@@ -18,6 +18,7 @@ Panneau d'administration
         <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item" %>
       </div>
 	</div>
+
 	<div class="col m9">
 		<div class="collection">
 			<% @words.each do |word| %>
@@ -29,7 +30,12 @@ Panneau d'administration
 		</div>
 
 
+		<div class="center-align"><small><%= paginate @words %> </small></div>
+
+
 	</div>
 </div>
+
+
 
 <% end %>
