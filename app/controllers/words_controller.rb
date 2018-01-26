@@ -7,7 +7,8 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words, @alphaParams = Word.in_lingala.order('name ASC').alpha_paginate(params[:letter]){|word| word.name}
+    #@words, @alphaParams = Word.in_lingala.order('name ASC').alpha_paginate(params[:letter]){|word| word.name}
+    @words = Word.order('name ASC').page(params[:page])
   end
 
   def dico_fr

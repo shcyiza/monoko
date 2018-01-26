@@ -23,7 +23,7 @@ Panneau d'administration
 			<% @words.each do |word| %>
 		      <div class="collection-item">
 		      	<p><%= link_to word.name.titleize, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
-						<!--<br><small><%= word.definitions.count %> définitions</small></p> for test-->
+						<br><small><%= word.definitions.count %> définitions</small></p>
 		    </div>
 		    <% end %>
 		</div>
