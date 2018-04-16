@@ -1,4 +1,4 @@
-<h3>Modifier l'exemple à la définition <small><i>"<%= @exemple.definition.content %>" du mot <%= link_to @exemple.definition.name, word_path(@exemple.definition.word) %></i></small></h3>
+<h3>Modifier l'exemple à la définition <small><i>"<%= @exemple.word.name %>" du mot <%= link_to @exemple.word.name, word_path(@exemple.word) %></i></small></h3>
 <hr>
 
 <%= form_for(@exemple) do |f| %>
@@ -29,12 +29,12 @@
     <%= f.check_box :is_li %>
   </div>-->
   <div class="field">
-    
-    <%= f.hidden_field :definition_id %>
+
+    <%= f.hidden_field :word_id %>
   </div>
-  
+
     <%= f.hidden_field :contributor_id %>
-  
+
   <div class="field">
     <%= f.label :source %><br>
     <%= f.text_field :source %>
@@ -48,4 +48,3 @@
   </div>
   <br>
 <% end %>
-

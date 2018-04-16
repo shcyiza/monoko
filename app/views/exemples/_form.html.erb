@@ -26,10 +26,10 @@
     <%= f.check_box :is_li %>
   </div>-->
   <div class="field">
-    
-    <%= f.hidden_field :definition_id, value: definition.id %>
+
+    <%= f.hidden_field :word_id, value: word.id %>
   </div>
-  
+
   <% if user_signed_in? %>
     <%= f.hidden_field :contributor_id, value: current_user.id %>
   <% end %>

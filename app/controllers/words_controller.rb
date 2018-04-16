@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   before_action :set_word, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
 
-  
+
 
   # GET /words
   # GET /words.json
@@ -55,6 +55,15 @@ class WordsController < ApplicationController
         format.html { render :new }
         format.json { render json: @word.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def import
+    if current_user.is_admin
+      Word.import(params[:file], current_user)
+      redirect_to admin_words_path, notice: 'Les mots on bien ete importé.'
+    else
+      redirect_back fallback_location: root_path, notice: "Vous n'etes pas autorisez a faire cette action"
     end
   end
 

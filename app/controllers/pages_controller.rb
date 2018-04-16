@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  
+
 
 
   def home
@@ -23,7 +23,7 @@ class PagesController < ApplicationController
   end
 
   def admin_definitions
-    @definitions = Definition.all
+    @definitions = Definition.all.page(params[:page])
   end
 
   def admin_words

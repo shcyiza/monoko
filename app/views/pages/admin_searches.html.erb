@@ -7,22 +7,21 @@ Panneau d'administration
 <div class="row">
   <div class="col m3 s12">
     <div class="collection">
-        <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
-        <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
-        <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
-        <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
-        <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
-        <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
-        <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
-        <%= link_to "#{DefinitionGroup.count} Associations", admin_definitions_groups_path, class: "collection-item" %>
-        <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item active" %>
-        
-      </div>
+      <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
+      <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
+      <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item" %>
+      <%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
+      <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
+      <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
+      <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
+      <%= link_to "#{DefinitionGroup.count} Associations", admin_definitions_groups_path, class: "collection-item" %>
+      <%= link_to "#{Search.count} Recherches", admin_searches_path, class: "collection-item active" %>
+    </div>
   </div>
   <div class="col m9">
     <div class="collection">
-        <% @searches.each do |search| %> 
-		
+        <% @searches.each do |search| %>
+
 			<div class="collection-item">
 				<p>
 					<%= link_to search.keywords, search_path(search) %>
@@ -30,13 +29,13 @@ Panneau d'administration
 					<small>
 						<i><%= search.created_at.strftime("recherché le %d %B %Y à %Hh%M") %></i>
 					</small>
-					
+
 				</p>
 			</div>
 		<% end %>
 
 
-    
+
 
 
     </div>

@@ -21,6 +21,7 @@ Panneau d'administration
 
 	<div class="col m9">
 		<div class="collection">
+					<button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">import_export</i> importer des mots</button>
 			<% @words.each do |word| %>
 		      <div class="collection-item">
 		      	<p><%= link_to word.name.titleize, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
@@ -34,8 +35,27 @@ Panneau d'administration
 
 
 	</div>
+
+	<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+
+			<h2>Importer d'un fichier xlsx ou CVS</h2>
+			<%= form_tag import_words_path, multipart: true do %>
+			  <%= file_field_tag :file %>
+			  <%= submit_tag "Import" %>
+			<% end %>
+
+		</div>
+	</div>
+
+
 </div>
 
-
-
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>

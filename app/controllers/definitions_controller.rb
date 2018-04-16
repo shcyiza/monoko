@@ -5,7 +5,7 @@ class DefinitionsController < ApplicationController
   # GET /definitions
   # GET /definitions.json
   def index
-    @definitions = Definition.all
+    @definitions = Definition.order('content ASC').where.not(content: [nil, '']).page(params[:page])
     @words, @alphaParams = Word.in_lingala.order('name ASC').alpha_paginate(params[:letter]){|word| word.name}
   end
 

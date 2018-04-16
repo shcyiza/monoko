@@ -10,7 +10,7 @@ Panneau d'administration
         <%= link_to "#{User.count} Contributeurs", admin_path, class: "collection-item" %>
         <%= link_to "#{Word.count} Mots", admin_words_path, class: "collection-item" %>
         <%= link_to "#{Definition.count} Définitions", admin_definitions_path, class: "collection-item active" %>
- 		<%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
+ 				<%= link_to "#{DefinitionTranslation.count} Traductions", admin_translations_path, class: "collection-item" %>
         <%= link_to "#{Theme.count} Thèmes", admin_themes_path, class: "collection-item" %>
         <%= link_to "#{DefinitionTheme.count} Labelisations", admin_definitions_themes_path, class: "collection-item" %>
         <%= link_to "#{Group.count} Groupes", admin_groups_path, class: "collection-item" %>
@@ -29,6 +29,7 @@ Panneau d'administration
 			<% end %>
 		</div>
 
+		<div class="center-align"><small><%= paginate @definitions %> </small></div>
 
 	</div>
 </div>

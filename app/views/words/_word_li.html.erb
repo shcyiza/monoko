@@ -1,18 +1,18 @@
 <ul class="collection">
-  
+
 
 <!-- definitions visible to all -->
 
   <% @word.definitions.each do |definition| %>
-    
+
 
 
     <!-- contenu de la définition -->
-          
+
       <li class="collection-item">
-            
+
         <% if definition.themes.any? %>
-          
+
                 <span class="new badge teal" data-badge-caption="">
                   <%= link_to definition.definition_themes.last.name, theme_path(definition.definition_themes.last.theme) %>
                 </span>
@@ -30,17 +30,17 @@
 
 
     <!-- traductions -->
-        
+
         <% if definition.definition_translations.any? %>
         <p>
           <small><strong>En français : </strong></small>
           <br>
-          
+
           <% definition.definition_translations.each do |translation| %>
               <% if translation.word %>
                 <%= link_to translation.word.name, word_path(translation.word) %>
 
-                
+
                 <% if user_signed_in? && current_user.id == translation.word.contributor_id or current_user.is_admin %>
                    <!-- modifier le mot -->
                   <%= link_to edit_word_path(translation.definition.word) do %>
@@ -53,54 +53,16 @@
                   <%= link_to edit_definition_translation_path(translation) do %>
                     <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
                   <% end %>
-                
+
                 <% end %>
 
               <% end %>
                 <br>
 
           <% end %>
-            
+
         </p>
         <% end %>
-
-    <!-- exemples -->
-
-        <% if definition.exemples.any? %>
-        
-
-        <p>
-              <small><strong>Exemples : </strong></small>
-              <br>
-              <% definition.exemples.each do |exemple| %>
-                - <%= exemple.content %>
-
-                <% if user_signed_in? && current_user.id == exemple.contributor_id %>
-                  <%= link_to edit_exemple_path(exemple) do %>
-                    <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
-                  <% end %>
-                  
-                <% end %>
-
-                <br>
-              <% end %>
-            
-            </p>
-
-        <% end %>
-
-
-
-        <% if user_signed_in? %>
-            <!-- Modal Structure Exemple -->
-            <div id="modal3_<%= definition.id %>" class="modal bottom-sheet">
-              <div class="modal-content container">   
-                <%= render partial: "exemples/form", locals: {definition: definition} %>
-              </div>
-            </div>
-        <% end %>
-            
-
       <!-- associations -->
 
         <% if definition.groups.any? %>
@@ -110,7 +72,7 @@
               <br>
 
               <% definition.groups.each do |group| %>
-                <small><b><%= group.name %> 
+                <small><b><%= group.name %>
 
                 <!-- si le user a créé le groupe de mots -->
                 <% if user_signed_in? && current_user.id == group.contributor_id %>
@@ -120,21 +82,21 @@
 
                   <%= link_to group, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
                     <%= content_tag(:i, "delete", :class=> 'tiny material-icons') %>
-                  <% end %> 
+                  <% end %>
 
                 <% end %>
 
-                :</b></small> 
+                :</b></small>
 
 
                 <% group.definitions.sort_by(&:name).each do |terme_associe| %>
-                  
+
                   <% unless terme_associe == definition %>
                     <%= link_to terme_associe.name, word_path(terme_associe.word) if terme_associe.word %>
 
                     <!-- si le user a créé la définition objet de l'association -->
                     <% if user_signed_in? && current_user.id == terme_associe.contributor_id %>
-                      
+
                       <%= link_to edit_definition_path(terme_associe) do %>
                         <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
                       <% end %>
@@ -156,7 +118,7 @@
                       <% end %>
                     <% end %>
 
-                    , 
+                    ,
                   <% end %>
 
                 <% end %><br>
@@ -173,23 +135,23 @@
     <!-- visible only when signed in -->
 
 
-            
+
           <% if user_signed_in? %>
             <!-- Modal Structure Groupe -->
               <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
                 <div class="modal-content container">
-                  <h6>Associez cette définition à d'autres termes, 
+                  <h6>Associez cette définition à d'autres termes,
                    ou rendez-vous en bas de la liste pour créer une nouvelle association
                   </h6>
 
-                  
-                  
+
+
                   <ul class="collection">
                     <% @groups.sort_by(&:name_li).each do |group| %>
                       <li class="collection-item">
                         <div class="row">
                           <div class="col m9">
-                            <b><%= group.name_li %> :</b> 
+                            <b><%= group.name_li %> :</b>
                             <% group.definitions.sort_by(&:name).each do |definition| %>
                               <i><%= definition.name %>,</i>
                             <% end %>
@@ -215,7 +177,7 @@
                   </ul>
 
 
-                </div> 
+                </div>
               </div>
                   <br>
             <% end %>
@@ -223,10 +185,10 @@
 
       <!-- bouton de modification ou ajout -->
 
-           <% if user_signed_in? %>       
+           <% if user_signed_in? %>
           <div class="right-align">
             <div class="fixed-action-btn horizontal click-to-toggle" style="position: relative;">
-              
+
               <a class="btn-floating btn-large waves-effect waves-light red">
               <i class="material-icons">edit</i>
               </a>
@@ -234,11 +196,11 @@
               <ul>
                 <li>
                 <button data-target="modal5_<%= definition.id %>" class="btn-floating red modal-trigger"><i class="material-icons">language</i></button></li>
-                
+
                 <li><a data-target="modal3_<%= definition.id %>" class="btn-floating yellow darken-1 modal-trigger"><i class="material-icons">info_outline</i></a></li>
-                
+
                 <li><button data-target="modal2_<%= definition.id %>" class="btn-floating green modal-trigger"><i class="material-icons">label</i></button></li>
-                
+
                 <li><a data-target="modal4_<%= definition.id %>" class="btn-floating blue modal-trigger"><i class="material-icons">group_work</i></a></li>
               </ul>
 
@@ -264,16 +226,16 @@
             <h6>Ajoutez un thème à cette définition de <%= @word.name %></h6>
             <hr>
             <div class="row">
-              
+
                 <div class="col m9 s12">
                   <%= render partial: "definition_themes/form", locals: {definition: definition} %>
-                  
+
                 </div>
                 <div class="col m3 s12">
                   <%= link_to "ou ajoutez un nouveau thème au lexique", new_theme_path %>
                 </div>
-              
-            </div> 
+
+            </div>
           </div>
             <!--<div class="modal-footer">
               <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -285,7 +247,7 @@
           <div class="modal-content container">
             <h6>Ajoutez une traduction à cette définition de <%= @word.name %></h6>
             <div class="row">
-              
+
               <div class="col m9 s12">
               <%= render partial: "definition_translations/form", locals: {definition: definition} %>
               </div>
@@ -293,7 +255,7 @@
               <div class="col m3 s12">
               <%= link_to "ou ajoutez un nouveau mot au dictionnaire", new_word_path %>
               </div>
-              
+
             </div>
           </div>
             <!--<div class="modal-footer">

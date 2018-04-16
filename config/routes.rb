@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :definition_groups
   resources :groups
   resources :definition_themes
-  
+
   devise_for :users
   resources :users
 
@@ -31,9 +31,9 @@ Rails.application.routes.draw do
   get 'pages/terms'
   get 'admin' => "pages#admin"
 
-  
+
   #admin page
-  
+
   get 'admin_words' => 'pages#admin_words'
   get 'admin_definitions' => 'pages#admin_definitions'
   get 'admin_translations' => 'pages#admin_translations'
@@ -43,6 +43,11 @@ Rails.application.routes.draw do
   get 'admin_groups' => 'pages#admin_groups'
   get 'admin_searches' => 'pages#admin_searches'
 
+  resources :words do
+    collection do
+      post :import
+    end
+  end
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
@@ -54,7 +59,7 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
