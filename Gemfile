@@ -39,7 +39,6 @@ gem 'rails-jquery-autocomplete'
 
 gem 'alphabetical_paginate'
 gem 'kaminari'
-gem 'pg'
 
 # importing and exporting data
 gem 'activerecord-import'
@@ -67,7 +66,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.21.0'
   gem 'rails_12factor'
   gem 'thin'
 end
