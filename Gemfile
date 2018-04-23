@@ -4,8 +4,8 @@ ruby '2.4.1'
 gem 'rails', '5.0.6 '
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 gem "materialize-sass"
+gem 'sass-rails', '~> 5.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -34,18 +34,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'jquery-ui-rails'
-gem 'rails-jquery-autocomplete'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'rails-jquery-autocomplete'
 
 gem 'alphabetical_paginate'
 gem 'kaminari'
 
 # importing and exporting data
 gem 'activerecord-import'
-gem 'roo'
-gem 'rubyzip', '>= 1.2.1'
 gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'
+gem 'roo'
+gem 'rubyzip', '>= 1.2.1'
 # end import/export data
 
 group :development, :test do
@@ -66,7 +66,7 @@ group :development do
 end
 
 group :production do
-  gem 'thin'
   gem 'pg'
   gem 'rails_12factor'
+  gem 'thin'
 end
