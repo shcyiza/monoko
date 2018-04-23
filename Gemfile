@@ -39,6 +39,7 @@ gem 'rails-jquery-autocomplete'
 
 gem 'alphabetical_paginate'
 gem 'kaminari'
+gem 'pg'
 
 # importing and exporting data
 gem 'activerecord-import'
