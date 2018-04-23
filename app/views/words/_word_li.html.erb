@@ -22,9 +22,11 @@
 
         <%= definition.content if definition.content %>
 
-        <% if user_signed_in? && current_user.id == definition.contributor_id %>
-          <%= link_to edit_definition_path(definition) do %>
-            <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+        <% if current_user %>
+          <% if current_user.id == definition.contributor_id %>
+            <%= link_to edit_definition_path(definition) do %>
+              <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+            <% end %>
           <% end %>
         <% end %>
 
@@ -41,19 +43,23 @@
                 <%= link_to translation.word.name, word_path(translation.word) %>
 
 
-                <% if user_signed_in? && current_user.id == translation.word.contributor_id or current_user.is_admin %>
-                   <!-- modifier le mot -->
-                  <%= link_to edit_word_path(translation.definition.word) do %>
-                    <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                <% if current_user %>
+                  <% if current_user.id == translation.word.contributor_id or current_user.is_admin %>
+                     <!-- modifier le mot -->
+                    <%= link_to edit_word_path(translation.definition.word) do %>
+                      <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                    <% end %>
                   <% end %>
                 <% end %>
 
-                <% if user_signed_in? && current_user.id == translation.contributor_id or current_user.is_admin %>
-                  <!-- associer à un autre mot -->
-                  <%= link_to edit_definition_translation_path(translation) do %>
-                    <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
-                  <% end %>
+                <% if current_user %>
+                  <% if current_user.id == translation.contributor_id or current_user.is_admin %>
+                    <!-- associer à un autre mot -->
+                    <%= link_to edit_definition_translation_path(translation) do %>
+                      <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
+                    <% end %>
 
+                <% end %>
                 <% end %>
 
               <% end %>
@@ -75,15 +81,17 @@
                 <small><b><%= group.name %>
 
                 <!-- si le user a créé le groupe de mots -->
-                <% if user_signed_in? && current_user.id == group.contributor_id %>
-                  <%= link_to edit_group_path(group) do %>
-                    <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
-                  <% end %>
+                <% if current_user %>
+                    <% if current_user.id == group.contributor_id %>
+                      <%= link_to edit_group_path(group) do %>
+                        <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                      <% end %>
 
-                  <%= link_to group, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
-                    <%= content_tag(:i, "delete", :class=> 'tiny material-icons') %>
-                  <% end %>
+                      <%= link_to group, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
+                        <%= content_tag(:i, "delete", :class=> 'tiny material-icons') %>
+                      <% end %>
 
+                    <% end %>
                 <% end %>
 
                 :</b></small>
@@ -95,26 +103,30 @@
                     <%= link_to terme_associe.name, word_path(terme_associe.word) if terme_associe.word %>
 
                     <!-- si le user a créé la définition objet de l'association -->
-                    <% if user_signed_in? && current_user.id == terme_associe.contributor_id %>
+                    <% if current_user %>
+                      <% if current_user.id == terme_associe.contributor_id %>
 
-                      <%= link_to edit_definition_path(terme_associe) do %>
-                        <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                        <%= link_to edit_definition_path(terme_associe) do %>
+                          <%= content_tag(:i, "edit" ,:class=> 'tiny material-icons') -%>
+                        <% end %>
+
                       <% end %>
-
                     <% end %>
 
                     <!-- si le user est l'auteur de l'association-même, alors il peut modifier cette association ou la supprimer -->
                     <% terme_associe.definition_groups.each do |association| %>
-                      <% if user_signed_in? && current_user.id == association.contributor_id %>
+                      <% if current_user %>
+                        <% if current_user.id == association.contributor_id %>
 
-                        <%= link_to edit_definition_group_path(association) do %>
-                          <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
+                          <%= link_to edit_definition_group_path(association) do %>
+                            <%= content_tag(:i, "swap_horiz" ,:class=> 'tiny material-icons') -%>
+                          <% end %>
+
+                          <%= link_to association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
+                            <%= content_tag(:i, "delete" ,:class=> 'tiny material-icons') -%>
+                          <% end %>
+
                         <% end %>
-
-                        <%= link_to association, method: :delete, data: { confirm: 'Etes-vous sûr ?' } do %>
-                          <%= content_tag(:i, "delete" ,:class=> 'tiny material-icons') -%>
-                        <% end %>
-
                       <% end %>
                     <% end %>
 
@@ -136,7 +148,7 @@
 
 
 
-          <% if user_signed_in? %>
+          <% if current_user %>
             <!-- Modal Structure Groupe -->
               <div id="modal4_<%= definition.id %>" class="modal bottom-sheet">
                 <div class="modal-content container">
@@ -218,7 +230,7 @@
 
 
 
-      <% if user_signed_in? %>
+      <% if current_user %>
 
       <!-- Modal Structure Theme -->
         <div id="modal2_<%= definition.id %>" class="modal bottom-sheet">

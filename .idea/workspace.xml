@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="883c98ad-97c0-4786-96a7-e1af566058eb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/views/words/_word_li.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_word_li.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/words/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -18,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/monoko@developement.rcov" NAME="developement Coverage Results" MODIFIED="1524507859467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
+    <SUITE FILE_PATH="coverage/monoko@developement.rcov" NAME="developement Coverage Results" MODIFIED="1524521129615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
     <SUITE FILE_PATH="coverage/monoko@Unnamed.rcov" NAME="developement Coverage Results" MODIFIED="1524269082156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
   </component>
   <component name="DatabaseView">
@@ -69,12 +70,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/words/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="931">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_word_li.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/words/_word_li.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/words/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-760" />
           </provider>
         </entry>
       </file>
@@ -82,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1368">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -109,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/Gemfile.lock">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
-              <caret line="144" column="12" lean-forward="true" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="14" />
+              <caret line="144" column="12" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -141,6 +158,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20180416095402_exemple_belongs_to_word_not_definiton.rb" />
         <option value="$PROJECT_DIR$/app/models/exemple.rb" />
         <option value="$PROJECT_DIR$/app/views/words/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/words/_word_li.html.erb" />
       </list>
     </option>
   </component>
@@ -278,12 +296,12 @@
       <workItem from="1524493172787" duration="599000" />
       <workItem from="1524494986362" duration="599000" />
       <workItem from="1524496182120" duration="6000" />
-      <workItem from="1524496853682" duration="18526000" />
+      <workItem from="1524496853682" duration="20183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21392000" />
+    <option name="totallyTimeSpent" value="23049000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,7 +316,7 @@
     <frame x="0" y="27" width="1920" height="2133" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13533835" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13533835" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5042965" side_tool="true" weight="0.32865497" />
@@ -307,7 +325,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49838883" weight="0.32982457" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49677765" weight="0.14573644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49570355" visible="true" weight="0.32816538" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49570355" visible="true" weight="0.32816538" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -454,7 +472,7 @@
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
-          <caret line="144" column="12" lean-forward="true" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="14" />
+          <caret line="144" column="12" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -489,7 +507,7 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
@@ -500,10 +518,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/words/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-760" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/words/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="931">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/words/_word_li.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="60" />
         </state>
       </provider>
     </entry>
