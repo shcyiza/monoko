@@ -1,9 +1,11 @@
 
   <h3>
     <%= @word.name.titleize %>
-      <% if user_signed_in? && current_user.id == @word.contributor_id or current_user.is_admin %>
-        <%= link_to edit_word_path(@word) do %>
-          <%= content_tag(:i, "edit" ,:class=> 'small material-icons') -%>
+      <% if user_signed_in? %>
+        <% if current_user.id == @word.contributor_id || current_user.is_admin %>
+          <%= link_to edit_word_path(@word) do %>
+            <%= content_tag(:i, "edit" ,:class=> 'small material-icons') -%>
+          <% end %>
         <% end %>
       <% end %>
 
