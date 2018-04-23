@@ -1,0 +1,17 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: @timestamp) do |sheet|
+
+    sheet.add_row %w(LINGALA PHONETIQUE FR ENG EXEMPLE DEFINITION)
+
+    @all_words.each do |word|
+    sheet.add_row [
+        word.name,
+        word.prononciation,
+        content_if_exist(word.definitions.where(is_fr: true).first),
+        content_if_exist(word.definitions.where(is_en: true).first),
+        content_if_exist(word.exemples.first),
+        content_if_exist(word.definitions.where(is_li: true).first)
+        ]
+    end
+end

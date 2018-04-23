@@ -1,6 +1,5 @@
 class ExempleBelongsToWordNotDefiniton < ActiveRecord::Migration[5.0]
   def change
-    remove_column :exemples, :definition_id
-    add_reference :exemples, :word
+    change_column :exemples, :definition_id, :word_id
   end
 end

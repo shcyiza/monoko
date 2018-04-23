@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-
-
+ruby '2.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.6 '
 
@@ -14,8 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
-
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,7 +40,13 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'alphabetical_paginate'
 gem 'kaminari'
 
+# importing and exporting data
+gem 'activerecord-import'
 gem 'roo'
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'
+# end import/export data
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

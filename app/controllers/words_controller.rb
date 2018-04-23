@@ -60,11 +60,15 @@ class WordsController < ApplicationController
 
   def import
     if current_user.is_admin
-      Word.import(params[:file], current_user)
+      Word.import_file(params[:file], current_user)
       redirect_to admin_words_path, notice: 'Les mots on bien ete importé.'
     else
       redirect_back fallback_location: root_path, notice: "Vous n'etes pas autorisez a faire cette action"
     end
+  end
+
+  def export
+
   end
 
   # PATCH/PUT /words/1

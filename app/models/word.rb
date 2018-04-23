@@ -18,36 +18,49 @@ class Word < ActiveRecord::Base
   	self.definition_translations
   end
 
-	def self.import file, contributor
+	def self.import_file file, contributor
+
+		words = []
+		definitions = []
+		exemples = []
+
 		spreadsheet = Roo::Spreadsheet.open(file.path)
+
 		(2..spreadsheet.last_row).each do |i|
 
 			row = spreadsheet.row(i)
-			word = Word.new(contributor: contributor, name: row[0], prononciation: row[1], is_li: true)
+			words << Word.new(contributor: contributor, name: row[0], prononciation: row[1], is_li: true, imported_file: file.path, imported_row: row)
+		end
 
-			if word.save
-				# create the definitions in french
-				if row[2] != nil
-					Definition.create!(contributor: contributor, word: word, content: row[2], is_fr: true)
-				end
+		Word.import(words)
 
-				# create the definitions in english
-				if row[3] != nil
-					Definition.create!(contributor: contributor, word: word, content: row[3], is_en: true)
-				end
-
-				# create exemples
-				if row[4] != nil
-					Exemple.create!(contributor: contributor, word: word, content: row[4], is_li: true)
-				end
-
-				# create the definitions in ligala
-				if row[5] != nil
-					Definition.create!( contributor: contributor, word: word, content: row[5], is_en: true)
-				end
+		(2..spreadsheet.last_row).each do |i|
+			row = spreadsheet.row(i)
+			word = Word.find_by(name: row[0])
+			# create the definitions in french
+			if row[2] != nil
+				definitions  << Definition.new(contributor: contributor, word: word, content: row[2], is_fr: true, imported_file: file.path, imported_row: row)
 			end
 
+			# create the definitions in english
+			if row[3] != nil
+				definitions << Definition.new(contributor: contributor, word: word, content: row[3], is_en: true, imported_file: file.path, imported_row: row)
+			end
+
+			# create exemples
+			if row[4] != nil
+				exemples << Exemple.new(contributor: contributor, word: word, content: row[4], is_li: true, imported_file: file.path, imported_row: row)
+			end
+
+			# create the definitions in ligala
+			if row[5] != nil
+				definitions << Definition.new( contributor: contributor, word: word, content: row[5], is_li: true, imported_file: file.path, imported_row: row)
+			end
 		end
+
+		Exemple.import(exemples)
+		Definition.import(definitions)
+
 	end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180416095402) do
+ActiveRecord::Schema.define(version: 20180417100229) do
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20180416095402) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.boolean  "is_en"
+    t.string   "imported_file"
+    t.string   "imported_row"
   end
 
   create_table "exemples", force: :cascade do |t|
@@ -59,6 +61,8 @@ ActiveRecord::Schema.define(version: 20180416095402) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "word_id"
+    t.string   "imported_file"
+    t.string   "imported_row"
     t.index ["word_id"], name: "index_exemples_on_word_id"
   end
 
@@ -153,6 +157,8 @@ ActiveRecord::Schema.define(version: 20180416095402) do
     t.string   "image_title"
     t.text     "image_description"
     t.string   "image_url"
+    t.string   "imported_file"
+    t.string   "imported_row"
   end
 
 end

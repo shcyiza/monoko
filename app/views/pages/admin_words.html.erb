@@ -21,7 +21,7 @@ Panneau d'administration
 
 	<div class="col m9">
 		<div class="collection">
-					<button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">import_export</i> importer des mots</button>
+					<button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">import_export</i> importer/exporter des mots</button>
 			<% @words.each do |word| %>
 		      <div class="collection-item">
 		      	<p><%= link_to word.name.titleize, word_path(word) %> <small>(<i><%= word.prononciation if word.prononciation %></i>)</small>
@@ -38,13 +38,20 @@ Panneau d'administration
 
 	<div id="modal1" class="modal bottom-sheet">
     <div class="modal-content">
+      <div class="row">
 
-			<h2>Importer d'un fichier xlsx ou CVS</h2>
-			<%= form_tag import_words_path, multipart: true do %>
-			  <%= file_field_tag :file %>
-			  <%= submit_tag "Import" %>
-			<% end %>
-
+        <div class="col m6 s12">
+          <h2>Importer d'un fichier xlsx</h2>
+          <%= form_tag import_words_path, multipart: true do %>
+            <%= file_field_tag :file %>
+            <%= submit_tag "Importer", class: "btn" %>
+          <% end %>
+        </div>
+        <div class="col m6 s12">
+          <h2>Exporter vos mots fichier xlsx</h2>
+          <%= link_to "Exporter les mots", admin_words_path(format: "xlsx"), class: "btn" %>
+        </div>
+      </div>
 		</div>
 	</div>
 
