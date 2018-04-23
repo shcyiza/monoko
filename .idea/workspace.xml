@@ -72,8 +72,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/words/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="57">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -278,12 +278,12 @@
       <workItem from="1524493172787" duration="599000" />
       <workItem from="1524494986362" duration="599000" />
       <workItem from="1524496182120" duration="6000" />
-      <workItem from="1524496853682" duration="18012000" />
+      <workItem from="1524496853682" duration="18526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20878000" />
+    <option name="totallyTimeSpent" value="21392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,7 +298,7 @@
     <frame x="0" y="27" width="1920" height="2133" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13533835" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13533835" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5042965" side_tool="true" weight="0.32865497" />
@@ -307,7 +307,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49838883" weight="0.32982457" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49677765" weight="0.14573644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49570355" visible="true" weight="0.32816538" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49570355" visible="true" weight="0.32816538" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -502,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/words/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="57">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>
