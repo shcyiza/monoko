@@ -13,7 +13,7 @@
     <small>
       (<i><%= @word.prononciation if @word.prononciation %></i>)
 
-      <% if user_signed_in? %>
+      <% if current_user %>
       <button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">edit</i></button>
       <% end %>
     </small>
