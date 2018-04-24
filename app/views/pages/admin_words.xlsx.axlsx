@@ -4,7 +4,7 @@ wb.add_worksheet(name: @timestamp) do |sheet|
 
     sheet.add_row %w(WORD_ID TO_DELET LINGALA PHONETIQUE FR ENG EXEMPLE DEFINITION)
 
-    @all_words.each do |word|
+    @words.each do |word|
     sheet.add_row [
         word.id,
         nil,

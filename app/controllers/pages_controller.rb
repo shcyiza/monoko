@@ -22,7 +22,6 @@ class PagesController < ApplicationController
 
   def admin_words
     @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page])
-    @all_words = Word.all.order('name ASC').where.not(name: [nil, ''])
     @timestamp = "admin_export_#{Time.now.strftime('%d%m%Y%H%M%S')}"
     respond_to do |format|
       format.html
