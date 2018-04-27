@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   get 'admin_definitions_groups' => 'pages#admin_definitions_groups'
   get 'admin_groups' => 'pages#admin_groups'
   get 'admin_searches' => 'pages#admin_searches'
+  get 'export_words' => 'pages#export_words'
 
   resources :words do
     collection do

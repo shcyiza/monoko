@@ -22,7 +22,7 @@ class PagesController < ApplicationController
 
   def admin_words
     @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page])
-    @timestamp = "admin_export_#{Time.now.strftime('%d%m%Y%H%M%S')}"
+    @total_export_page = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page]).per(500).total_pages
     respond_to do |format|
       format.html
       format.xlsx do
@@ -30,6 +30,17 @@ class PagesController < ApplicationController
       end
     end
   end
+
+  def export_words
+    @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page]).per(500)
+    @timestamp = "word_export_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    respond_to do |format|
+      format.xlsx do
+        response.headers['Content-Disposition'] = "attachment; filename='#{@timestamp}.xlsx'"
+      end
+    end
+  end
+
 
   def admin_translations
     @translations = DefinitionTranslation.all
