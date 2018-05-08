@@ -63,4 +63,57 @@ class Word < ActiveRecord::Base
 
 	end
 
+	def self.import_updates file, contributor
+
+    definitions = []
+    exemples = []
+
+		spreadsheet = Roo::Spreadsheet.open(file.path)
+
+		(2..spreadsheet.last_row).each do |i|
+
+			row = spreadsheet.row(i)
+			word = Word.find(row[0])
+			# create the definitions in french
+			if row[1] == 1
+				word.destroy
+      else
+
+        # modify words data
+        word.update(name: row[2], prononciation: row[3])
+        # create or modifying the definitions in french
+        if word.definitions.where(is_fr: true).first
+          word.definitions.where(is_fr: true).first.update(content: row[4])
+        else
+          definitions << Definition.new(contributor: contributor, word: word, content: row[4], is_fr: true, imported_file: file.path, imported_row: row)
+        end
+
+        # create or modifying the definitions in english
+        if word.definitions.where(is_en: true).first
+          word.definitions.where(is_en: true).first.update(content: row[5])
+        else
+          definitions << Definition.new(contributor: contributor, word: word, content: row[5], is_fr: true, imported_file: file.path, imported_row: row)
+        end
+
+        # create or modifying the exemples
+        if word.exemples.first
+          word.exemples.first.update(content: row[6])
+        else
+          exemples << Exemple.new(contributor: contributor, word: word, content: row[6], is_li: true, imported_file: file.path, imported_row: row)
+        end
+
+        # create the definitions in ligala
+        if word.definitions.where(is_li: true).first
+          word.definitions.where(is_li: true).first.update(content: row[7])
+        else
+          definitions << Definition.new(contributor: contributor, word: word, content: row[7], is_fr: true, imported_file: file.path, imported_row: row)
+        end
+
+      end
+		end
+
+    Exemple.import(exemples)
+    Definition.import(definitions)
+
+	end
 end

@@ -36,7 +36,7 @@ class PagesController < ApplicationController
     @timestamp = "word_export_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
     respond_to do |format|
       format.xlsx do
-        response.headers['Content-Disposition'] = "attachment; filename='#{@timestamp}.xlsx'"
+        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
       end
     end
   end

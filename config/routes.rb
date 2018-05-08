@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   resources :words do
     collection do
       post :import
+      post :import_updates
     end
   end
 

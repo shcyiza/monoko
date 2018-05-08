@@ -67,8 +67,13 @@ class WordsController < ApplicationController
     end
   end
 
-  def export
-
+  def import_updates
+    if current_user.is_admin
+      Word.import_updates(params[:file], current_user)
+      redirect_to admin_words_path, notice: 'Les mots on bien ete modifié.'
+    else
+      redirect_back fallback_location: root_path, notice: "Vous n'etes pas autorisez a faire cette action"
+    end
   end
 
   # PATCH/PUT /words/1

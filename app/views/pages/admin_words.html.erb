@@ -46,6 +46,13 @@ Panneau d'administration
             <%= file_field_tag :file %>
             <%= submit_tag "Importer", class: "btn" %>
           <% end %>
+
+          <h2>Importer des modification en xlsx</h2>
+          <%= form_tag import_updates_words_path, multipart: true do %>
+            <%= file_field_tag :file %>
+            <%= submit_tag "Importer", class: "btn" %>
+          <% end %>
+
         </div>
         <div class="col m6 s12">
           <h2>Exporter tout les mots en fichier xlsx</h2>

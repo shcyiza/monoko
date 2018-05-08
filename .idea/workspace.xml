@@ -2,11 +2,337 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="883c98ad-97c0-4786-96a7-e1af566058eb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8002217-c259-4379-ab99-97f2d10de82c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8002217-c259-4379-ab99-97f2d10de82c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8002217-c259-4379-ab99-97f2d10de82c/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8002217-c259-4379-ab99-97f2d10de82c/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/monoko.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monoko.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rdoc" beforeDir="false" afterPath="$PROJECT_DIR$/README.rdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/definition_groups.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/definition_groups.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/definition_themes.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/definition_themes.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/definition_translations.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/definition_translations.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/definitions.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/definitions.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/exemples.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/exemples.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/groups.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/groups.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/illustrations.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/illustrations.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/pages.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/pages.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/searches.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/searches.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/skills.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/skills.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/themes.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/themes.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/words.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/words.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/definition_groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/definition_groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/definition_themes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/definition_themes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/definition_translations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/definition_translations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/definitions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/definitions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/exemples.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/exemples.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/groups.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/groups.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/illustrations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/illustrations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/searches.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/searches.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/skills.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/themes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/themes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/words.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/words.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/concerns/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/definition_groups_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/definition_groups_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/definition_themes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/definition_themes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/definition_translations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/definition_translations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/definitions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/definitions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/exemples_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/exemples_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/groups_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/groups_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/illustrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/illustrations_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/searches_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/searches_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/skills_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/skills_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/themes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/themes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/words_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/words_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/definition_groups_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/definition_groups_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/definition_themes_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/definition_themes_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/definition_translations_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/definition_translations_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/definitions_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/definitions_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/exemples_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/exemples_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/groups_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/groups_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/illustrations_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/illustrations_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/pages_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/pages_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/searches_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/searches_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/skills_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/skills_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/themes_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/themes_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/users_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/users_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/words_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/words_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/concerns/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/definition.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/definition.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/definition_group.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/definition_group.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/definition_theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/definition_theme.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/definition_translation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/definition_translation.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/exemple.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/exemple.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/group.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/group.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/illustration.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/illustration.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/search.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/search.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/skill.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/skill.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/theme.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/theme.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/word.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/word.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/_definition_group.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/_definition_group.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_groups/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_groups/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/_definition_theme.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/_definition_theme.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_themes/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_themes/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/_definition_translation.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/_definition_translation.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definition_translations/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definition_translations/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/_definition.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/_definition.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/definitions/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/definitions/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/_exemple.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/_exemple.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/exemples/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exemples/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/_group.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/_group.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/_illustration.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/_illustration.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/illustrations/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/illustrations/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_nav_links.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_nav_links.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/about.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/about.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_definitions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_definitions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_definitions_groups.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_definitions_groups.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_definitions_themes.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_definitions_themes.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_groups.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_groups.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_searches.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_searches.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_themes.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_themes.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_translations.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_translations.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/admin_words.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_words.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_words.xlsx.axlsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/contact.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/contact.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/team.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/team.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/terms.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/terms.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/_search.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/_search.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/searches/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/_skill.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/_skill.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/skills/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/skills/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/_theme.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/_theme.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/themes/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/themes/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_associations.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_associations.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_definitions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_definitions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_exemples.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_exemples.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_themes.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_themes.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_traductions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_traductions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_words.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_words.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/_form_image.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_form_image.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/_right_pane.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_right_pane.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/_word.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_word.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/_word_fr.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_word_fr.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/_word_li.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_word_li.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/dico_fr.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/dico_fr.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/dico_li.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/dico_li.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/words/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/config.ru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/devise.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/secrets.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/secrets.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161015132549_create_words.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161015132549_create_words.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161015133046_create_definitions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161015133046_create_definitions.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161015133410_create_themes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161015133410_create_themes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161015133748_create_illustrations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161015133748_create_illustrations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161015133951_create_exemples.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161015133951_create_exemples.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161015171015_devise_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161015171015_devise_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161101073851_create_definition_themes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161101073851_create_definition_themes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161101101046_create_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161101101046_create_groups.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161101101225_create_definition_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161101101225_create_definition_groups.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161101134849_create_definition_translations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161101134849_create_definition_translations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20161101161046_add_fixes_to_words.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20161101161046_add_fixes_to_words.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170308144903_add_attributes_to_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170308144903_add_attributes_to_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170308145345_create_skills.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170308145345_create_skills.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170308145732_add_source_to_skills.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170308145732_add_source_to_skills.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170308182435_create_searches.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170308182435_create_searches.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510123631_add_user_id_to_words.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510123631_add_user_id_to_words.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510124441_add_contributor_id_to_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510124441_add_contributor_id_to_groups.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510124721_add_contributor_id_to_definition_translations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510124721_add_contributor_id_to_definition_translations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510124845_add_contributor_id_to_definition_themes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510124845_add_contributor_id_to_definition_themes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510124911_add_contributor_id_to_definition_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510124911_add_contributor_id_to_definition_groups.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510143321_add_attachment_image_to_words.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510143321_add_attachment_image_to_words.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170510144957_add_image_elements_to_words.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170510144957_add_image_elements_to_words.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20170516101327_add_first_definition_to_groups.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20170516101327_add_first_definition_to_groups.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180416091153_add_is_eng_to_definitions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180416091153_add_is_eng_to_definitions.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180416095402_exemple_belongs_to_word_not_definiton.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180416095402_exemple_belongs_to_word_not_definiton.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180417100229_add_import_meta_to_words.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180417100229_add_import_meta_to_words.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/assets/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/log/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/422.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/422.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/words/images/000/000/013/medium/Capture_d’écran_2017-02-15_à_08.48.57.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/words/images/000/000/013/medium/Capture_d’écran_2017-02-15_à_08.48.57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/words/images/000/000/013/original/Capture_d’écran_2017-02-15_à_08.48.57.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/words/images/000/000/013/original/Capture_d’écran_2017-02-15_à_08.48.57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/words/images/000/000/013/thumb/Capture_d’écran_2017-02-15_à_08.48.57.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/words/images/000/000/013/thumb/Capture_d’écran_2017-02-15_à_08.48.57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/words/images/000/000/014/medium/Capture_d’écran_2017-02-15_à_14.38.38.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/words/images/000/000/014/medium/Capture_d’écran_2017-02-15_à_14.38.38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/words/images/000/000/014/original/Capture_d’écran_2017-02-15_à_14.38.38.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/words/images/000/000/014/original/Capture_d’écran_2017-02-15_à_14.38.38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/system/words/images/000/000/014/thumb/Capture_d’écran_2017-02-15_à_14.38.38.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/system/words/images/000/000/014/thumb/Capture_d’écran_2017-02-15_à_14.38.38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/definition_groups_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/definition_groups_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/definition_themes_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/definition_themes_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/definition_translations_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/definition_translations_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/definitions_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/definitions_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/exemples_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/exemples_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/groups_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/groups_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/illustrations_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/illustrations_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/pages_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/pages_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/searches_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/searches_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/skills_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/skills_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/themes_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/themes_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/words_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/words_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/definition_groups.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/definition_groups.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/definition_themes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/definition_themes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/definition_translations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/definition_translations.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/definitions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/definitions.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/exemples.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/exemples.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/groups.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/groups.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/illustrations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/illustrations.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/searches.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/searches.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/skills.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/skills.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/themes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/themes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/words.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/words.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/helpers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/helpers/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/definition_group_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/definition_group_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/definition_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/definition_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/definition_theme_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/definition_theme_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/definition_translation_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/definition_translation_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/exemple_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/exemple_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/group_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/group_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/illustration_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/illustration_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/search_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/search_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/skill_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/skill_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/theme_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/theme_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/user_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/word_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/word_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/javascripts/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.keep" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,7 +348,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/monoko@developement.rcov" NAME="developement Coverage Results" MODIFIED="1524822982055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
+    <SUITE FILE_PATH="coverage/monoko@developement.rcov" NAME="developement Coverage Results" MODIFIED="1525780080381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
     <SUITE FILE_PATH="coverage/monoko@Unnamed.rcov" NAME="developement Coverage Results" MODIFIED="1524269082156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
   </component>
   <component name="DatabaseView">
@@ -52,26 +378,26 @@
       <file leaf-file-name="export_words.xlsx.axlsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state relative-caret-position="294">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <file leaf-file-name="words_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/words_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
+            <state relative-caret-position="280">
+              <caret line="71" column="53" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="word.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/word.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="-476">
+              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -79,8 +405,17 @@
       <file leaf-file-name="admin_words.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="52" column="70" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+            <state relative-caret-position="331">
+              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -95,14 +430,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/models/word.rb" />
         <option value="$PROJECT_DIR$/app/helpers/definitions_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/words/_word_fr.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/words_controller.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -111,9 +447,11 @@
         <option value="$PROJECT_DIR$/app/views/words/_word_li.html.erb" />
         <option value="$PROJECT_DIR$/app/views/words/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/admin_words.xlsx.axlsx" />
-        <option value="$PROJECT_DIR$/app/views/pages/admin_words.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/pages/admin_words.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/words_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/word.rb" />
       </list>
     </option>
   </component>
@@ -144,18 +482,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="monoko" type="cbb8eebc:String" user="monoko" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,7 +498,7 @@
               <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
               <item name="monoko" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
@@ -191,6 +517,18 @@
               <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
               <item name="monoko" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="monoko" type="cbb8eebc:String" user="monoko" />
             </path>
           </expand>
           <select />
@@ -267,7 +605,14 @@
       <workItem from="1524566866086" duration="1816000" />
       <workItem from="1524569857626" duration="960000" />
       <workItem from="1524672355111" duration="94000" />
-      <workItem from="1524822147563" duration="2239000" />
+      <workItem from="1524822147563" duration="2821000" />
+      <workItem from="1524825318646" duration="463000" />
+      <workItem from="1524828005065" duration="631000" />
+      <workItem from="1524862185204" duration="6000" />
+      <workItem from="1524913466310" duration="23000" />
+      <workItem from="1525196196765" duration="91000" />
+      <workItem from="1525732859741" duration="673000" />
+      <workItem from="1525779411085" duration="4798000" />
     </task>
     <task id="LOCAL-00001" summary="add word_id and words to be deleted to the xlsx sheet">
       <created>1524524656205</created>
@@ -283,11 +628,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524570088195</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixes pagination in export request check if heroku can take 500 words per export">
+      <created>1524824535326</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524824535327</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30455000" />
+    <option name="totallyTimeSpent" value="37722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,21 +652,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49948132" visible="true" weight="0.22335845" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.3299435" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50537056" side_tool="true" weight="0.32935685" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49677765" weight="0.32438478" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49838883" weight="0.3290398" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49462944" weight="0.32997763" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948132" visible="true" weight="0.20332618" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50537056" side_tool="true" weight="0.32935685" />
       <window_info anchor="right" id="Database" order="3" weight="0.32921588" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49838883" visible="true" weight="0.32792583" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49677765" weight="0.3059096" />
       <window_info id="Structure" order="1" sideWeight="0.5005187" side_tool="true" weight="0.13533835" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49462944" weight="0.32997763" />
       <window_info id="Favorites" order="2" sideWeight="0.5005187" side_tool="true" weight="0.13533835" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -323,29 +673,30 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="8" sideWeight="0.49946582" weight="0.3299435" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13533835" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49677765" visible="true" weight="0.3059096" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49948132" visible="true" weight="0.22335845" />
+      <window_info id="Structure" order="1" sideWeight="0.5005187" side_tool="true" weight="0.13533835" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49677765" weight="0.32982457" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32921588" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49570355" visible="true" weight="0.32865497" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49838883" weight="0.32982457" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5042965" side_tool="true" weight="0.32865497" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32921588" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49462944" weight="0.32997763" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49838883" weight="0.3290398" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50537056" side_tool="true" weight="0.32935685" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49946582" weight="0.3299435" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3299435" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5005187" side_tool="true" weight="0.13533835" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,9 +708,115 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add word_id and words to be deleted to the xlsx sheet" />
     <MESSAGE value="charger bas de donnée par page pour le dyno" />
-    <option name="LAST_COMMIT_MESSAGE" value="charger bas de donnée par page pour le dyno" />
+    <MESSAGE value="fixes pagination in export request check if heroku can take 500 words per export" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes pagination in export request check if heroku can take 500 words per export" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="93" selection-start-line="38" selection-start-column="93" selection-end-line="38" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -479,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/word.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="56" column="99" selection-start-line="56" selection-start-column="99" selection-end-line="56" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/admin_definitions.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -561,19 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/definition_themes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/words_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="93" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -588,31 +1025,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="52" column="70" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        <state relative-caret-position="441">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="294">
+          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
+        <state relative-caret-position="294">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_words.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/words_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="71" column="53" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/word.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
         </state>
       </provider>
     </entry>
