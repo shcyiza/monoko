@@ -84,28 +84,28 @@ class Word < ActiveRecord::Base
         # create or modifying the definitions in french
         if word.definitions.where(is_fr: true).first
           word.definitions.where(is_fr: true).first.update(content: row[4])
-        else
+        elsif row[4] != nil
           definitions << Definition.new(contributor: contributor, word: word, content: row[4], is_fr: true, imported_file: file.path, imported_row: row)
         end
 
         # create or modifying the definitions in english
         if word.definitions.where(is_en: true).first
           word.definitions.where(is_en: true).first.update(content: row[5])
-        else
+        elsif row[5] != nil
           definitions << Definition.new(contributor: contributor, word: word, content: row[5], is_fr: true, imported_file: file.path, imported_row: row)
         end
 
         # create or modifying the exemples
         if word.exemples.first
           word.exemples.first.update(content: row[6])
-        else
+        elsif row[6] != nil
           exemples << Exemple.new(contributor: contributor, word: word, content: row[6], is_li: true, imported_file: file.path, imported_row: row)
         end
 
         # create the definitions in ligala
         if word.definitions.where(is_li: true).first
           word.definitions.where(is_li: true).first.update(content: row[7])
-        else
+        elsif row[7] != nil
           definitions << Definition.new(contributor: contributor, word: word, content: row[7], is_fr: true, imported_file: file.path, imported_row: row)
         end
 
