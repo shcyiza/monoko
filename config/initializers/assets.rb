@@ -11,3 +11,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( alphabetical_paginate.js )
+Rails.application.config.assets.precompile += %w( materialize-sprockets.js )
+Rails.application.config.assets.precompile += %w( materialize/extras/nouislider.js )

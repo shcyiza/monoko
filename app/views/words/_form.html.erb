@@ -12,31 +12,40 @@
   <% end %>
 
   <div class="row">
-    <div class="col m4 s12">
+
+    <div class="col m3 s12">
       <div class="input-field">
         <%= f.text_field :name, label: false, placeholder: "Nom" %>
       </div>
     </div>
 
-    <div class="col m4 s12">
+    <div class="col m3 s12">
       <div class="input-field"> 
         <%= f.text_field :prononciation, label: false, placeholder: "Prononciation" %>
       </div>
     </div>
 
-    <div class="col m2 s6">
-      <div class="input-field">
-        <%= f.check_box :is_fr %>
-        <%= f.label :is_fr, "français" %>
+      <div class="col m2 s4">
+        <div class="input-field">
+          <%= f.label :is_fr, "français" %>
+          <%= f.check_box :is_fr %>
+        </div>
       </div>
-    </div>
 
-    <div class="col m2 s6">
-      <div class="input-field">
-        <%= f.check_box :is_li %>
-        <%= f.label :is_li, "lingala" %>
+      <div class="col m2 s4">
+        <div class="input-field">
+          <%= f.label :is_li, "lingala" %>
+          <%= f.check_box :is_li %>
+        </div>
       </div>
-    </div>
+
+      <div class="col m2 s4">
+        <div class="input-field">
+          <%= f.label :is_en, "english" %>
+          <%= f.check_box :is_en %>
+        </div>
+      </div>
+
     </div>
 
     <div class="row">

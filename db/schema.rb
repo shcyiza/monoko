@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417100229) do
+ActiveRecord::Schema.define(version: 20180518171431) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "definition_groups", force: :cascade do |t|
     t.integer  "definition_id"
@@ -55,15 +58,14 @@ ActiveRecord::Schema.define(version: 20180417100229) do
     t.text     "content"
     t.boolean  "is_fr"
     t.boolean  "is_li"
+    t.integer  "word_id"
     t.integer  "contributor_id"
     t.string   "source"
     t.boolean  "is_validated"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.integer  "word_id"
     t.string   "imported_file"
     t.string   "imported_row"
-    t.index ["word_id"], name: "index_exemples_on_word_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -132,8 +134,8 @@ ActiveRecord::Schema.define(version: 20180417100229) do
     t.string   "last_name"
     t.boolean  "is_contributor"
     t.boolean  "is_admin"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "words", force: :cascade do |t|
@@ -159,6 +161,7 @@ ActiveRecord::Schema.define(version: 20180417100229) do
     t.string   "image_url"
     t.string   "imported_file"
     t.string   "imported_row"
+    t.boolean  "is_en"
   end
 
 end

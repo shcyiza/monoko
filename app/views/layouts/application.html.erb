@@ -3,13 +3,12 @@
 <head>
   <title>Monoko</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/minimal/minimal.css', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -94,6 +93,14 @@
 	$( document ).ready(function(){
 		$(".button-collapse").sideNav();
 	})
+
+  $(document).ready(function(){
+      $('input').iCheck({
+          checkboxClass: 'icheckbox_minimal',
+          radioClass: 'iradio_minimal',
+          increaseArea: '20%' // optional
+      });
+  });
 </script>
 
 

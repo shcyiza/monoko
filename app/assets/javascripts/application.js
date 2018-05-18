@@ -14,9 +14,10 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require autocomplete-rails
-//= require turbolinks
+//= require ./icheck.js
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
+//= require turbolinks
 
 (function($){
   $.fn.leanModal = function(options) {
