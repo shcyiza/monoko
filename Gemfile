@@ -48,6 +48,8 @@ gem 'axlsx_rails'
 gem 'roo'
 gem 'rubyzip', '>= 1.2.1'
 # end import/export data
+#
+gem 'pg_search'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
