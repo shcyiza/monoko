@@ -10,12 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :keywords %><br>
-    <%= f.text_field :keywords %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field row">
+      <%= f.text_field :keywords, label: false, placeholder: "Luka ndimbola na Lingala to libongoli na Français / Rechercher une définition ou une traduction en Lingala", class: "col s11" %>
+      <%= button_tag class: 'btn btn-sm', type: :submit do %>
+        <i class="material-icons prefix col s1">search</i>
+      <% end %>
+    </div>
+    <!--<small>Luka ndimbola na Lingala to libongoli na Français / Rechercher une définition ou une traduction en Lingala</small>-->
 <% end %>

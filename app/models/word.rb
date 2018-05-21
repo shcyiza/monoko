@@ -13,6 +13,13 @@ class Word < ActiveRecord::Base
   scope :in_french, lambda {where(:is_fr => true)}
   scope :in_lingala, lambda {where(:is_li => true)}
 
+	include PgSearch
+	pg_search_scope :search_by_name, against: :name,
+                  using: {
+                      trigram: {
+                          threshold: 0.25
+                      }
+                  }, :ranked_by => ":trigram"
 
   def translations
   	self.definition_translations

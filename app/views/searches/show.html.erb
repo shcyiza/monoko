@@ -1,25 +1,24 @@
 
 
 
-	<h5 class="center-align">Résultats de votre recherche sur Monoko
-		<small><br><span class="whitey">Terme recherché : "<%= @search.keywords %>"</span></small>
+	<h5 class="center-align">Résultats de votre recherche pour le terme: "<%= @search.keywords %>"
 	</h5>
-<hr>
 	
 
 
 
 <div class="">
-<% if @search.search_words.empty? %>
+<% if @results.empty? %>
 	<p class="center-align">Il n'y pas encore de terme qui correspond à votre recherche.
 		<br>Vérifiez l'orthographe, ou revenez plus tard, vous aurez peut-être plus de chance alors.
 	</p>
 <% else %>
+    <%= render partial: 'form' %>
 <ul class="collection">
 
-	<% @search.search_words.each do |word| %>
+	<% @results.each do |word| %>
 		<!-- !! identité -->
-		<% if @search.search_words.include?(word.name) %>
+		<% if @results.include?(word.name) %>
 			<%= link_to word.name, word_path(word) %>
 		<% end %>
 
@@ -42,10 +41,8 @@
 </ul>
 		
 <% end %>
+<div class="center-align"><small><%= paginate @results %> </small></div>
 
-<div class="center-align">
-<%= link_to "Nouvelle recherche", root_path, class: "btn btn-primary btn-sm" %> 
-</div>
 </div>
 
 

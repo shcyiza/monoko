@@ -12,6 +12,7 @@ class SearchesController < ApplicationController
   # GET /searches/1.json
   def show
     @search = Search.find(params[:id])
+    @results = Word.search_by_name(@search.keywords).page(params[:page])
   end
 
   # GET /searches/new
