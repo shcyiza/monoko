@@ -54,6 +54,15 @@ class DefinitionsController < ApplicationController
     end
   end
 
+  def import_updates
+    if current_user.is_admin
+      Definition.import_updates(params[:file], current_user)
+      redirect_to admin_definitions_path, notice: 'Les definiontion on bien été importé on bien ete modifié.'
+    else
+      redirect_back fallback_location: root_path, notice: "Vous n'etes pas autorisez a faire cette action"
+    end
+  end
+
   # DELETE /definitions/1
   # DELETE /definitions/1.json
   def destroy

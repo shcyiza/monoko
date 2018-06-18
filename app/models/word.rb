@@ -34,7 +34,6 @@ class Word < ActiveRecord::Base
 		spreadsheet = Roo::Spreadsheet.open(file.path)
 
 		(2..spreadsheet.last_row).each do |i|
-
 			row = spreadsheet.row(i)
 			words << Word.new(contributor: contributor, name: row[0], prononciation: row[1], is_li: true, imported_file: file.path, imported_row: row)
 		end

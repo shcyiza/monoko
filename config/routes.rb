@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get 'admin_groups' => 'pages#admin_groups'
   get 'admin_searches' => 'pages#admin_searches'
   get 'export_words' => 'pages#export_words'
+  get 'export_definiton' => 'pages#export_definition_translation'
 
   resources :words do
     collection do
@@ -51,6 +52,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :definitions do
+    collection do
+      post :import_updates
+    end
+  end
   # You can have the root of your site routed with "root"
   root 'pages#home'
 

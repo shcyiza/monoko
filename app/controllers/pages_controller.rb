@@ -17,7 +17,17 @@ class PagesController < ApplicationController
   end
 
   def admin_definitions
-    @definitions = Definition.all.page(params[:page])
+    @definitions = Definition.by_words.page(params[:page])
+  end
+
+  def export_definition_translation
+    @definitions = Definition.by_words.page(params[:page]).per(400)
+    @timestamp = "word_export_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    respond_to do |format|
+      format.xlsx do
+        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
+      end
+    end
   end
 
   def admin_words
