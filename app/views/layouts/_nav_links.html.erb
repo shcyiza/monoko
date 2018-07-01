@@ -1,22 +1,32 @@
-	
-        
+
+
         <% if user_signed_in? %>
+          <li class="row">
+            <%= form_for @search_bar do |s| %>
+              <div class="actions col s2">
+                <%= s.button :submit, class: "btn search_bar_btn" do %>
+                  <i class="material-icons">search</i>
+                <%end%>
+              </div>
+              <div class="field col s10">
 
-                <% if current_user.is_admin %>
-                        <li><%= link_to "Admin", admin_path %></li>
-                        <li><%= link_to "Définitions", words_path %></li>
-                        <li><%= link_to "Traductions", dico_fr_path %></li>
-                        <li><%= link_to "Lexiques", themes_path %></li>
-                <% end %>
-
-        
+                <%= s.text_field :keywords, label: false, class: "search_bar", placeholder: "Luka ndimbola na Lingala to libongoli na Français" %>
+              </div>
+            <% end %>
+          </li>
+            <% if current_user.is_admin %>
+                    <li><%= link_to "Admin", admin_path %></li>
+                    <li><%= link_to "Définitions", words_path %></li>
+                    <li><%= link_to "Traductions", dico_fr_path %></li>
+                    <li><%= link_to "Lexiques", themes_path %></li>
+            <% end %>
 	        <li><%= link_to "Mon profil", user_path(current_user) %></li>
 	        <li><%= link_to "Se déconnecter", destroy_user_session_path, :method=>'delete' %>
-        
+
         <% else %>
-        
+
         	<li><%= link_to "Se connecter", new_user_session_path %></li>
-        
+
         <% end %>
 
         <li><%= link_to "Contribuer", new_word_path, class: "waves-effect waves-light btn" %></li>

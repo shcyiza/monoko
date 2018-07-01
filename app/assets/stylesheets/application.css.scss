@@ -30,3 +30,14 @@ main {
 	font-family: 'Shadows Into Light', cursive;
 	/* font-family: 'Courgette', cursive; */
 }
+
+.search_bar {
+  border-bottom: 1px solid black !important;
+}
+
+.search_bar_btn {
+  color: black;
+  background-color: #ba68c800;
+  padding: unset;
+  height: 55px;
+}
