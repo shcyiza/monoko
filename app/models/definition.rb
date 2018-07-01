@@ -29,11 +29,17 @@ class Definition < ActiveRecord::Base
   end
 
   def in_fr
-    self.translations.joins(:word).where('words.is_fr = ?', true).first
+    translation = self.translations.joins(:word).where('words.is_fr = ?', true).first
+    if translation
+      return translation.word
+    end
   end
 
   def in_en
-    self.translations.joins(:word).where('words.is_en = ?', true).first
+    translation = self.translations.joins(:word).where('words.is_en = ?', true).first
+    if translation
+      return translation.word
+    end
   end
 
 
@@ -66,8 +72,8 @@ class Definition < ActiveRecord::Base
 
         # create or modifying the translations in french
         if definition.in_fr
-          if definition.in_fr != row[5]
-            definition.in_fr.word.update(name: row[5])
+          if definition.in_fr.name != row[5]
+            definition.in_fr.update(name: row[5])
           end
         elsif row[5] != nil
           # preapring some magic, I put the translated definition in a array
@@ -79,8 +85,8 @@ class Definition < ActiveRecord::Base
 
         # create or modifying the translations in english
         if definition.in_en
-          if definition.in_en != row[6]
-            definition.in_fr.word.update(name: row[6])
+          if definition.in_en.name != row[6]
+            definition.in_fr.update(name: row[6])
           end
         elsif row[6] != nil
           #see line 68

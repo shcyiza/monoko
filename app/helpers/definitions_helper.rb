@@ -16,4 +16,12 @@ module DefinitionsHelper
     end
   end
 
+  def name_if_exist word
+    if word
+      return word.name
+    else
+      return nil
+    end
+  end
+
 end
