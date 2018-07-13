@@ -15,6 +15,7 @@ class PagesController < ApplicationController
 
   def admin_definitions
     @definitions = Definition.by_words.page(params[:page])
+    @total_export_page = Definition.by_words.page(params[:page]).per(400).total_pages
   end
 
   def export_definition_translation

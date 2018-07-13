@@ -10,7 +10,7 @@ wb.add_worksheet(name: @timestamp) do |sheet|
         meaning.word.name,
         meaning.id,
         nil,
-        meaning.name,
+        meaning.content,
         name_if_exist(meaning.in_fr),
         name_if_exist(meaning.in_en)
         ]
