@@ -9,6 +9,7 @@ class Definition < ActiveRecord::Base
 	has_many :definition_translations, dependent: :destroy
 
 	belongs_to :contributor, :class_name => "User"
+  validates :content, presence: true
 
 	scope :by_words, -> { includes(:word).order('words.name') }
 
