@@ -2,7 +2,7 @@ wb = xlsx_package.workbook
 
 wb.add_worksheet(name: @timestamp) do |sheet|
 
-    sheet.add_row %w(WORD_ID WORD DEFINITION_ID TO_DELET DEFINITION TRANSLION_FR TRANSLATION_EN)
+    sheet.add_row %w(WORD_ID WORD DEFINITION_ID TO_DELET DEFINITION)
 
     @definitions.each do |meaning|
     sheet.add_row [
@@ -10,9 +10,7 @@ wb.add_worksheet(name: @timestamp) do |sheet|
         meaning.word.name,
         meaning.id,
         nil,
-        meaning.content,
-        name_if_exist(meaning.in_fr),
-        name_if_exist(meaning.in_en)
+        meaning.content
         ]
     end
 end

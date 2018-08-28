@@ -18,16 +18,6 @@ class PagesController < ApplicationController
     @total_export_page = Definition.by_words.page(params[:page]).per(400).total_pages
   end
 
-  def export_definition_translation
-    @definitions = Definition.by_words.page(params[:page]).per(400)
-    @timestamp = "word_export_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
-    respond_to do |format|
-      format.xlsx do
-        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
-      end
-    end
-  end
-
   def admin_words
     @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page])
     @total_export_page = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page]).per(500).total_pages
@@ -39,19 +29,9 @@ class PagesController < ApplicationController
     end
   end
 
-  def export_words
-    @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page]).per(500)
-    @timestamp = "word_export_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
-    respond_to do |format|
-      format.xlsx do
-        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
-      end
-    end
-  end
-
-
   def admin_translations
-    @translations = DefinitionTranslation.all
+    @translations = DefinitionTranslation.by_words.page(params[:page])
+    @total_export_page = DefinitionTranslation.by_words.page(params[:page]).per(400).total_pages
   end
 
   def admin_definitions_themes
@@ -73,4 +53,35 @@ class PagesController < ApplicationController
   def admin_searches
     @searches = Search.order('created_at DESC')
   end
+
+  def export_definition
+    @definitions = Definition.by_words.page(params[:page]).per(400)
+    @timestamp = "word_exp_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    respond_to do |format|
+      format.xlsx do
+        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
+      end
+    end
+  end
+
+  def export_words
+    @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page]).per(500)
+    @timestamp = "definition_exp_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    respond_to do |format|
+      format.xlsx do
+        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
+      end
+    end
+  end
+
+  def export_translation
+    @translations = DefinitionTranslation.by_words.page(params[:page]).per(400)
+    @timestamp = "translation_exp_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    respond_to do |format|
+      format.xlsx do
+        response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
+      end
+    end
+  end
+
 end

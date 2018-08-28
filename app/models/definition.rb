@@ -46,9 +46,7 @@ class Definition < ActiveRecord::Base
 
   def self.import_updates file, contributor
 
-    translated_defs = []
-    translations = []
-    definitions_translation = []
+    definitions = []
 
     spreadsheet = Roo::Spreadsheet.open(file.path)
 
@@ -57,61 +55,23 @@ class Definition < ActiveRecord::Base
       row = spreadsheet.row(i)
       definition = nil
       if row[2]
-        definition = Definition.find(row[2])
-      else
-        definition = Definition.create(word_id: row[0], is_li: true, content: row[4])
-      end
-      # create the definitions in french
-      if row[3] == 1
-        definition.destroy
-      else
 
-        # modify definition data
-        if definition.content != row[4]
+        definition = Definition.find(row[2])
+        if row[3] == 1
+          # destroy definition if requested
+          definition.destroy
+        elsif definition.content != row[4]
+          # modify definition data
           definition.update(content: row[4])
         end
 
-        # create or modifying the translations in french
-        if definition.in_fr
-          if definition.in_fr.name != row[5]
-            definition.in_fr.update(name: row[5])
-          end
-        elsif row[5] != nil
-          # preapring some magic, I put the translated definition in a array
-          # at the same time that i put the translation in the array ready to be exported
-          # So they have the same index... see line
-          translated_defs << definition.content
-          translations << Word.new(contributor: contributor, name: row[5], is_fr: true, imported_file: file.path, imported_row: row)
-        end
-
-        # create or modifying the translations in english
-        if definition.in_en
-          if definition.in_en.name != row[6]
-            definition.in_fr.update(name: row[6])
-          end
-        elsif row[6] != nil
-          #see line 68
-          translated_defs << definition.content
-          translations << Word.new(contributor: contributor, name: row[6], is_en: true, imported_file: file.path, imported_row: row)
-        end
-
+      elsif row[0] && row[4]
+        definitions << Definition.new(word_id: row[0], is_li: true, content: row[4], contributor: contributor)
       end
+
     end
 
-    Word.import(translations)
-
-    translated_defs.each do |definition|
-      # Since they have the same index I can call the translated from the translation
-      # and vise versa... Tada! Magic is done
-      translated = Definition.find_by(content: definition)
-      find_translation = translations[translated_defs.index(definition)]
-      translation = Word.find_by(name: find_translation.name)
-      unless DefinitionTranslation.where(definition: translated, word: translation).any?
-        definitions_translation << DefinitionTranslation.new(definition: translated, word: translation)
-      end
-    end
-
-    DefinitionTranslation.import(definitions_translation)
+    Definition.import(definitions)
 
   end
 

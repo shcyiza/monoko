@@ -43,7 +43,8 @@ Rails.application.routes.draw do
   get 'admin_groups' => 'pages#admin_groups'
   get 'admin_searches' => 'pages#admin_searches'
   get 'export_words' => 'pages#export_words'
-  get 'export_definiton' => 'pages#export_definition_translation'
+  get 'export_definiton' => 'pages#export_definition'
+  get 'export_translation' => 'pages#export_translation'
 
   resources :words do
     collection do
@@ -53,6 +54,12 @@ Rails.application.routes.draw do
   end
 
   resources :definitions do
+    collection do
+      post :import_updates
+    end
+  end
+
+  resources :definition_translations do
     collection do
       post :import_updates
     end

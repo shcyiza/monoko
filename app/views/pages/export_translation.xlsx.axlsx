@@ -1,0 +1,19 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: @timestamp) do |sheet|
+
+    sheet.add_row %w(ID TO_DELET TRANSLATION_ID TRANSLATION IS_FR IS_ENG DEFINITION_ID DEFINITION)
+
+    @translations.each do |t|
+    sheet.add_row [
+        t.id,
+        nil,
+        t.word.id,
+        t.word.name,
+        t.word.is_fr,
+        t.word.is_en,
+        t.definition.id,
+        t.definition.content
+        ]
+    end
+end
