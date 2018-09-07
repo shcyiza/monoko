@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="883c98ad-97c0-4786-96a7-e1af566058eb" name="Default" comment="search in navbar">
-      <change afterPath="$PROJECT_DIR$/app/views/pages/export_translation.xlsx.axlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="883c98ad-97c0-4786-96a7-e1af566058eb" name="Default" comment="excel sheet for import/export of translations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/definition_translations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/definition_translations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/definition.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/definition.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/definition_translation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/definition_translation.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_definitions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_definitions.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/admin_translations.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/admin_translations.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/export_definition_translation.xlsx.axlsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/export_definition.xlsx.axlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/words/_word_li.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/words/_word_li.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -30,7 +21,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/monoko@IRB_console__monoko.rcov" NAME="IRB console: monoko Coverage Results" MODIFIED="1535490282629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
     <SUITE FILE_PATH="coverage/monoko@Unnamed.rcov" NAME="developement Coverage Results" MODIFIED="1524269082156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
-    <SUITE FILE_PATH="coverage/monoko@developement.rcov" NAME="developement Coverage Results" MODIFIED="1535490268198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
+    <SUITE FILE_PATH="coverage/monoko@developement.rcov" NAME="developement Coverage Results" MODIFIED="1536310244998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="monoko" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -50,25 +41,27 @@
     <session id="841361676">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="3" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="axlsx" value="5" />
-          <entry key="erb" value="10" />
+          <entry key="erb" value="13" />
           <entry key="rb" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Haml" value="100" />
-          <entry key="PLAIN_TEXT" value="34" />
-          <entry key="RHTML" value="66" />
+          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="RHTML" value="216" />
           <entry key="Ruby" value="1315" />
         </counts>
       </usages-collector>
@@ -77,15 +70,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="axlsx" value="100" />
-          <entry key="erb" value="66" />
+          <entry key="erb" value="216" />
           <entry key="rb" value="1315" />
-          <entry key="txt" value="34" />
+          <entry key="txt" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Haml" value="5" />
-          <entry key="RHTML" value="10" />
+          <entry key="RHTML" value="13" />
           <entry key="Ruby" value="12" />
         </counts>
       </usages-collector>
@@ -97,15 +90,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/definition.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="68" column="109" selection-start-line="68" selection-start-column="83" selection-end-line="68" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/definition_translation.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1092">
@@ -114,29 +98,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/words/_word_li.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
+            <state relative-caret-position="-43">
               <caret line="202" column="21" selection-start-line="202" selection-start-column="21" selection-end-line="202" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+            <state relative-caret-position="840">
+              <caret line="85" selection-start-line="85" selection-end-line="90" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/admin_translations.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+            <state relative-caret-position="609">
+              <caret line="29" column="29" selection-start-line="28" selection-end-line="33" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,9 +142,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/words/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="44" column="114" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/definitions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
+            <state relative-caret-position="1176">
               <caret line="56" selection-start-line="56" selection-end-line="63" selection-end-column="5" />
             </state>
           </provider>
@@ -162,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/definition_translations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
+            <state>
               <caret column="4" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
@@ -170,9 +170,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -231,10 +229,8 @@
         <option value="$PROJECT_DIR$/app/controllers/definitions_controller.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/helpers/definitions_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/pages/home.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/searches/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/export_definition_translation.xlsx.axlsx" />
@@ -250,6 +246,8 @@
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/definition_translations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/words/_word_li.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pages/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -268,7 +266,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="27" />
-    <option name="width" value="1920" />
+    <option name="width" value="1910" />
     <option name="height" value="2133" />
   </component>
   <component name="ProjectView">
@@ -276,17 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="monoko" type="cbb8eebc:String" user="monoko" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -304,13 +291,14 @@
               <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
               <item name="monoko" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
               <item name="monoko" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
@@ -324,10 +312,16 @@
               <item name="monoko" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
             <path>
-              <item name="monoko" type="b2602c69:ProjectViewProjectNode" />
-              <item name="monoko" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="monoko" type="cbb8eebc:String" user="monoko" />
             </path>
           </expand>
           <select />
@@ -359,7 +353,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="IRB console.IRB console: monoko">
+  <component name="RunManager" selected="Rails.developement">
     <configuration name="IRB console: monoko" type="IrbRunConfigurationType" factoryName="IRB console">
       <module name="monoko" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -465,7 +459,9 @@
       <workItem from="1534754367869" duration="7338000" />
       <workItem from="1534763726188" duration="1232000" />
       <workItem from="1534974559519" duration="90000" />
-      <workItem from="1535473292858" duration="23603000" />
+      <workItem from="1535473292858" duration="23880000" />
+      <workItem from="1536046623487" duration="22000" />
+      <workItem from="1536310089894" duration="3397000" />
     </task>
     <task id="LOCAL-00001" summary="add word_id and words to be deleted to the xlsx sheet">
       <created>1524524656205</created>
@@ -572,11 +568,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534761614136</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="excel sheet for import/export of translations">
+      <created>1535499844999</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1535499844999</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144540000" />
+    <option name="totallyTimeSpent" value="148236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,26 +591,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="2133" extended-state="4" />
+    <frame x="0" y="27" width="1910" height="2133" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948132" visible="true" weight="0.29978472" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948132" visible="true" weight="0.30952382" />
       <window_info id="Structure" order="1" sideWeight="0.5005187" side_tool="true" weight="0.13533835" />
       <window_info id="Favorites" order="2" sideWeight="0.5005187" side_tool="true" weight="0.13533835" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32957458" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49677765" weight="0.24500257" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4962325" visible="true" weight="0.24500257" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.3299435" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49407965" weight="0.23577653" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49838883" weight="0.29523322" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49354145" weight="0.23577653" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4956943" weight="0.29523322" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3299435" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49946582" weight="0.3299435" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50592035" side_tool="true" weight="0.24807" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5037675" side_tool="true" weight="0.24500257" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -656,12 +659,10 @@
     <MESSAGE value="orphelin definition + fixed error in worksheet" />
     <MESSAGE value="search in navbar" />
     <MESSAGE value="validation to escape future errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation to escape future errors" />
+    <MESSAGE value="excel sheet for import/export of translations" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel sheet for import/export of translations" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/definitions/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/export_words.xlsx.axlsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -754,24 +755,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -861,18 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/definitions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="56" selection-start-line="56" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/export_definition.xlsx.axlsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -884,13 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/definition.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="68" column="109" selection-start-line="68" selection-start-column="83" selection-end-line="68" selection-end-column="109" />
         </state>
       </provider>
     </entry>
@@ -908,24 +876,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/definition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="68" column="109" selection-start-line="68" selection-start-column="83" selection-end-line="68" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/definition_translation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="61" column="36" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_translations.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -936,17 +897,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/admin_translations.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/definitions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="56" selection-start-line="56" selection-end-line="63" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/definition_translations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
+        <state>
           <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/words/_word_li.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
+        <state relative-caret-position="-43">
           <caret line="202" column="21" selection-start-line="202" selection-start-column="21" selection-end-line="202" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="61" column="36" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/words/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="44" column="114" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="29" selection-start-line="28" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="85" selection-start-line="85" selection-end-line="90" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
