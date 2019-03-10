@@ -56,7 +56,7 @@ class PagesController < ApplicationController
 
   def export_definition
     @definitions = Definition.by_words.page(params[:page]).per(400)
-    @timestamp = "w_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    @timestamp = "d_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
     respond_to do |format|
       format.xlsx do
         response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
@@ -66,7 +66,7 @@ class PagesController < ApplicationController
 
   def export_words
     @words = Word.all.order('name ASC').where.not(name: [nil, '']).page(params[:page]).per(500)
-    @timestamp = "d_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
+    @timestamp = "w_p#{params[:page]}_#{Time.now.strftime('%d%m%Y%H%M')}"
     respond_to do |format|
       format.xlsx do
         response.headers['Content-Disposition'] = "attachment; filename=#{@timestamp}.xlsx"
