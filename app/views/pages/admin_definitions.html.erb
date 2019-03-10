@@ -23,7 +23,7 @@ Panneau d'administration
       <button data-target="modal1" class="btn modal-trigger right"><i class="material-icons">import_export</i> importer/exporter des definitions</button>
 			<% @definitions.each do |definition| %>
 				<div class="collection-item">
-					<p><%= definition.content %>
+					<p><%= simple_format(definition.content) %>
 						<br><small><%= link_to definition.word.name, word_path(definition.word) %></small>
 					</p>
 				</div>

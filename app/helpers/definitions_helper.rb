@@ -2,7 +2,7 @@ module DefinitionsHelper
 
   def content_if_exist definition
     if definition
-      return definition.content
+      return simple_format(definition.content)
     else
       return nil
     end

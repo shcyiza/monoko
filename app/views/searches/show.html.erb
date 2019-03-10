@@ -31,7 +31,7 @@
 				<% word.definitions.each do |definition| %>
 					<% definition.definition_translations.each do |translation| %>
 	                	<i><%= link_to translation.word.name, word_path(translation.word) if translation.word %></i> <small>(français)</small>
-	                	<br><%= definition.content %><br>
+	                	<br><%= simple_format(definition.content) %><br>
 	              	<% end %>
               	<% end %>
 			<% end %>
