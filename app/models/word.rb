@@ -16,6 +16,7 @@ class Word < ActiveRecord::Base
 
 	include PgSearch
 	pg_search_scope :search_by_name, against: :name,
+									ignoring: :accents,
                   using: {
                       trigram: {
                           threshold: 0.25
